@@ -11,13 +11,10 @@ include(FetchContent)
 set(CMAKE_CXX_STANDARD 14)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
 
-option(ENABLE_PLOTS "Enable matplotplusplus plotting" ON)
-option(ENABLE_TESTS "Enable tests" ON)
+option(ENABLE_PLOTS "Enable matplotplusplus plotting" OFF)
+option(ENABLE_TESTS "Enable tests" OFF)
 
 include_directories(${PROJECT_SOURCE_DIR}/include)
-
-
-
 
 add_library(nlohmann_json INTERFACE)
 target_include_directories(nlohmann_json INTERFACE ${CMAKE_SOURCE_DIR}/include/external/nlohmann)
