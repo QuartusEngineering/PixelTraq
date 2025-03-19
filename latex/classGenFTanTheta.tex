@@ -1,0 +1,592 @@
+\doxysection{Gen\+FTan\+Theta Class Reference}
+\label{classGenFTanTheta}\index{GenFTanTheta@{GenFTanTheta}}
+Inheritance diagram for Gen\+FTan\+Theta\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{classGenFTanTheta}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classGenFTanTheta_a02c76391524983722fe8006bd83d96c8}{Gen\+FTan\+Theta}} (const std\+::vector$<$ double $>$ \&focal\+\_\+length, const std\+::vector$<$ double $>$ \&principal\+\_\+point, const double \&skew, const std\+::vector$<$ int $>$ \&image\+\_\+size, const std\+::vector$<$ double $>$ \&radial\+\_\+distortion\+\_\+num=\{\}, const std\+::vector$<$ double $>$ \&radial\+\_\+distortion\+\_\+den=\{\}, const std\+::vector$<$ double $>$ \&tangential\+\_\+distortion=\{\}, const std\+::vector$<$ double $>$ \&tangential\+\_\+distortion\+\_\+polycoeff=\{\}, const std\+::vector$<$ double $>$ \&tangential\+\_\+distortion\+\_\+\+OCVcoeff=\{\}, const Point3 \&rotation=\{ 0.\+0, 0.\+0, 0.\+0 \}, const Point3 \&translation=\{ 0.\+0, 0.\+0, 0.\+0 \})
+\begin{DoxyCompactList}\small\item\em Parameterized constructor for the \doxylink{classBrownConrady}{Brown\+Conrady} class. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classGenFTanTheta_a2ca0d646d7e1a0ea28c722df9cc46de7}{Gen\+FTan\+Theta}} (const \mbox{\hyperlink{classGenFTanTheta}{Gen\+FTan\+Theta}} \&model)
+\begin{DoxyCompactList}\small\item\em Copy constructor for the \doxylink{classGenFTanTheta}{Gen\+FTan\+Theta} class. \end{DoxyCompactList}\item 
+virtual std\+::array$<$ double, 2 $>$ \mbox{\hyperlink{classGenFTanTheta_ac6b4279643d9c8bcbff45c31f3bcdf93}{project}} (const Point3 \&point\+\_\+3d) const override
+\begin{DoxyCompactList}\small\item\em Projects a 3D point to a 2D point using intrinsic and extrinsic parameters. \end{DoxyCompactList}\item 
+virtual Point3 \mbox{\hyperlink{classGenFTanTheta_a4e0e79a50d89065aabaf0c96438818bf}{backproject}} (const std\+::array$<$ double, 2 $>$ \&point\+\_\+2d) const override
+\begin{DoxyCompactList}\small\item\em Backprojects a 2D point to a 3D ray. \end{DoxyCompactList}\item 
+virtual const std\+::string \mbox{\hyperlink{classGenFTanTheta_ad0b70c12573254c0b61041afdc39c49a}{get\+Model\+Name}} () const override
+\begin{DoxyCompactList}\small\item\em Gets the model name. \end{DoxyCompactList}\item 
+virtual std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classPinhole}{Pinhole}} $>$ \mbox{\hyperlink{classGenFTanTheta_aeb959ba4c40409398c2f449ebae74695}{get\+Pinhole}} () const override
+\begin{DoxyCompactList}\small\item\em Gets a shared pointer to a \doxylink{classPinhole}{Pinhole} model. \end{DoxyCompactList}\item 
+std\+::vector$<$ double $>$ \mbox{\hyperlink{classGenFTanTheta_a7f24761c2a7e1a6c8ee3d069f17546d3}{get\+Focal\+Length}} () const
+\begin{DoxyCompactList}\small\item\em Gets the focal length. \end{DoxyCompactList}\item 
+std\+::vector$<$ double $>$ \mbox{\hyperlink{classGenFTanTheta_adc1534c27fbdab12a0da599b7ef1db6e}{get\+Principal\+Point}} () const
+\begin{DoxyCompactList}\small\item\em Gets the principal point. \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{classGenFTanTheta_ac34db688495bd6a48cfab787fdc88396}{get\+Skew}} () const
+\begin{DoxyCompactList}\small\item\em Gets the skew. \end{DoxyCompactList}\item 
+std\+::vector$<$ double $>$ \mbox{\hyperlink{classGenFTanTheta_a89a77e44c1b2b36ae873c5461c5a6843}{get\+Radial\+Dist\+Num\+Coeffs}} () const
+\begin{DoxyCompactList}\small\item\em Gets the radial distortion numerator coefficients. The radial distortion numerator is defined by the equation\+: \end{DoxyCompactList}\item 
+std\+::vector$<$ double $>$ \mbox{\hyperlink{classGenFTanTheta_a1e63442dcf86684fb10a2ded8b387f66}{get\+Radial\+Dist\+Den\+Coeffs}} () const
+\begin{DoxyCompactList}\small\item\em Gets the radial distortion denominator coefficients. The radial distortion denominator is defined by the equation\+: \end{DoxyCompactList}\item 
+std\+::vector$<$ double $>$ \mbox{\hyperlink{classGenFTanTheta_a8a223e9252d16a4b43f30ba2f148ddba}{get\+Tangential\+Dist\+Coeffs}} () const
+\begin{DoxyCompactList}\small\item\em Gets the tangential distortion coefficients. \end{DoxyCompactList}\item 
+std\+::vector$<$ double $>$ \mbox{\hyperlink{classGenFTanTheta_a8fb21bdde0c4afb25deb970ffdd4ffc3}{get\+Tangential\+Polynominal\+Dist\+Coeffs}} () const
+\begin{DoxyCompactList}\small\item\em Gets the tangential polynomial distortion coefficients. \end{DoxyCompactList}\item 
+std\+::vector$<$ double $>$ \mbox{\hyperlink{classGenFTanTheta_a27197a815655485fa5f1a10519287c7a}{get\+Tangential\+Dist\+OCVCoeffs}} () const
+\begin{DoxyCompactList}\small\item\em Gets the tangential distortion OCV coefficients. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classGenFTanTheta_a0a23c187d00565dcafb300da81e5bd10}{set\+Focal\+Length}} (std\+::vector$<$ double $>$ focal\+\_\+length)
+\begin{DoxyCompactList}\small\item\em Sets the focal length. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classGenFTanTheta_a2547a302267b30d2fa22171a23b86599}{set\+Principal\+Point}} (std\+::vector$<$ double $>$ principal\+\_\+point)
+\begin{DoxyCompactList}\small\item\em Sets the principal point. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classGenFTanTheta_abaa5d332fd365a26b5309bb5afaf434b}{set\+Skew}} (double skew)
+\begin{DoxyCompactList}\small\item\em Sets the skew value. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classGenFTanTheta_a2b3757fac1d78b525643f517854f13c6}{set\+Radial\+Dist\+Num\+Coeffs}} (std\+::vector$<$ double $>$ radial\+\_\+dist\+\_\+num\+\_\+coeffs)
+\begin{DoxyCompactList}\small\item\em Sets the radial distortion numerator coefficients. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classGenFTanTheta_a1db98f4646990b11515233d299e33897}{set\+Radial\+Dist\+Den\+Coeffs}} (std\+::vector$<$ double $>$ radial\+\_\+dist\+\_\+den\+\_\+coeffs)
+\begin{DoxyCompactList}\small\item\em Sets the radial distortion denominator coefficients. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classGenFTanTheta_a3f6810e2272654ad6e0a0a0b25d3edf7}{set\+Tangential\+Dist\+Coeffs}} (std\+::vector$<$ double $>$ tangential\+\_\+dist\+\_\+coeffs)
+\begin{DoxyCompactList}\small\item\em Sets the tangential distortion coefficients. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classGenFTanTheta_a39d849a76c64564366b61cf25513b651}{set\+Tangential\+Polynominal\+Dist\+Coeffs}} (std\+::vector$<$ double $>$ tangential\+\_\+polynomial\+\_\+dist\+\_\+coeffs)
+\begin{DoxyCompactList}\small\item\em Sets the tangential polynomial distortion coefficients. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classGenFTanTheta_a4e64b6013a3747d67c5e222a245b4410}{set\+Tangential\+Dist\+OCVCoeffs}} (std\+::vector$<$ double $>$ tangential\+\_\+dist\+\_\+ocv)
+\begin{DoxyCompactList}\small\item\em Sets the tangential distortion OCV coefficients. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classGenFTanTheta_aabc69eb88eaefdb4b6bb517ecb5b208f}{set\+Backproject\+Settings}} (double threshold, int iterations)
+\begin{DoxyCompactList}\small\item\em Sets the backprojection settings. \end{DoxyCompactList}\item 
+std\+::vector$<$ Point2 $>$ \mbox{\hyperlink{classGenFTanTheta_a6ae3fa443671dd7a681711f3ff2bd46b}{project}} (const std\+::vector$<$ Point3 $>$ \&points\+\_\+3d) const
+\begin{DoxyCompactList}\small\item\em Projects 3D points to 2D points using the camera model. \end{DoxyCompactList}\item 
+std\+::vector$<$ std\+::vector$<$ Point2 $>$ $>$ \mbox{\hyperlink{classGenFTanTheta_a2d4cb6f9297cffe56d4936743f0cb358}{project}} (const std\+::vector$<$ std\+::vector$<$ Point3 $>$ $>$ \&points\+\_\+3d1) const
+\begin{DoxyCompactList}\small\item\em Projects 2D vectors of 3D points to 2D points using the camera model. \end{DoxyCompactList}\item 
+std\+::vector$<$ std\+::vector$<$ std\+::array$<$ double, 3 $>$ $>$ $>$ \mbox{\hyperlink{classGenFTanTheta_a0fa46f041586bb492f0bd5e525e4a020}{backproject}} (const std\+::vector$<$ std\+::vector$<$ double $>$ $>$ \&image) const
+\begin{DoxyCompactList}\small\item\em Backprojects a 2D vector of 2D points to 3D rays using the camera model. \end{DoxyCompactList}\item 
+std\+::vector$<$ Point3 $>$ \mbox{\hyperlink{classGenFTanTheta_aef54da14254e193c05f01794cc1e2cc0}{backproject}} (const std\+::vector$<$ Point2 $>$ \&points\+\_\+2d) const
+\begin{DoxyCompactList}\small\item\em Backprojects 2D points to 3D rays using the camera model. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{classCamera}{Camera}}}
+\begin{DoxyCompactItemize}
+\item 
+{\bfseries Camera} ()
+\begin{DoxyCompactList}\small\item\em Default constructor for the \doxylink{classCamera}{Camera} class. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classCamera_ae4dce82bbbae84426aa18223438ea3b2}{Camera}} (std\+::vector$<$ int $>$ image\+\_\+size, Point3 rotation, Point3 translation)
+\begin{DoxyCompactList}\small\item\em Parameterized constructor for the \doxylink{classCamera}{Camera} class. \end{DoxyCompactList}\item 
+std\+::string \mbox{\hyperlink{classCamera_a52aedf294fdf857f9a41e124c7927b43}{get\+Parameter\+Display\+String}} () const
+\begin{DoxyCompactList}\small\item\em Returns a string with the camera parameters for display. \end{DoxyCompactList}\item 
+void {\bfseries display} () const
+\begin{DoxyCompactList}\small\item\em Displays the camera parameters to the console. \end{DoxyCompactList}\item 
+std\+::vector$<$ int $>$ \mbox{\hyperlink{classCamera_ae647b7b651bdc664118d03e5f7f66616}{get\+Image\+Size}} () const
+\begin{DoxyCompactList}\small\item\em Gets the image size. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classCamera_a7131f2a763a841f7c6a93a79981ffb72}{set\+Image\+Size}} (std\+::vector$<$ int $>$ image\+\_\+size)
+\begin{DoxyCompactList}\small\item\em Sets the image size. \end{DoxyCompactList}\item 
+std\+::vector$<$ Point2 $>$ \mbox{\hyperlink{classCamera_a6ae3fa443671dd7a681711f3ff2bd46b}{project}} (const std\+::vector$<$ Point3 $>$ \&points\+\_\+3d) const
+\begin{DoxyCompactList}\small\item\em Projects 3D points to 2D points using the camera model. \end{DoxyCompactList}\item 
+std\+::vector$<$ std\+::vector$<$ Point2 $>$ $>$ \mbox{\hyperlink{classCamera_a2d4cb6f9297cffe56d4936743f0cb358}{project}} (const std\+::vector$<$ std\+::vector$<$ Point3 $>$ $>$ \&points\+\_\+3d1) const
+\begin{DoxyCompactList}\small\item\em Projects 2D vectors of 3D points to 2D points using the camera model. \end{DoxyCompactList}\item 
+std\+::vector$<$ std\+::vector$<$ std\+::array$<$ double, 3 $>$ $>$ $>$ \mbox{\hyperlink{classCamera_a0fa46f041586bb492f0bd5e525e4a020}{backproject}} (const std\+::vector$<$ std\+::vector$<$ double $>$ $>$ \&image) const
+\begin{DoxyCompactList}\small\item\em Backprojects a 2D vector of 2D points to 3D rays using the camera model. \end{DoxyCompactList}\item 
+std\+::vector$<$ Point3 $>$ \mbox{\hyperlink{classCamera_aef54da14254e193c05f01794cc1e2cc0}{backproject}} (const std\+::vector$<$ Point2 $>$ \&points\+\_\+2d) const
+\begin{DoxyCompactList}\small\item\em Backprojects 2D points to 3D rays using the camera model. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classCamera_a8f46c6f364430fa41f0b96aa62c7f158}{set\+Translation}} (Point3 translation)
+\begin{DoxyCompactList}\small\item\em Sets the translation vector. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classCamera_a53ac33421a4e50f8a94330540d6971f4}{set\+Rotation}} (Point3 rotation)
+\begin{DoxyCompactList}\small\item\em Sets the rotation vector. \end{DoxyCompactList}\item 
+const std\+::vector$<$ Point3 $>$ \mbox{\hyperlink{classCamera_a5d9ce2104ac617235356c9ef2734049a}{world\+To\+Camera\+Pnts}} (const std\+::vector$<$ Point3 $>$ \&world\+\_\+points) const
+\begin{DoxyCompactList}\small\item\em Transforms world points to camera points. \end{DoxyCompactList}\item 
+const std\+::vector$<$ Point3 $>$ \mbox{\hyperlink{classCamera_a5cb55aa775a0213abbfe85122112b16a}{camera\+To\+World\+Pnts}} (const std\+::vector$<$ Point3 $>$ \&world\+\_\+points) const
+\begin{DoxyCompactList}\small\item\em Transforms camera points to world points. \end{DoxyCompactList}\item 
+const Point3 \mbox{\hyperlink{classCamera_a7fcbbda82d69c6b3407d3397b59336fb}{world\+To\+Camera\+Pnts}} (const Point3 \&world\+\_\+point) const
+\begin{DoxyCompactList}\small\item\em Transforms a single world point to a camera point. \end{DoxyCompactList}\item 
+const Point3 \mbox{\hyperlink{classCamera_a543532ed983ca1232c3c7e0d620c1c8d}{camera\+To\+World\+Pnts}} (const Point3 \&world\+\_\+point) const
+\begin{DoxyCompactList}\small\item\em Transforms a single camera point to a world point. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classCamera_a0ad27316f530acbc22702832bbc84e11}{save}} (const std\+::string \&file\+Name) const
+\begin{DoxyCompactList}\small\item\em Saves the \doxylink{classCamera}{Camera} object to a file. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classGenFTanTheta}{Gen\+FTan\+Theta}} $>$ \mbox{\hyperlink{classGenFTanTheta_ab49cc4c2bb5d4a56fbb3e1ab2278006e}{load}} (const std\+::string \&file\+Name)
+\begin{DoxyCompactList}\small\item\em Loads a \doxylink{classGenFTanTheta}{Gen\+FTan\+Theta} model from a file. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Member Functions inherited from \mbox{\hyperlink{classCamera}{Camera}}}
+\begin{DoxyCompactItemize}
+\item 
+static std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classCamera}{Camera}} $>$ \mbox{\hyperlink{classCamera_ac7fc1f6c7e0b0560097c3ab69d4fa533}{load}} (const std\+::string \&file\+Name)
+\begin{DoxyCompactList}\small\item\em Static method to load a camera based on file type. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\label{classGenFTanTheta_a02c76391524983722fe8006bd83d96c8} 
+\index{GenFTanTheta@{GenFTanTheta}!GenFTanTheta@{GenFTanTheta}}
+\index{GenFTanTheta@{GenFTanTheta}!GenFTanTheta@{GenFTanTheta}}
+\doxysubsubsection{\texorpdfstring{GenFTanTheta()}{GenFTanTheta()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily Gen\+FTan\+Theta\+::\+Gen\+FTan\+Theta (\begin{DoxyParamCaption}\item[{const std\+::vector$<$ double $>$ \&}]{focal\+\_\+length,  }\item[{const std\+::vector$<$ double $>$ \&}]{principal\+\_\+point,  }\item[{const double \&}]{skew,  }\item[{const std\+::vector$<$ int $>$ \&}]{image\+\_\+size,  }\item[{const std\+::vector$<$ double $>$ \&}]{radial\+\_\+distortion\+\_\+num = {\ttfamily \{\}},  }\item[{const std\+::vector$<$ double $>$ \&}]{radial\+\_\+distortion\+\_\+den = {\ttfamily \{\}},  }\item[{const std\+::vector$<$ double $>$ \&}]{tangential\+\_\+distortion = {\ttfamily \{\}},  }\item[{const std\+::vector$<$ double $>$ \&}]{tangential\+\_\+distortion\+\_\+polycoeff = {\ttfamily \{\}},  }\item[{const std\+::vector$<$ double $>$ \&}]{tangential\+\_\+distortion\+\_\+\+OCVcoeff = {\ttfamily \{\}},  }\item[{const Point3 \&}]{rotation = {\ttfamily \{~0.0,~0.0,~0.0~\}},  }\item[{const Point3 \&}]{translation = {\ttfamily \{~0.0,~0.0,~0.0~\}} }\end{DoxyParamCaption})}
+
+
+
+Parameterized constructor for the \doxylink{classBrownConrady}{Brown\+Conrady} class. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em focal\+\_\+length} & Vector of focal length values. \\
+\hline
+{\em principal\+\_\+point} & Vector of principal point values. \\
+\hline
+{\em skew} & skew value. \\
+\hline
+{\em image\+\_\+size} & Vector of image size dimensions. \\
+\hline
+{\em radial\+\_\+distortion\+\_\+num} & Vector of radial distortion numerator coefficients. \\
+\hline
+{\em radial\+\_\+distortion\+\_\+den} & Vector of radial distortion denominator coefficients. \\
+\hline
+{\em tangential\+\_\+distortion} & Vector of tangential distortion coefficients. \\
+\hline
+{\em tangential\+\_\+distortion\+\_\+polycoeff} & Vector of fourier tangential distortion polynomial coefficients. \\
+\hline
+{\em tangential\+\_\+distortion\+\_\+\+OCVcoeff} & Vector of tangential distortion ocv coefficients. \\
+\hline
+{\em rotation} & Rotation vector. \\
+\hline
+{\em translation} & Translation vector. \\
+\hline
+\end{DoxyParams}
+\label{classGenFTanTheta_a2ca0d646d7e1a0ea28c722df9cc46de7} 
+\index{GenFTanTheta@{GenFTanTheta}!GenFTanTheta@{GenFTanTheta}}
+\index{GenFTanTheta@{GenFTanTheta}!GenFTanTheta@{GenFTanTheta}}
+\doxysubsubsection{\texorpdfstring{GenFTanTheta()}{GenFTanTheta()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily Gen\+FTan\+Theta\+::\+Gen\+FTan\+Theta (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classGenFTanTheta}{Gen\+FTan\+Theta}} \&}]{model }\end{DoxyParamCaption})}
+
+
+
+Copy constructor for the \doxylink{classGenFTanTheta}{Gen\+FTan\+Theta} class. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em model} & The \doxylink{classGenFTanTheta}{Gen\+FTan\+Theta} model to copy from. \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\label{classGenFTanTheta_a4e0e79a50d89065aabaf0c96438818bf} 
+\index{GenFTanTheta@{GenFTanTheta}!backproject@{backproject}}
+\index{backproject@{backproject}!GenFTanTheta@{GenFTanTheta}}
+\doxysubsubsection{\texorpdfstring{backproject()}{backproject()}\hspace{0.1cm}{\footnotesize\ttfamily [1/3]}}
+{\footnotesize\ttfamily Point3 Gen\+FTan\+Theta\+::backproject (\begin{DoxyParamCaption}\item[{const std\+::array$<$ double, 2 $>$ \&}]{point\+\_\+2d }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Backprojects a 2D point to a 3D ray. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em point\+\_\+2d} & The 2D point to backproject. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The backprojected 3D ray. 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{classCamera}{Camera}}.
+
+\label{classGenFTanTheta_aef54da14254e193c05f01794cc1e2cc0} 
+\index{GenFTanTheta@{GenFTanTheta}!backproject@{backproject}}
+\index{backproject@{backproject}!GenFTanTheta@{GenFTanTheta}}
+\doxysubsubsection{\texorpdfstring{backproject()}{backproject()}\hspace{0.1cm}{\footnotesize\ttfamily [2/3]}}
+{\footnotesize\ttfamily std\+::vector$<$ Point3 $>$ Camera\+::backproject (\begin{DoxyParamCaption}\item[{const std\+::vector$<$ Point2 $>$ \&}]{points\+\_\+2d }\end{DoxyParamCaption}) const}
+
+
+
+Backprojects 2D points to 3D rays using the camera model. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em points\+\_\+2d} & A vector of 2D points. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A vector of backprojected 3D rays. 
+\end{DoxyReturn}
+\label{classGenFTanTheta_a0fa46f041586bb492f0bd5e525e4a020} 
+\index{GenFTanTheta@{GenFTanTheta}!backproject@{backproject}}
+\index{backproject@{backproject}!GenFTanTheta@{GenFTanTheta}}
+\doxysubsubsection{\texorpdfstring{backproject()}{backproject()}\hspace{0.1cm}{\footnotesize\ttfamily [3/3]}}
+{\footnotesize\ttfamily std\+::vector$<$ std\+::vector$<$ std\+::array$<$ double, 3 $>$ $>$ $>$ Camera\+::backproject (\begin{DoxyParamCaption}\item[{const std\+::vector$<$ std\+::vector$<$ double $>$ $>$ \&}]{image }\end{DoxyParamCaption}) const}
+
+
+
+Backprojects a 2D vector of 2D points to 3D rays using the camera model. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em image} & A 2D vector of 2D points. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A 2D vector of backprojected 3D rays. 
+\end{DoxyReturn}
+\label{classGenFTanTheta_a7f24761c2a7e1a6c8ee3d069f17546d3} 
+\index{GenFTanTheta@{GenFTanTheta}!getFocalLength@{getFocalLength}}
+\index{getFocalLength@{getFocalLength}!GenFTanTheta@{GenFTanTheta}}
+\doxysubsubsection{\texorpdfstring{getFocalLength()}{getFocalLength()}}
+{\footnotesize\ttfamily std\+::vector$<$ double $>$ Gen\+FTan\+Theta\+::get\+Focal\+Length (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Gets the focal length. 
+
+\begin{DoxyReturn}{Returns}
+The focal length. 
+\end{DoxyReturn}
+\label{classGenFTanTheta_ad0b70c12573254c0b61041afdc39c49a} 
+\index{GenFTanTheta@{GenFTanTheta}!getModelName@{getModelName}}
+\index{getModelName@{getModelName}!GenFTanTheta@{GenFTanTheta}}
+\doxysubsubsection{\texorpdfstring{getModelName()}{getModelName()}}
+{\footnotesize\ttfamily const std\+::string Gen\+FTan\+Theta\+::get\+Model\+Name (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Gets the model name. 
+
+\begin{DoxyReturn}{Returns}
+A string containing the model name. 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{classCamera}{Camera}}.
+
+\label{classGenFTanTheta_aeb959ba4c40409398c2f449ebae74695} 
+\index{GenFTanTheta@{GenFTanTheta}!getPinhole@{getPinhole}}
+\index{getPinhole@{getPinhole}!GenFTanTheta@{GenFTanTheta}}
+\doxysubsubsection{\texorpdfstring{getPinhole()}{getPinhole()}}
+{\footnotesize\ttfamily std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classPinhole}{Pinhole}} $>$ Gen\+FTan\+Theta\+::get\+Pinhole (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Gets a shared pointer to a \doxylink{classPinhole}{Pinhole} model. 
+
+\begin{DoxyReturn}{Returns}
+A shared pointer to a \doxylink{classPinhole}{Pinhole} model. 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{classCamera}{Camera}}.
+
+\label{classGenFTanTheta_adc1534c27fbdab12a0da599b7ef1db6e} 
+\index{GenFTanTheta@{GenFTanTheta}!getPrincipalPoint@{getPrincipalPoint}}
+\index{getPrincipalPoint@{getPrincipalPoint}!GenFTanTheta@{GenFTanTheta}}
+\doxysubsubsection{\texorpdfstring{getPrincipalPoint()}{getPrincipalPoint()}}
+{\footnotesize\ttfamily std\+::vector$<$ double $>$ Gen\+FTan\+Theta\+::get\+Principal\+Point (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Gets the principal point. 
+
+\begin{DoxyReturn}{Returns}
+The principal point. 
+\end{DoxyReturn}
+\label{classGenFTanTheta_a1e63442dcf86684fb10a2ded8b387f66} 
+\index{GenFTanTheta@{GenFTanTheta}!getRadialDistDenCoeffs@{getRadialDistDenCoeffs}}
+\index{getRadialDistDenCoeffs@{getRadialDistDenCoeffs}!GenFTanTheta@{GenFTanTheta}}
+\doxysubsubsection{\texorpdfstring{getRadialDistDenCoeffs()}{getRadialDistDenCoeffs()}}
+{\footnotesize\ttfamily std\+::vector$<$ double $>$ Gen\+FTan\+Theta\+::get\+Radial\+Dist\+Den\+Coeffs (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Gets the radial distortion denominator coefficients. The radial distortion denominator is defined by the equation\+: 
+
+\[
+R_d = 1 + k_1 r^2 + k_2 r^4 + k_3 r^6 + \cdots
+\] \begin{DoxyReturn}{Returns}
+The radial distortion denominator coefficients. 
+\end{DoxyReturn}
+\label{classGenFTanTheta_a89a77e44c1b2b36ae873c5461c5a6843} 
+\index{GenFTanTheta@{GenFTanTheta}!getRadialDistNumCoeffs@{getRadialDistNumCoeffs}}
+\index{getRadialDistNumCoeffs@{getRadialDistNumCoeffs}!GenFTanTheta@{GenFTanTheta}}
+\doxysubsubsection{\texorpdfstring{getRadialDistNumCoeffs()}{getRadialDistNumCoeffs()}}
+{\footnotesize\ttfamily std\+::vector$<$ double $>$ Gen\+FTan\+Theta\+::get\+Radial\+Dist\+Num\+Coeffs (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Gets the radial distortion numerator coefficients. The radial distortion numerator is defined by the equation\+: 
+
+\[
+R_n = 1 + k_1 r^2 + k_2 r^4 + k_3 r^6 + \cdots
+\] \begin{DoxyReturn}{Returns}
+The radial distortion numerator coefficients. 
+\end{DoxyReturn}
+\label{classGenFTanTheta_ac34db688495bd6a48cfab787fdc88396} 
+\index{GenFTanTheta@{GenFTanTheta}!getSkew@{getSkew}}
+\index{getSkew@{getSkew}!GenFTanTheta@{GenFTanTheta}}
+\doxysubsubsection{\texorpdfstring{getSkew()}{getSkew()}}
+{\footnotesize\ttfamily double Gen\+FTan\+Theta\+::get\+Skew (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Gets the skew. 
+
+\begin{DoxyReturn}{Returns}
+The skew value. 
+\end{DoxyReturn}
+\label{classGenFTanTheta_a8a223e9252d16a4b43f30ba2f148ddba} 
+\index{GenFTanTheta@{GenFTanTheta}!getTangentialDistCoeffs@{getTangentialDistCoeffs}}
+\index{getTangentialDistCoeffs@{getTangentialDistCoeffs}!GenFTanTheta@{GenFTanTheta}}
+\doxysubsubsection{\texorpdfstring{getTangentialDistCoeffs()}{getTangentialDistCoeffs()}}
+{\footnotesize\ttfamily std\+::vector$<$ double $>$ Gen\+FTan\+Theta\+::get\+Tangential\+Dist\+Coeffs (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Gets the tangential distortion coefficients. 
+
+\begin{DoxyReturn}{Returns}
+The tangential distortion coefficients. 
+\end{DoxyReturn}
+\label{classGenFTanTheta_a27197a815655485fa5f1a10519287c7a} 
+\index{GenFTanTheta@{GenFTanTheta}!getTangentialDistOCVCoeffs@{getTangentialDistOCVCoeffs}}
+\index{getTangentialDistOCVCoeffs@{getTangentialDistOCVCoeffs}!GenFTanTheta@{GenFTanTheta}}
+\doxysubsubsection{\texorpdfstring{getTangentialDistOCVCoeffs()}{getTangentialDistOCVCoeffs()}}
+{\footnotesize\ttfamily std\+::vector$<$ double $>$ Gen\+FTan\+Theta\+::get\+Tangential\+Dist\+OCVCoeffs (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Gets the tangential distortion OCV coefficients. 
+
+\begin{DoxyReturn}{Returns}
+The tangential distortion OCV coefficients. 
+\end{DoxyReturn}
+\label{classGenFTanTheta_a8fb21bdde0c4afb25deb970ffdd4ffc3} 
+\index{GenFTanTheta@{GenFTanTheta}!getTangentialPolynominalDistCoeffs@{getTangentialPolynominalDistCoeffs}}
+\index{getTangentialPolynominalDistCoeffs@{getTangentialPolynominalDistCoeffs}!GenFTanTheta@{GenFTanTheta}}
+\doxysubsubsection{\texorpdfstring{getTangentialPolynominalDistCoeffs()}{getTangentialPolynominalDistCoeffs()}}
+{\footnotesize\ttfamily std\+::vector$<$ double $>$ Gen\+FTan\+Theta\+::get\+Tangential\+Polynominal\+Dist\+Coeffs (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Gets the tangential polynomial distortion coefficients. 
+
+\begin{DoxyReturn}{Returns}
+The tangential polynomial distortion coefficients. 
+\end{DoxyReturn}
+\label{classGenFTanTheta_ab49cc4c2bb5d4a56fbb3e1ab2278006e} 
+\index{GenFTanTheta@{GenFTanTheta}!load@{load}}
+\index{load@{load}!GenFTanTheta@{GenFTanTheta}}
+\doxysubsubsection{\texorpdfstring{load()}{load()}}
+{\footnotesize\ttfamily std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classGenFTanTheta}{Gen\+FTan\+Theta}} $>$ Gen\+FTan\+Theta\+::load (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{file\+Name }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Loads a \doxylink{classGenFTanTheta}{Gen\+FTan\+Theta} model from a file. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em file\+Name} & The path of the file to load the model from. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A shared pointer to the loaded \doxylink{classGenFTanTheta}{Gen\+FTan\+Theta} model. 
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em std\+::invalid\+\_\+argument} & if the model contained in the imported file is not a \doxylink{classGenFTanTheta}{Gen\+FTan\+Theta} model. \\
+\hline
+\end{DoxyExceptions}
+\label{classGenFTanTheta_ac6b4279643d9c8bcbff45c31f3bcdf93} 
+\index{GenFTanTheta@{GenFTanTheta}!project@{project}}
+\index{project@{project}!GenFTanTheta@{GenFTanTheta}}
+\doxysubsubsection{\texorpdfstring{project()}{project()}\hspace{0.1cm}{\footnotesize\ttfamily [1/3]}}
+{\footnotesize\ttfamily std\+::array$<$ double, 2 $>$ Gen\+FTan\+Theta\+::project (\begin{DoxyParamCaption}\item[{const Point3 \&}]{point\+\_\+3d }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Projects a 3D point to a 2D point using intrinsic and extrinsic parameters. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em point\+\_\+3d} & The 3D point to project. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The projected 2D point. 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{classCamera}{Camera}}.
+
+\label{classGenFTanTheta_a6ae3fa443671dd7a681711f3ff2bd46b} 
+\index{GenFTanTheta@{GenFTanTheta}!project@{project}}
+\index{project@{project}!GenFTanTheta@{GenFTanTheta}}
+\doxysubsubsection{\texorpdfstring{project()}{project()}\hspace{0.1cm}{\footnotesize\ttfamily [2/3]}}
+{\footnotesize\ttfamily std\+::vector$<$ Point2 $>$ Camera\+::project (\begin{DoxyParamCaption}\item[{const std\+::vector$<$ Point3 $>$ \&}]{points\+\_\+3d }\end{DoxyParamCaption}) const}
+
+
+
+Projects 3D points to 2D points using the camera model. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em points\+\_\+3d} & A vector of 3D points. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A vector of projected 2D points. 
+\end{DoxyReturn}
+\label{classGenFTanTheta_a2d4cb6f9297cffe56d4936743f0cb358} 
+\index{GenFTanTheta@{GenFTanTheta}!project@{project}}
+\index{project@{project}!GenFTanTheta@{GenFTanTheta}}
+\doxysubsubsection{\texorpdfstring{project()}{project()}\hspace{0.1cm}{\footnotesize\ttfamily [3/3]}}
+{\footnotesize\ttfamily std\+::vector$<$ std\+::vector$<$ Point2 $>$ $>$ Camera\+::project (\begin{DoxyParamCaption}\item[{const std\+::vector$<$ std\+::vector$<$ Point3 $>$ $>$ \&}]{points\+\_\+3d }\end{DoxyParamCaption}) const}
+
+
+
+Projects 2D vectors of 3D points to 2D points using the camera model. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em points\+\_\+3d} & A 2D vector of 3D points. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A 2D vector of projected 2D points. 
+\end{DoxyReturn}
+\label{classGenFTanTheta_aabc69eb88eaefdb4b6bb517ecb5b208f} 
+\index{GenFTanTheta@{GenFTanTheta}!setBackprojectSettings@{setBackprojectSettings}}
+\index{setBackprojectSettings@{setBackprojectSettings}!GenFTanTheta@{GenFTanTheta}}
+\doxysubsubsection{\texorpdfstring{setBackprojectSettings()}{setBackprojectSettings()}}
+{\footnotesize\ttfamily void Gen\+FTan\+Theta\+::set\+Backproject\+Settings (\begin{DoxyParamCaption}\item[{double}]{threshold,  }\item[{int}]{iterations }\end{DoxyParamCaption})}
+
+
+
+Sets the backprojection settings. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em threshold} & The new threshold value. \\
+\hline
+{\em iterations} & The new number of iterations. \\
+\hline
+\end{DoxyParams}
+\label{classGenFTanTheta_a0a23c187d00565dcafb300da81e5bd10} 
+\index{GenFTanTheta@{GenFTanTheta}!setFocalLength@{setFocalLength}}
+\index{setFocalLength@{setFocalLength}!GenFTanTheta@{GenFTanTheta}}
+\doxysubsubsection{\texorpdfstring{setFocalLength()}{setFocalLength()}}
+{\footnotesize\ttfamily void Gen\+FTan\+Theta\+::set\+Focal\+Length (\begin{DoxyParamCaption}\item[{std\+::vector$<$ double $>$}]{focal\+\_\+length }\end{DoxyParamCaption})}
+
+
+
+Sets the focal length. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em focal\+\_\+length} & A vector containing the new focal length values. \\
+\hline
+\end{DoxyParams}
+\label{classGenFTanTheta_a2547a302267b30d2fa22171a23b86599} 
+\index{GenFTanTheta@{GenFTanTheta}!setPrincipalPoint@{setPrincipalPoint}}
+\index{setPrincipalPoint@{setPrincipalPoint}!GenFTanTheta@{GenFTanTheta}}
+\doxysubsubsection{\texorpdfstring{setPrincipalPoint()}{setPrincipalPoint()}}
+{\footnotesize\ttfamily void Gen\+FTan\+Theta\+::set\+Principal\+Point (\begin{DoxyParamCaption}\item[{std\+::vector$<$ double $>$}]{principal\+\_\+point }\end{DoxyParamCaption})}
+
+
+
+Sets the principal point. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em principal\+\_\+point} & A vector containing the new principal point values. \\
+\hline
+\end{DoxyParams}
+\label{classGenFTanTheta_a1db98f4646990b11515233d299e33897} 
+\index{GenFTanTheta@{GenFTanTheta}!setRadialDistDenCoeffs@{setRadialDistDenCoeffs}}
+\index{setRadialDistDenCoeffs@{setRadialDistDenCoeffs}!GenFTanTheta@{GenFTanTheta}}
+\doxysubsubsection{\texorpdfstring{setRadialDistDenCoeffs()}{setRadialDistDenCoeffs()}}
+{\footnotesize\ttfamily void Gen\+FTan\+Theta\+::set\+Radial\+Dist\+Den\+Coeffs (\begin{DoxyParamCaption}\item[{std\+::vector$<$ double $>$}]{radial\+\_\+dist\+\_\+den\+\_\+coeffs }\end{DoxyParamCaption})}
+
+
+
+Sets the radial distortion denominator coefficients. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em radial\+\_\+dist\+\_\+den\+\_\+coeffs} & A vector containing the new radial distortion denominator coefficients. \\
+\hline
+\end{DoxyParams}
+\label{classGenFTanTheta_a2b3757fac1d78b525643f517854f13c6} 
+\index{GenFTanTheta@{GenFTanTheta}!setRadialDistNumCoeffs@{setRadialDistNumCoeffs}}
+\index{setRadialDistNumCoeffs@{setRadialDistNumCoeffs}!GenFTanTheta@{GenFTanTheta}}
+\doxysubsubsection{\texorpdfstring{setRadialDistNumCoeffs()}{setRadialDistNumCoeffs()}}
+{\footnotesize\ttfamily void Gen\+FTan\+Theta\+::set\+Radial\+Dist\+Num\+Coeffs (\begin{DoxyParamCaption}\item[{std\+::vector$<$ double $>$}]{radial\+\_\+dist\+\_\+num\+\_\+coeffs }\end{DoxyParamCaption})}
+
+
+
+Sets the radial distortion numerator coefficients. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em radial\+\_\+dist\+\_\+num\+\_\+coeffs} & A vector containing the new radial distortion numerator coefficients. \\
+\hline
+\end{DoxyParams}
+\label{classGenFTanTheta_abaa5d332fd365a26b5309bb5afaf434b} 
+\index{GenFTanTheta@{GenFTanTheta}!setSkew@{setSkew}}
+\index{setSkew@{setSkew}!GenFTanTheta@{GenFTanTheta}}
+\doxysubsubsection{\texorpdfstring{setSkew()}{setSkew()}}
+{\footnotesize\ttfamily void Gen\+FTan\+Theta\+::set\+Skew (\begin{DoxyParamCaption}\item[{double}]{skew }\end{DoxyParamCaption})}
+
+
+
+Sets the skew value. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em skew} & A double containing the new skew value. \\
+\hline
+\end{DoxyParams}
+\label{classGenFTanTheta_a3f6810e2272654ad6e0a0a0b25d3edf7} 
+\index{GenFTanTheta@{GenFTanTheta}!setTangentialDistCoeffs@{setTangentialDistCoeffs}}
+\index{setTangentialDistCoeffs@{setTangentialDistCoeffs}!GenFTanTheta@{GenFTanTheta}}
+\doxysubsubsection{\texorpdfstring{setTangentialDistCoeffs()}{setTangentialDistCoeffs()}}
+{\footnotesize\ttfamily void Gen\+FTan\+Theta\+::set\+Tangential\+Dist\+Coeffs (\begin{DoxyParamCaption}\item[{std\+::vector$<$ double $>$}]{tangential\+\_\+dist\+\_\+coeffs }\end{DoxyParamCaption})}
+
+
+
+Sets the tangential distortion coefficients. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em tangential\+\_\+dist\+\_\+coeffs} & A vector containing the new tangential distortion coefficients. \\
+\hline
+\end{DoxyParams}
+\label{classGenFTanTheta_a4e64b6013a3747d67c5e222a245b4410} 
+\index{GenFTanTheta@{GenFTanTheta}!setTangentialDistOCVCoeffs@{setTangentialDistOCVCoeffs}}
+\index{setTangentialDistOCVCoeffs@{setTangentialDistOCVCoeffs}!GenFTanTheta@{GenFTanTheta}}
+\doxysubsubsection{\texorpdfstring{setTangentialDistOCVCoeffs()}{setTangentialDistOCVCoeffs()}}
+{\footnotesize\ttfamily void Gen\+FTan\+Theta\+::set\+Tangential\+Dist\+OCVCoeffs (\begin{DoxyParamCaption}\item[{std\+::vector$<$ double $>$}]{tangential\+\_\+dist\+\_\+ocv }\end{DoxyParamCaption})}
+
+
+
+Sets the tangential distortion OCV coefficients. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em tangential\+\_\+dist\+\_\+ocv} & A vector containing the new tangential distortion OCV coefficients. \\
+\hline
+\end{DoxyParams}
+\label{classGenFTanTheta_a39d849a76c64564366b61cf25513b651} 
+\index{GenFTanTheta@{GenFTanTheta}!setTangentialPolynominalDistCoeffs@{setTangentialPolynominalDistCoeffs}}
+\index{setTangentialPolynominalDistCoeffs@{setTangentialPolynominalDistCoeffs}!GenFTanTheta@{GenFTanTheta}}
+\doxysubsubsection{\texorpdfstring{setTangentialPolynominalDistCoeffs()}{setTangentialPolynominalDistCoeffs()}}
+{\footnotesize\ttfamily void Gen\+FTan\+Theta\+::set\+Tangential\+Polynominal\+Dist\+Coeffs (\begin{DoxyParamCaption}\item[{std\+::vector$<$ double $>$}]{tangential\+\_\+polynomial\+\_\+dist\+\_\+coeffs }\end{DoxyParamCaption})}
+
+
+
+Sets the tangential polynomial distortion coefficients. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em tangential\+\_\+polynomial\+\_\+dist\+\_\+coeffs} & A vector containing the new tangential polynomial distortion coefficients. \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+include/camera/general\+\_\+ftan\+\_\+theta.\+h\item 
+src/camera/general\+\_\+ftan\+\_\+theta.\+cpp\end{DoxyCompactItemize}

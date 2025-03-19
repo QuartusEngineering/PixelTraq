@@ -1,0 +1,609 @@
+\doxysection{Gen\+FTheta Class Reference}
+\label{classGenFTheta}\index{GenFTheta@{GenFTheta}}
+Inheritance diagram for Gen\+FTheta\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{classGenFTheta}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classGenFTheta_a88d3fbd331dfb102a2fbc078e75d7178}{Gen\+FTheta}} (const std\+::vector$<$ double $>$ \&focal\+\_\+length, const std\+::vector$<$ double $>$ \&principal\+\_\+point, const double \&skew, const std\+::vector$<$ int $>$ \&image\+\_\+size, const std\+::vector$<$ double $>$ \&radial\+\_\+distortion\+\_\+sym=\{\}, const std\+::vector$<$ double $>$ \&radial\+\_\+distortion\+\_\+asym=\{\}, const std\+::vector$<$ double $>$ \&radial\+\_\+distortion\+\_\+four=\{\}, const std\+::vector$<$ double $>$ \&tangential\+\_\+distortion\+\_\+asym=\{\}, const std\+::vector$<$ double $>$ \&tangential\+\_\+distortion\+\_\+four=\{\}, const Point3 \&rotation=\{ 0.\+0, 0.\+0, 0.\+0 \}, const Point3 \&translation=\{ 0.\+0, 0.\+0, 0.\+0 \})
+\begin{DoxyCompactList}\small\item\em Parameterized constructor for the \doxylink{classKannala}{Kannala} class. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classGenFTheta_a2624916c2328e5dcb1fcc07692c55819}{Gen\+FTheta}} (const \mbox{\hyperlink{classGenFTheta}{Gen\+FTheta}} \&model)
+\begin{DoxyCompactList}\small\item\em Copy constructor for the \doxylink{classKannala}{Kannala} class. \end{DoxyCompactList}\item 
+virtual std\+::array$<$ double, 2 $>$ \mbox{\hyperlink{classGenFTheta_a2c6308e977a1ceca7ef08bd636d196c9}{project}} (const Point3 \&point\+\_\+3d) const override
+\begin{DoxyCompactList}\small\item\em Projects a 3D point to a 2D point using intrinsic and extrinsic parameters. \end{DoxyCompactList}\item 
+virtual Point3 \mbox{\hyperlink{classGenFTheta_a1dd61e42e3dbce6ab3b2295269d229ca}{backproject}} (const std\+::array$<$ double, 2 $>$ \&point\+\_\+2d) const override
+\begin{DoxyCompactList}\small\item\em Backprojects a 2D point to a 3D ray. \end{DoxyCompactList}\item 
+virtual const std\+::string \mbox{\hyperlink{classGenFTheta_a74ca1b578b96590342b999ba202989b7}{get\+Model\+Name}} () const override
+\begin{DoxyCompactList}\small\item\em Gets the model name. \end{DoxyCompactList}\item 
+virtual std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classPinhole}{Pinhole}} $>$ \mbox{\hyperlink{classGenFTheta_a7b8362ed15317b821e82ba8c43e58b6c}{get\+Pinhole}} () const override
+\begin{DoxyCompactList}\small\item\em Gets a shared pointer to a \doxylink{classPinhole}{Pinhole} model. \end{DoxyCompactList}\item 
+std\+::vector$<$ double $>$ \mbox{\hyperlink{classGenFTheta_a7fe27eea521eaf9aa1019012025db02b}{get\+Focal\+Length}} () const
+\begin{DoxyCompactList}\small\item\em Gets the focal length. \end{DoxyCompactList}\item 
+std\+::vector$<$ double $>$ \mbox{\hyperlink{classGenFTheta_a2d14b0fbdfbaca7fa2aafc9d34598722}{get\+Principal\+Point}} () const
+\begin{DoxyCompactList}\small\item\em Gets the principal point. \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{classGenFTheta_a26b4c9941517e50795056cb3938aab8e}{get\+Skew}} () const
+\begin{DoxyCompactList}\small\item\em Gets the skew. \end{DoxyCompactList}\item 
+std\+::vector$<$ double $>$ \mbox{\hyperlink{classGenFTheta_a68564688cf4be3d092a66be7ca0e3128}{get\+Radial\+Dist\+Sym\+Coeffs}} () const
+\begin{DoxyCompactList}\small\item\em Gets the symmetric radial distortion coefficients. The radial distortion is defined by the equation\+: \end{DoxyCompactList}\item 
+std\+::vector$<$ double $>$ \mbox{\hyperlink{classGenFTheta_a603b9080c7104c9657a14b0cd09b9fc3}{get\+Radial\+Dist\+Asym\+Coeffs}} () const
+\begin{DoxyCompactList}\small\item\em Gets the asymmetric radial distortion coefficients. \end{DoxyCompactList}\item 
+std\+::vector$<$ double $>$ \mbox{\hyperlink{classGenFTheta_a589030df82b83324961df073c1d4cb15}{get\+Radial\+Dist\+Four\+Coeffs}} () const
+\begin{DoxyCompactList}\small\item\em Gets the fourier radial distortion coefficients. \end{DoxyCompactList}\item 
+std\+::vector$<$ double $>$ \mbox{\hyperlink{classGenFTheta_a9837fa1876857f7b0fcfd693d4ffb20d}{get\+Tangential\+Dist\+Asym\+Coeffs}} () const
+\begin{DoxyCompactList}\small\item\em Gets the asymmetric tangential distortion coefficients. \end{DoxyCompactList}\item 
+std\+::vector$<$ double $>$ \mbox{\hyperlink{classGenFTheta_a29bc40b56af5f27389f362ba07cfbbe8}{get\+Tangential\+Dist\+Four\+Coeffs}} () const
+\begin{DoxyCompactList}\small\item\em Gets the fourier tangential distortion coefficients. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classGenFTheta_ac955d7b34738c904f57d1cb6919673de}{get\+Backproject\+Settings}} (double \&threshold, int \&iterations) const
+\begin{DoxyCompactList}\small\item\em Gets the backprojection settings. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classGenFTheta_a85de8f9a21aa1d9673f36fa9f4625d62}{set\+Focal\+Length}} (std\+::vector$<$ double $>$ focal\+\_\+length)
+\begin{DoxyCompactList}\small\item\em Sets the focal length. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classGenFTheta_a972d1af3f3dd6c8259bdc508db3706ca}{set\+Principal\+Point}} (std\+::vector$<$ double $>$ principal\+\_\+point)
+\begin{DoxyCompactList}\small\item\em Sets the principal point. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classGenFTheta_ae7afda62f064c8d68fb0b157aab02acb}{set\+Skew}} (double skew)
+\begin{DoxyCompactList}\small\item\em Sets the skew value. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classGenFTheta_ab4b8f80faea07846662dcb3933492eda}{set\+Radial\+Dist\+Sym\+Coeffs}} (std\+::vector$<$ double $>$ radial\+\_\+dist\+\_\+sym\+\_\+coeffs)
+\begin{DoxyCompactList}\small\item\em Sets the symmetric radial distortion coefficients. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classGenFTheta_ae5cf3b75c0f9b915d63f6a33bbebe781}{set\+Radial\+Dist\+Asym\+Coeffs}} (std\+::vector$<$ double $>$ radial\+\_\+dist\+\_\+asym\+\_\+coeffs)
+\begin{DoxyCompactList}\small\item\em Sets the asymmetric radial distortion coefficients. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classGenFTheta_a277e27383ef386e169be36b7917acbfb}{set\+Radial\+Dist\+Four\+Coeffs}} (std\+::vector$<$ double $>$ radial\+\_\+dist\+\_\+four\+\_\+coeffs)
+\begin{DoxyCompactList}\small\item\em Sets the four-\/term radial distortion coefficients. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classGenFTheta_a13d6c6178d4e193d901dc5e872a80b19}{set\+Tangential\+Dist\+Asym\+Coeffs}} (std\+::vector$<$ double $>$ tangential\+\_\+dist\+\_\+asym\+\_\+coeffs)
+\begin{DoxyCompactList}\small\item\em Sets the asymmetric tangential distortion coefficients. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classGenFTheta_a19d458da0271ef59ee297a4c7d818c86}{set\+Tangential\+Dist\+Four\+Coeffs}} (std\+::vector$<$ double $>$ tangential\+\_\+dist\+\_\+four\+\_\+coeffs)
+\begin{DoxyCompactList}\small\item\em Sets the four-\/term tangential distortion coefficients. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classGenFTheta_a03e0b771f2084abb3883c15b40babf79}{set\+Backproject\+Settings}} (double threshold, int iterations)
+\begin{DoxyCompactList}\small\item\em Sets the backprojection settings. \end{DoxyCompactList}\item 
+std\+::vector$<$ Point2 $>$ \mbox{\hyperlink{classGenFTheta_a6ae3fa443671dd7a681711f3ff2bd46b}{project}} (const std\+::vector$<$ Point3 $>$ \&points\+\_\+3d) const
+\begin{DoxyCompactList}\small\item\em Projects 3D points to 2D points using the camera model. \end{DoxyCompactList}\item 
+std\+::vector$<$ std\+::vector$<$ Point2 $>$ $>$ \mbox{\hyperlink{classGenFTheta_a2d4cb6f9297cffe56d4936743f0cb358}{project}} (const std\+::vector$<$ std\+::vector$<$ Point3 $>$ $>$ \&points\+\_\+3d1) const
+\begin{DoxyCompactList}\small\item\em Projects 2D vectors of 3D points to 2D points using the camera model. \end{DoxyCompactList}\item 
+std\+::vector$<$ std\+::vector$<$ std\+::array$<$ double, 3 $>$ $>$ $>$ \mbox{\hyperlink{classGenFTheta_a0fa46f041586bb492f0bd5e525e4a020}{backproject}} (const std\+::vector$<$ std\+::vector$<$ double $>$ $>$ \&image) const
+\begin{DoxyCompactList}\small\item\em Backprojects a 2D vector of 2D points to 3D rays using the camera model. \end{DoxyCompactList}\item 
+std\+::vector$<$ Point3 $>$ \mbox{\hyperlink{classGenFTheta_aef54da14254e193c05f01794cc1e2cc0}{backproject}} (const std\+::vector$<$ Point2 $>$ \&points\+\_\+2d) const
+\begin{DoxyCompactList}\small\item\em Backprojects 2D points to 3D rays using the camera model. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{classCamera}{Camera}}}
+\begin{DoxyCompactItemize}
+\item 
+{\bfseries Camera} ()
+\begin{DoxyCompactList}\small\item\em Default constructor for the \doxylink{classCamera}{Camera} class. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classCamera_ae4dce82bbbae84426aa18223438ea3b2}{Camera}} (std\+::vector$<$ int $>$ image\+\_\+size, Point3 rotation, Point3 translation)
+\begin{DoxyCompactList}\small\item\em Parameterized constructor for the \doxylink{classCamera}{Camera} class. \end{DoxyCompactList}\item 
+std\+::string \mbox{\hyperlink{classCamera_a52aedf294fdf857f9a41e124c7927b43}{get\+Parameter\+Display\+String}} () const
+\begin{DoxyCompactList}\small\item\em Returns a string with the camera parameters for display. \end{DoxyCompactList}\item 
+void {\bfseries display} () const
+\begin{DoxyCompactList}\small\item\em Displays the camera parameters to the console. \end{DoxyCompactList}\item 
+std\+::vector$<$ int $>$ \mbox{\hyperlink{classCamera_ae647b7b651bdc664118d03e5f7f66616}{get\+Image\+Size}} () const
+\begin{DoxyCompactList}\small\item\em Gets the image size. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classCamera_a7131f2a763a841f7c6a93a79981ffb72}{set\+Image\+Size}} (std\+::vector$<$ int $>$ image\+\_\+size)
+\begin{DoxyCompactList}\small\item\em Sets the image size. \end{DoxyCompactList}\item 
+std\+::vector$<$ Point2 $>$ \mbox{\hyperlink{classCamera_a6ae3fa443671dd7a681711f3ff2bd46b}{project}} (const std\+::vector$<$ Point3 $>$ \&points\+\_\+3d) const
+\begin{DoxyCompactList}\small\item\em Projects 3D points to 2D points using the camera model. \end{DoxyCompactList}\item 
+std\+::vector$<$ std\+::vector$<$ Point2 $>$ $>$ \mbox{\hyperlink{classCamera_a2d4cb6f9297cffe56d4936743f0cb358}{project}} (const std\+::vector$<$ std\+::vector$<$ Point3 $>$ $>$ \&points\+\_\+3d1) const
+\begin{DoxyCompactList}\small\item\em Projects 2D vectors of 3D points to 2D points using the camera model. \end{DoxyCompactList}\item 
+std\+::vector$<$ std\+::vector$<$ std\+::array$<$ double, 3 $>$ $>$ $>$ \mbox{\hyperlink{classCamera_a0fa46f041586bb492f0bd5e525e4a020}{backproject}} (const std\+::vector$<$ std\+::vector$<$ double $>$ $>$ \&image) const
+\begin{DoxyCompactList}\small\item\em Backprojects a 2D vector of 2D points to 3D rays using the camera model. \end{DoxyCompactList}\item 
+std\+::vector$<$ Point3 $>$ \mbox{\hyperlink{classCamera_aef54da14254e193c05f01794cc1e2cc0}{backproject}} (const std\+::vector$<$ Point2 $>$ \&points\+\_\+2d) const
+\begin{DoxyCompactList}\small\item\em Backprojects 2D points to 3D rays using the camera model. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classCamera_a8f46c6f364430fa41f0b96aa62c7f158}{set\+Translation}} (Point3 translation)
+\begin{DoxyCompactList}\small\item\em Sets the translation vector. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classCamera_a53ac33421a4e50f8a94330540d6971f4}{set\+Rotation}} (Point3 rotation)
+\begin{DoxyCompactList}\small\item\em Sets the rotation vector. \end{DoxyCompactList}\item 
+const std\+::vector$<$ Point3 $>$ \mbox{\hyperlink{classCamera_a5d9ce2104ac617235356c9ef2734049a}{world\+To\+Camera\+Pnts}} (const std\+::vector$<$ Point3 $>$ \&world\+\_\+points) const
+\begin{DoxyCompactList}\small\item\em Transforms world points to camera points. \end{DoxyCompactList}\item 
+const std\+::vector$<$ Point3 $>$ \mbox{\hyperlink{classCamera_a5cb55aa775a0213abbfe85122112b16a}{camera\+To\+World\+Pnts}} (const std\+::vector$<$ Point3 $>$ \&world\+\_\+points) const
+\begin{DoxyCompactList}\small\item\em Transforms camera points to world points. \end{DoxyCompactList}\item 
+const Point3 \mbox{\hyperlink{classCamera_a7fcbbda82d69c6b3407d3397b59336fb}{world\+To\+Camera\+Pnts}} (const Point3 \&world\+\_\+point) const
+\begin{DoxyCompactList}\small\item\em Transforms a single world point to a camera point. \end{DoxyCompactList}\item 
+const Point3 \mbox{\hyperlink{classCamera_a543532ed983ca1232c3c7e0d620c1c8d}{camera\+To\+World\+Pnts}} (const Point3 \&world\+\_\+point) const
+\begin{DoxyCompactList}\small\item\em Transforms a single camera point to a world point. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classCamera_a0ad27316f530acbc22702832bbc84e11}{save}} (const std\+::string \&file\+Name) const
+\begin{DoxyCompactList}\small\item\em Saves the \doxylink{classCamera}{Camera} object to a file. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classGenFTheta}{Gen\+FTheta}} $>$ \mbox{\hyperlink{classGenFTheta_ab39b9daadd9a852cbf0a4868706314e5}{load}} (const std\+::string \&file\+Name)
+\begin{DoxyCompactList}\small\item\em Loads a \doxylink{classGenFTheta}{Gen\+FTheta} model from a file. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Member Functions inherited from \mbox{\hyperlink{classCamera}{Camera}}}
+\begin{DoxyCompactItemize}
+\item 
+static std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classCamera}{Camera}} $>$ \mbox{\hyperlink{classCamera_ac7fc1f6c7e0b0560097c3ab69d4fa533}{load}} (const std\+::string \&file\+Name)
+\begin{DoxyCompactList}\small\item\em Static method to load a camera based on file type. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\label{classGenFTheta_a88d3fbd331dfb102a2fbc078e75d7178} 
+\index{GenFTheta@{GenFTheta}!GenFTheta@{GenFTheta}}
+\index{GenFTheta@{GenFTheta}!GenFTheta@{GenFTheta}}
+\doxysubsubsection{\texorpdfstring{GenFTheta()}{GenFTheta()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily Gen\+FTheta\+::\+Gen\+FTheta (\begin{DoxyParamCaption}\item[{const std\+::vector$<$ double $>$ \&}]{focal\+\_\+length,  }\item[{const std\+::vector$<$ double $>$ \&}]{principal\+\_\+point,  }\item[{const double \&}]{skew,  }\item[{const std\+::vector$<$ int $>$ \&}]{image\+\_\+size,  }\item[{const std\+::vector$<$ double $>$ \&}]{radial\+\_\+distortion\+\_\+sym = {\ttfamily \{\}},  }\item[{const std\+::vector$<$ double $>$ \&}]{radial\+\_\+distortion\+\_\+asym = {\ttfamily \{\}},  }\item[{const std\+::vector$<$ double $>$ \&}]{radial\+\_\+distortion\+\_\+four = {\ttfamily \{\}},  }\item[{const std\+::vector$<$ double $>$ \&}]{tangential\+\_\+distortion\+\_\+asym = {\ttfamily \{\}},  }\item[{const std\+::vector$<$ double $>$ \&}]{tangential\+\_\+distortion\+\_\+four = {\ttfamily \{\}},  }\item[{const Point3 \&}]{rotation = {\ttfamily \{~0.0,~0.0,~0.0~\}},  }\item[{const Point3 \&}]{translation = {\ttfamily \{~0.0,~0.0,~0.0~\}} }\end{DoxyParamCaption})}
+
+
+
+Parameterized constructor for the \doxylink{classKannala}{Kannala} class. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em focal\+\_\+length} & Vector of focal length values. \\
+\hline
+{\em principal\+\_\+point} & Vector of principal point values. \\
+\hline
+{\em skew} & skew value. \\
+\hline
+{\em image\+\_\+size} & Vector of image size dimensions. \\
+\hline
+{\em radial\+\_\+distortion\+\_\+sym} & Vector of symmetric radial distortion coefficients. \\
+\hline
+{\em radial\+\_\+distortion\+\_\+asym} & Vector of asymmetric radial distortion coefficients. \\
+\hline
+{\em radial\+\_\+distortion\+\_\+four} & Vector of fourier radial distortion coefficients. \\
+\hline
+{\em tangential\+\_\+distortion\+\_\+asym} & Vector of asymmetric tangential distortion coefficients. \\
+\hline
+{\em tangential\+\_\+distortion\+\_\+four} & Vector of fourier tangential distortion coefficients. \\
+\hline
+{\em rotation} & Rotation vector. \\
+\hline
+{\em translation} & Translation vector. \\
+\hline
+\end{DoxyParams}
+\label{classGenFTheta_a2624916c2328e5dcb1fcc07692c55819} 
+\index{GenFTheta@{GenFTheta}!GenFTheta@{GenFTheta}}
+\index{GenFTheta@{GenFTheta}!GenFTheta@{GenFTheta}}
+\doxysubsubsection{\texorpdfstring{GenFTheta()}{GenFTheta()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily Gen\+FTheta\+::\+Gen\+FTheta (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classGenFTheta}{Gen\+FTheta}} \&}]{model }\end{DoxyParamCaption})}
+
+
+
+Copy constructor for the \doxylink{classKannala}{Kannala} class. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em model} & The \doxylink{classKannala}{Kannala} model to copy from. \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\label{classGenFTheta_a1dd61e42e3dbce6ab3b2295269d229ca} 
+\index{GenFTheta@{GenFTheta}!backproject@{backproject}}
+\index{backproject@{backproject}!GenFTheta@{GenFTheta}}
+\doxysubsubsection{\texorpdfstring{backproject()}{backproject()}\hspace{0.1cm}{\footnotesize\ttfamily [1/3]}}
+{\footnotesize\ttfamily Point3 Gen\+FTheta\+::backproject (\begin{DoxyParamCaption}\item[{const std\+::array$<$ double, 2 $>$ \&}]{point\+\_\+2d }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Backprojects a 2D point to a 3D ray. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em point\+\_\+2d} & The 2D point to backproject. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The backprojected 3D ray. 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{classCamera}{Camera}}.
+
+\label{classGenFTheta_aef54da14254e193c05f01794cc1e2cc0} 
+\index{GenFTheta@{GenFTheta}!backproject@{backproject}}
+\index{backproject@{backproject}!GenFTheta@{GenFTheta}}
+\doxysubsubsection{\texorpdfstring{backproject()}{backproject()}\hspace{0.1cm}{\footnotesize\ttfamily [2/3]}}
+{\footnotesize\ttfamily std\+::vector$<$ Point3 $>$ Camera\+::backproject (\begin{DoxyParamCaption}\item[{const std\+::vector$<$ Point2 $>$ \&}]{points\+\_\+2d }\end{DoxyParamCaption}) const}
+
+
+
+Backprojects 2D points to 3D rays using the camera model. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em points\+\_\+2d} & A vector of 2D points. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A vector of backprojected 3D rays. 
+\end{DoxyReturn}
+\label{classGenFTheta_a0fa46f041586bb492f0bd5e525e4a020} 
+\index{GenFTheta@{GenFTheta}!backproject@{backproject}}
+\index{backproject@{backproject}!GenFTheta@{GenFTheta}}
+\doxysubsubsection{\texorpdfstring{backproject()}{backproject()}\hspace{0.1cm}{\footnotesize\ttfamily [3/3]}}
+{\footnotesize\ttfamily std\+::vector$<$ std\+::vector$<$ std\+::array$<$ double, 3 $>$ $>$ $>$ Camera\+::backproject (\begin{DoxyParamCaption}\item[{const std\+::vector$<$ std\+::vector$<$ double $>$ $>$ \&}]{image }\end{DoxyParamCaption}) const}
+
+
+
+Backprojects a 2D vector of 2D points to 3D rays using the camera model. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em image} & A 2D vector of 2D points. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A 2D vector of backprojected 3D rays. 
+\end{DoxyReturn}
+\label{classGenFTheta_ac955d7b34738c904f57d1cb6919673de} 
+\index{GenFTheta@{GenFTheta}!getBackprojectSettings@{getBackprojectSettings}}
+\index{getBackprojectSettings@{getBackprojectSettings}!GenFTheta@{GenFTheta}}
+\doxysubsubsection{\texorpdfstring{getBackprojectSettings()}{getBackprojectSettings()}}
+{\footnotesize\ttfamily void Gen\+FTheta\+::get\+Backproject\+Settings (\begin{DoxyParamCaption}\item[{double \&}]{threshold,  }\item[{int \&}]{iterations }\end{DoxyParamCaption}) const}
+
+
+
+Gets the backprojection settings. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em threshold} & The threshold value to be set. \\
+\hline
+{\em iterations} & The number of iterations to be set. \\
+\hline
+\end{DoxyParams}
+\label{classGenFTheta_a7fe27eea521eaf9aa1019012025db02b} 
+\index{GenFTheta@{GenFTheta}!getFocalLength@{getFocalLength}}
+\index{getFocalLength@{getFocalLength}!GenFTheta@{GenFTheta}}
+\doxysubsubsection{\texorpdfstring{getFocalLength()}{getFocalLength()}}
+{\footnotesize\ttfamily std\+::vector$<$ double $>$ Gen\+FTheta\+::get\+Focal\+Length (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Gets the focal length. 
+
+\begin{DoxyReturn}{Returns}
+The focal length. 
+\end{DoxyReturn}
+\label{classGenFTheta_a74ca1b578b96590342b999ba202989b7} 
+\index{GenFTheta@{GenFTheta}!getModelName@{getModelName}}
+\index{getModelName@{getModelName}!GenFTheta@{GenFTheta}}
+\doxysubsubsection{\texorpdfstring{getModelName()}{getModelName()}}
+{\footnotesize\ttfamily const std\+::string Gen\+FTheta\+::get\+Model\+Name (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Gets the model name. 
+
+\begin{DoxyReturn}{Returns}
+A string containing the model name. 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{classCamera}{Camera}}.
+
+\label{classGenFTheta_a7b8362ed15317b821e82ba8c43e58b6c} 
+\index{GenFTheta@{GenFTheta}!getPinhole@{getPinhole}}
+\index{getPinhole@{getPinhole}!GenFTheta@{GenFTheta}}
+\doxysubsubsection{\texorpdfstring{getPinhole()}{getPinhole()}}
+{\footnotesize\ttfamily std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classPinhole}{Pinhole}} $>$ Gen\+FTheta\+::get\+Pinhole (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Gets a shared pointer to a \doxylink{classPinhole}{Pinhole} model. 
+
+\begin{DoxyReturn}{Returns}
+A shared pointer to a \doxylink{classPinhole}{Pinhole} model. 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{classCamera}{Camera}}.
+
+\label{classGenFTheta_a2d14b0fbdfbaca7fa2aafc9d34598722} 
+\index{GenFTheta@{GenFTheta}!getPrincipalPoint@{getPrincipalPoint}}
+\index{getPrincipalPoint@{getPrincipalPoint}!GenFTheta@{GenFTheta}}
+\doxysubsubsection{\texorpdfstring{getPrincipalPoint()}{getPrincipalPoint()}}
+{\footnotesize\ttfamily std\+::vector$<$ double $>$ Gen\+FTheta\+::get\+Principal\+Point (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Gets the principal point. 
+
+\begin{DoxyReturn}{Returns}
+The principal point. 
+\end{DoxyReturn}
+\label{classGenFTheta_a603b9080c7104c9657a14b0cd09b9fc3} 
+\index{GenFTheta@{GenFTheta}!getRadialDistAsymCoeffs@{getRadialDistAsymCoeffs}}
+\index{getRadialDistAsymCoeffs@{getRadialDistAsymCoeffs}!GenFTheta@{GenFTheta}}
+\doxysubsubsection{\texorpdfstring{getRadialDistAsymCoeffs()}{getRadialDistAsymCoeffs()}}
+{\footnotesize\ttfamily std\+::vector$<$ double $>$ Gen\+FTheta\+::get\+Radial\+Dist\+Asym\+Coeffs (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Gets the asymmetric radial distortion coefficients. 
+
+\begin{DoxyReturn}{Returns}
+The asymmetric radial distortion coefficients. 
+\end{DoxyReturn}
+\label{classGenFTheta_a589030df82b83324961df073c1d4cb15} 
+\index{GenFTheta@{GenFTheta}!getRadialDistFourCoeffs@{getRadialDistFourCoeffs}}
+\index{getRadialDistFourCoeffs@{getRadialDistFourCoeffs}!GenFTheta@{GenFTheta}}
+\doxysubsubsection{\texorpdfstring{getRadialDistFourCoeffs()}{getRadialDistFourCoeffs()}}
+{\footnotesize\ttfamily std\+::vector$<$ double $>$ Gen\+FTheta\+::get\+Radial\+Dist\+Four\+Coeffs (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Gets the fourier radial distortion coefficients. 
+
+\begin{DoxyReturn}{Returns}
+The fourier radial distortion coefficients. 
+\end{DoxyReturn}
+\label{classGenFTheta_a68564688cf4be3d092a66be7ca0e3128} 
+\index{GenFTheta@{GenFTheta}!getRadialDistSymCoeffs@{getRadialDistSymCoeffs}}
+\index{getRadialDistSymCoeffs@{getRadialDistSymCoeffs}!GenFTheta@{GenFTheta}}
+\doxysubsubsection{\texorpdfstring{getRadialDistSymCoeffs()}{getRadialDistSymCoeffs()}}
+{\footnotesize\ttfamily std\+::vector$<$ double $>$ Gen\+FTheta\+::get\+Radial\+Dist\+Sym\+Coeffs (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Gets the symmetric radial distortion coefficients. The radial distortion is defined by the equation\+: 
+
+\[
+R_n = 1 + k_1 r^2 + k_2 r^4 + k_3 r^6 + \cdots
+\] \begin{DoxyReturn}{Returns}
+The symmetric radial distortion coefficients. 
+\end{DoxyReturn}
+\label{classGenFTheta_a26b4c9941517e50795056cb3938aab8e} 
+\index{GenFTheta@{GenFTheta}!getSkew@{getSkew}}
+\index{getSkew@{getSkew}!GenFTheta@{GenFTheta}}
+\doxysubsubsection{\texorpdfstring{getSkew()}{getSkew()}}
+{\footnotesize\ttfamily double Gen\+FTheta\+::get\+Skew (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Gets the skew. 
+
+\begin{DoxyReturn}{Returns}
+The skew value. 
+\end{DoxyReturn}
+\label{classGenFTheta_a9837fa1876857f7b0fcfd693d4ffb20d} 
+\index{GenFTheta@{GenFTheta}!getTangentialDistAsymCoeffs@{getTangentialDistAsymCoeffs}}
+\index{getTangentialDistAsymCoeffs@{getTangentialDistAsymCoeffs}!GenFTheta@{GenFTheta}}
+\doxysubsubsection{\texorpdfstring{getTangentialDistAsymCoeffs()}{getTangentialDistAsymCoeffs()}}
+{\footnotesize\ttfamily std\+::vector$<$ double $>$ Gen\+FTheta\+::get\+Tangential\+Dist\+Asym\+Coeffs (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Gets the asymmetric tangential distortion coefficients. 
+
+\begin{DoxyReturn}{Returns}
+The asymmetric tangential distortion coefficients. 
+\end{DoxyReturn}
+\label{classGenFTheta_a29bc40b56af5f27389f362ba07cfbbe8} 
+\index{GenFTheta@{GenFTheta}!getTangentialDistFourCoeffs@{getTangentialDistFourCoeffs}}
+\index{getTangentialDistFourCoeffs@{getTangentialDistFourCoeffs}!GenFTheta@{GenFTheta}}
+\doxysubsubsection{\texorpdfstring{getTangentialDistFourCoeffs()}{getTangentialDistFourCoeffs()}}
+{\footnotesize\ttfamily std\+::vector$<$ double $>$ Gen\+FTheta\+::get\+Tangential\+Dist\+Four\+Coeffs (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Gets the fourier tangential distortion coefficients. 
+
+\begin{DoxyReturn}{Returns}
+The fourier tangential distortion coefficients. 
+\end{DoxyReturn}
+\label{classGenFTheta_ab39b9daadd9a852cbf0a4868706314e5} 
+\index{GenFTheta@{GenFTheta}!load@{load}}
+\index{load@{load}!GenFTheta@{GenFTheta}}
+\doxysubsubsection{\texorpdfstring{load()}{load()}}
+{\footnotesize\ttfamily std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classGenFTheta}{Gen\+FTheta}} $>$ Gen\+FTheta\+::load (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{file\+Name }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Loads a \doxylink{classGenFTheta}{Gen\+FTheta} model from a file. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em file\+Name} & The path of the file to load the model from. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A shared pointer to the loaded \doxylink{classGenFTheta}{Gen\+FTheta} model. 
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em std\+::invalid\+\_\+argument} & if the model contained in the imported file is not a \doxylink{classGenFTheta}{Gen\+FTheta} model. \\
+\hline
+\end{DoxyExceptions}
+\label{classGenFTheta_a2c6308e977a1ceca7ef08bd636d196c9} 
+\index{GenFTheta@{GenFTheta}!project@{project}}
+\index{project@{project}!GenFTheta@{GenFTheta}}
+\doxysubsubsection{\texorpdfstring{project()}{project()}\hspace{0.1cm}{\footnotesize\ttfamily [1/3]}}
+{\footnotesize\ttfamily std\+::array$<$ double, 2 $>$ Gen\+FTheta\+::project (\begin{DoxyParamCaption}\item[{const Point3 \&}]{point\+\_\+3d }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Projects a 3D point to a 2D point using intrinsic and extrinsic parameters. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em point\+\_\+3d} & The 3D point to project. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The projected 2D point. 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{classCamera}{Camera}}.
+
+\label{classGenFTheta_a6ae3fa443671dd7a681711f3ff2bd46b} 
+\index{GenFTheta@{GenFTheta}!project@{project}}
+\index{project@{project}!GenFTheta@{GenFTheta}}
+\doxysubsubsection{\texorpdfstring{project()}{project()}\hspace{0.1cm}{\footnotesize\ttfamily [2/3]}}
+{\footnotesize\ttfamily std\+::vector$<$ Point2 $>$ Camera\+::project (\begin{DoxyParamCaption}\item[{const std\+::vector$<$ Point3 $>$ \&}]{points\+\_\+3d }\end{DoxyParamCaption}) const}
+
+
+
+Projects 3D points to 2D points using the camera model. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em points\+\_\+3d} & A vector of 3D points. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A vector of projected 2D points. 
+\end{DoxyReturn}
+\label{classGenFTheta_a2d4cb6f9297cffe56d4936743f0cb358} 
+\index{GenFTheta@{GenFTheta}!project@{project}}
+\index{project@{project}!GenFTheta@{GenFTheta}}
+\doxysubsubsection{\texorpdfstring{project()}{project()}\hspace{0.1cm}{\footnotesize\ttfamily [3/3]}}
+{\footnotesize\ttfamily std\+::vector$<$ std\+::vector$<$ Point2 $>$ $>$ Camera\+::project (\begin{DoxyParamCaption}\item[{const std\+::vector$<$ std\+::vector$<$ Point3 $>$ $>$ \&}]{points\+\_\+3d }\end{DoxyParamCaption}) const}
+
+
+
+Projects 2D vectors of 3D points to 2D points using the camera model. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em points\+\_\+3d} & A 2D vector of 3D points. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A 2D vector of projected 2D points. 
+\end{DoxyReturn}
+\label{classGenFTheta_a03e0b771f2084abb3883c15b40babf79} 
+\index{GenFTheta@{GenFTheta}!setBackprojectSettings@{setBackprojectSettings}}
+\index{setBackprojectSettings@{setBackprojectSettings}!GenFTheta@{GenFTheta}}
+\doxysubsubsection{\texorpdfstring{setBackprojectSettings()}{setBackprojectSettings()}}
+{\footnotesize\ttfamily void Gen\+FTheta\+::set\+Backproject\+Settings (\begin{DoxyParamCaption}\item[{double}]{threshold,  }\item[{int}]{iterations }\end{DoxyParamCaption})}
+
+
+
+Sets the backprojection settings. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em threshold} & The new threshold value. \\
+\hline
+{\em iterations} & The new number of iterations. \\
+\hline
+\end{DoxyParams}
+\label{classGenFTheta_a85de8f9a21aa1d9673f36fa9f4625d62} 
+\index{GenFTheta@{GenFTheta}!setFocalLength@{setFocalLength}}
+\index{setFocalLength@{setFocalLength}!GenFTheta@{GenFTheta}}
+\doxysubsubsection{\texorpdfstring{setFocalLength()}{setFocalLength()}}
+{\footnotesize\ttfamily void Gen\+FTheta\+::set\+Focal\+Length (\begin{DoxyParamCaption}\item[{std\+::vector$<$ double $>$}]{focal\+\_\+length }\end{DoxyParamCaption})}
+
+
+
+Sets the focal length. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em focal\+\_\+length} & A vector containing the new focal length values. \\
+\hline
+\end{DoxyParams}
+\label{classGenFTheta_a972d1af3f3dd6c8259bdc508db3706ca} 
+\index{GenFTheta@{GenFTheta}!setPrincipalPoint@{setPrincipalPoint}}
+\index{setPrincipalPoint@{setPrincipalPoint}!GenFTheta@{GenFTheta}}
+\doxysubsubsection{\texorpdfstring{setPrincipalPoint()}{setPrincipalPoint()}}
+{\footnotesize\ttfamily void Gen\+FTheta\+::set\+Principal\+Point (\begin{DoxyParamCaption}\item[{std\+::vector$<$ double $>$}]{principal\+\_\+point }\end{DoxyParamCaption})}
+
+
+
+Sets the principal point. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em principal\+\_\+point} & A vector containing the new principal point values. \\
+\hline
+\end{DoxyParams}
+\label{classGenFTheta_ae5cf3b75c0f9b915d63f6a33bbebe781} 
+\index{GenFTheta@{GenFTheta}!setRadialDistAsymCoeffs@{setRadialDistAsymCoeffs}}
+\index{setRadialDistAsymCoeffs@{setRadialDistAsymCoeffs}!GenFTheta@{GenFTheta}}
+\doxysubsubsection{\texorpdfstring{setRadialDistAsymCoeffs()}{setRadialDistAsymCoeffs()}}
+{\footnotesize\ttfamily void Gen\+FTheta\+::set\+Radial\+Dist\+Asym\+Coeffs (\begin{DoxyParamCaption}\item[{std\+::vector$<$ double $>$}]{radial\+\_\+dist\+\_\+asym\+\_\+coeffs }\end{DoxyParamCaption})}
+
+
+
+Sets the asymmetric radial distortion coefficients. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em radial\+\_\+dist\+\_\+asym\+\_\+coeffs} & A vector containing the new asymmetric radial distortion coefficients. \\
+\hline
+\end{DoxyParams}
+\label{classGenFTheta_a277e27383ef386e169be36b7917acbfb} 
+\index{GenFTheta@{GenFTheta}!setRadialDistFourCoeffs@{setRadialDistFourCoeffs}}
+\index{setRadialDistFourCoeffs@{setRadialDistFourCoeffs}!GenFTheta@{GenFTheta}}
+\doxysubsubsection{\texorpdfstring{setRadialDistFourCoeffs()}{setRadialDistFourCoeffs()}}
+{\footnotesize\ttfamily void Gen\+FTheta\+::set\+Radial\+Dist\+Four\+Coeffs (\begin{DoxyParamCaption}\item[{std\+::vector$<$ double $>$}]{radial\+\_\+dist\+\_\+four\+\_\+coeffs }\end{DoxyParamCaption})}
+
+
+
+Sets the four-\/term radial distortion coefficients. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em radial\+\_\+dist\+\_\+four\+\_\+coeffs} & A vector containing the new four-\/term radial distortion coefficients. \\
+\hline
+\end{DoxyParams}
+\label{classGenFTheta_ab4b8f80faea07846662dcb3933492eda} 
+\index{GenFTheta@{GenFTheta}!setRadialDistSymCoeffs@{setRadialDistSymCoeffs}}
+\index{setRadialDistSymCoeffs@{setRadialDistSymCoeffs}!GenFTheta@{GenFTheta}}
+\doxysubsubsection{\texorpdfstring{setRadialDistSymCoeffs()}{setRadialDistSymCoeffs()}}
+{\footnotesize\ttfamily void Gen\+FTheta\+::set\+Radial\+Dist\+Sym\+Coeffs (\begin{DoxyParamCaption}\item[{std\+::vector$<$ double $>$}]{radial\+\_\+dist\+\_\+sym\+\_\+coeffs }\end{DoxyParamCaption})}
+
+
+
+Sets the symmetric radial distortion coefficients. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em radial\+\_\+dist\+\_\+sym\+\_\+coeffs} & A vector containing the new symmetric radial distortion coefficients. \\
+\hline
+\end{DoxyParams}
+\label{classGenFTheta_ae7afda62f064c8d68fb0b157aab02acb} 
+\index{GenFTheta@{GenFTheta}!setSkew@{setSkew}}
+\index{setSkew@{setSkew}!GenFTheta@{GenFTheta}}
+\doxysubsubsection{\texorpdfstring{setSkew()}{setSkew()}}
+{\footnotesize\ttfamily void Gen\+FTheta\+::set\+Skew (\begin{DoxyParamCaption}\item[{double}]{skew }\end{DoxyParamCaption})}
+
+
+
+Sets the skew value. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em skew} & A double containing the new skew value. \\
+\hline
+\end{DoxyParams}
+\label{classGenFTheta_a13d6c6178d4e193d901dc5e872a80b19} 
+\index{GenFTheta@{GenFTheta}!setTangentialDistAsymCoeffs@{setTangentialDistAsymCoeffs}}
+\index{setTangentialDistAsymCoeffs@{setTangentialDistAsymCoeffs}!GenFTheta@{GenFTheta}}
+\doxysubsubsection{\texorpdfstring{setTangentialDistAsymCoeffs()}{setTangentialDistAsymCoeffs()}}
+{\footnotesize\ttfamily void Gen\+FTheta\+::set\+Tangential\+Dist\+Asym\+Coeffs (\begin{DoxyParamCaption}\item[{std\+::vector$<$ double $>$}]{tangential\+\_\+dist\+\_\+asym\+\_\+coeffs }\end{DoxyParamCaption})}
+
+
+
+Sets the asymmetric tangential distortion coefficients. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em tangential\+\_\+dist\+\_\+asym\+\_\+coeffs} & A vector containing the new asymmetric tangential distortion coefficients. \\
+\hline
+\end{DoxyParams}
+\label{classGenFTheta_a19d458da0271ef59ee297a4c7d818c86} 
+\index{GenFTheta@{GenFTheta}!setTangentialDistFourCoeffs@{setTangentialDistFourCoeffs}}
+\index{setTangentialDistFourCoeffs@{setTangentialDistFourCoeffs}!GenFTheta@{GenFTheta}}
+\doxysubsubsection{\texorpdfstring{setTangentialDistFourCoeffs()}{setTangentialDistFourCoeffs()}}
+{\footnotesize\ttfamily void Gen\+FTheta\+::set\+Tangential\+Dist\+Four\+Coeffs (\begin{DoxyParamCaption}\item[{std\+::vector$<$ double $>$}]{tangential\+\_\+dist\+\_\+four\+\_\+coeffs }\end{DoxyParamCaption})}
+
+
+
+Sets the four-\/term tangential distortion coefficients. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em tangential\+\_\+dist\+\_\+four\+\_\+coeffs} & A vector containing the new four-\/term tangential distortion coefficients. \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+include/camera/general\+\_\+ftheta.\+h\item 
+src/camera/general\+\_\+ftheta.\+cpp\end{DoxyCompactItemize}

@@ -1,0 +1,92 @@
+\chapter{Pixel\+Traq}
+\label{index}\index{PixelTraq@{PixelTraq}}
+\label{index_md_README}%
+\Hypertarget{index_md_README}%
+
+
+The Pixel\+Traq library is a C++ library developed to help users integrate cameras calibrated using the Pixel\+Traq \doxylink{classCamera}{Camera} Calibration system into their projects. The library contains ready made camera model implementations and code for common workflows such as image undistortion, 3d reconstruction, and stereo rectification.\hypertarget{index_autotoc_md1}{}\doxysection{\texorpdfstring{External Links}{External Links}}\label{index_autotoc_md1}
+\href{https://www.quartus.com/products/pixeltraq/}{\texttt{ Pixel\+Traq Service}}\textbackslash{} \href{https://www.quartus.com/products/pixeltraq/resources/}{\texttt{ Pixel\+Traq Resources}}\textbackslash{} \href{https://github.com/pages/QuartusEngineering/PixelTraq}{\texttt{ Documentation}}\hypertarget{index_autotoc_md2}{}\doxysection{\texorpdfstring{Integration}{Integration}}\label{index_autotoc_md2}
+There are a few different ways to include the library in your project. The following sections outline how to integrate the library into your project.\hypertarget{index_autotoc_md3}{}\doxysubsection{\texorpdfstring{Stand Alone to Run Examples}{Stand Alone to Run Examples}}\label{index_autotoc_md3}
+If you are only interested in running the examples or tools, you can clone the library directly using\+: 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{git\ clone\ https://github.com/QuartusEngineering/PixelTraq.git}
+
+\end{DoxyCode}
+
+
+The examples can be built as long as you have cmake installed using the following steps\+:
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{mkdir\ build}
+\DoxyCodeLine{cd\ build}
+\DoxyCodeLine{cmake\ ..\ -\/DCMAKE\_BUILD\_TYPE=Release\ -\/DCMAKE\_CXX\_FLAGS="{}-\/O2"{}}
+\DoxyCodeLine{cmake\ -\/-\/build\ .\ -\/-\/parallel\ 2\ -\/-\/config\ Release}
+
+\end{DoxyCode}
+ Replace --parallel 2 with --parallel \texorpdfstring{$<$}{<}number of cores in your machine\texorpdfstring{$>$}{>}.\hypertarget{index_autotoc_md4}{}\doxysubsection{\texorpdfstring{Add to a Project Using CMake}{Add to a Project Using CMake}}\label{index_autotoc_md4}
+\hypertarget{index_autotoc_md5}{}\doxysubsubsection{\texorpdfstring{Add as a Subdirectory}{Add as a Subdirectory}}\label{index_autotoc_md5}
+To add Pixel\+Traq as a subdirectory, clone the project into your main project folder or add it as a submodule. 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{git\ clone\ https://github.com/QuartusEngineering/PixelTraq.git}
+
+\end{DoxyCode}
+
+
+Next, add the following line to your project\textquotesingle{}s CMake\+Lists.\+txt file 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{add\_subdirectory(PixelTraq)}
+
+\end{DoxyCode}
+
+
+You will also need to target the library to link to your execuatable 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{add\_executable(target\ main.cpp)}
+\DoxyCodeLine{target\_link\_libraries(target\ PUBLIC\ PixelTraq)}
+
+\end{DoxyCode}
+
+
+Any source files that use the Pixel\+Traq library need to include the entry point header file 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\#include\ <PixelTraq/pixeltraq.h>}
+
+\end{DoxyCode}
+\hypertarget{index_autotoc_md6}{}\doxysubsubsection{\texorpdfstring{Add using Fetch\+Content}{Add using FetchContent}}\label{index_autotoc_md6}
+Enter the following code block into your cmake file to fetch the pixeltraq github
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\#\ Include\ FetchContent\ before\ using\ it}
+\DoxyCodeLine{include(FetchContent)}
+\DoxyCodeLine{}
+\DoxyCodeLine{\#\ Fetch\ the\ external\ project\ (pixelTraq)}
+\DoxyCodeLine{FetchContent\_Declare(}
+\DoxyCodeLine{\ \ \ \ PixelTraq}
+\DoxyCodeLine{\ \ \ \ GIT\_REPOSITORY\ https://github.com/QuartusEngineering/PixelTraq.git}
+\DoxyCodeLine{\ \ \ \ GIT\_TAG\ main\ \ \#\ Use\ the\ specific\ branch\ or\ commit\ hash\ if\ needed}
+\DoxyCodeLine{)}
+\DoxyCodeLine{}
+\DoxyCodeLine{FetchContent\_MakeAvailable(PixelTraq)}
+\DoxyCodeLine{}
+\DoxyCodeLine{\#\ Define\ the\ executable}
+\DoxyCodeLine{add\_executable(<yourProject>\ "{}<yourProject.cpp>"{}\ "{}<yourProject.h>"{})}
+\DoxyCodeLine{}
+\DoxyCodeLine{\#add\ the\ include\ directory}
+\DoxyCodeLine{target\_include\_directories(<yourProject>\ PRIVATE\ \$\{pixeltraq\_SOURCE\_DIR\}/include)}
+\DoxyCodeLine{}
+\DoxyCodeLine{\#link\ the\ pixelTraq\ library}
+\DoxyCodeLine{target\_link\_libraries(<yourProject>\ PRIVATE\ PixelTraq)}
+
+\end{DoxyCode}
+\hypertarget{index_autotoc_md7}{}\doxysection{\texorpdfstring{Examples}{Examples}}\label{index_autotoc_md7}
+We have created a number of examples for you to follow in order for you to familiarize yourself with this library.\hypertarget{index_autotoc_md8}{}\doxysubsection{\texorpdfstring{./scripts/examples/load\+\_\+save\+\_\+example.\+cpp}{./scripts/examples/load\_save\_example.cpp}}\label{index_autotoc_md8}
+This example shows how to consume a pixel\+Traq json file and save out the json file.\hypertarget{index_autotoc_md9}{}\doxysubsection{\texorpdfstring{./scripts/examples/projection\+\_\+example.\+cpp}{./scripts/examples/projection\_example.cpp}}\label{index_autotoc_md9}
+This example shows how to manually set up your own \doxylink{classCamera}{Camera} model then project points from world frame to camera frame. Then from camera frame to the image plane\hypertarget{index_autotoc_md10}{}\doxysubsection{\texorpdfstring{./scripts/examples/reconstruction\+\_\+example.\+cpp}{./scripts/examples/reconstruction\_example.cpp}}\label{index_autotoc_md10}
+This examples showns how to reconstruct 3d points from measurements in 2d stereo images\hypertarget{index_autotoc_md11}{}\doxysubsection{\texorpdfstring{./scripts/examples/stereo\+\_\+rectification\+\_\+example.\+cpp}{./scripts/examples/stereo\_rectification\_example.cpp}}\label{index_autotoc_md11}
+This method shows how to rectify images captured from the left and right camera of a stereo module.\hypertarget{index_autotoc_md12}{}\doxysubsection{\texorpdfstring{./scripts/examples/undistortion\+\_\+example.\+cpp}{./scripts/examples/undistortion\_example.cpp}}\label{index_autotoc_md12}
+This example shows how to initialize a remapper which can be used for quickly undistorting an image\hypertarget{index_autotoc_md13}{}\doxysection{\texorpdfstring{Tools}{Tools}}\label{index_autotoc_md13}
+\hypertarget{index_autotoc_md14}{}\doxysubsection{\texorpdfstring{./scripts/tools/undistort\+\_\+image.\+cpp}{./scripts/tools/undistort\_image.cpp}}\label{index_autotoc_md14}
+This tool can be built as an executable for undistorting an image using a camera model file and an optional target camera model file.\hypertarget{index_autotoc_md15}{}\doxysection{\texorpdfstring{License}{License}}\label{index_autotoc_md15}
+This library is licensed under the Apache License Version 2.\+0 -\/ see the LICENSE file for details. 

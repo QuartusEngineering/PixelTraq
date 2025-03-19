@@ -1,0 +1,4 @@
+var searchData=
+[
+  ['kannala_0',['kannala',['../classKannala.html',1,'Kannala'],['../classKannala.html#a3ac415b65d567529528db33f42bc5dad',1,'Kannala::Kannala()'],['../classKannala.html#af85688e27cf603facf73a372065dfac0',1,'Kannala::Kannala(const std::vector&lt; double &gt; &amp;focal_length, const std::vector&lt; double &gt; &amp;principal_point, const std::vector&lt; int &gt; &amp;image_size, const std::vector&lt; double &gt; &amp;radial_distortion_sym={}, const std::vector&lt; double &gt; &amp;radial_distortion_asym={}, const std::vector&lt; double &gt; &amp;radial_distortion_four={}, const std::vector&lt; double &gt; &amp;tangential_distortion_asym={}, const std::vector&lt; double &gt; &amp;tangential_distortion_four={}, const Point3 &amp;rotation={ 0.0, 0.0, 0.0 }, const Point3 &amp;translation={ 0.0, 0.0, 0.0 })'],['../classKannala.html#adbbbce95a6ceefd2927c1712c4a27c39',1,'Kannala::Kannala(const Kannala &amp;model)']]]
+];

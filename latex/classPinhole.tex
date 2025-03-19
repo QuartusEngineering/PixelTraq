@@ -1,0 +1,399 @@
+\doxysection{Pinhole Class Reference}
+\label{classPinhole}\index{Pinhole@{Pinhole}}
+Inheritance diagram for Pinhole\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{classPinhole}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classPinhole_a0bd6c9c7684c823a9bf3a88a60b3ee10}{Pinhole}} (const std\+::vector$<$ double $>$ \&focal\+\_\+length, const std\+::vector$<$ double $>$ \&principal\+\_\+point, const double \&skew, const std\+::vector$<$ int $>$ \&image\+\_\+size, const Point3 \&rotation=\{ 0.\+0, 0.\+0, 0.\+0 \}, const Point3 \&translation=\{ 0.\+0, 0.\+0, 0.\+0 \})
+\begin{DoxyCompactList}\small\item\em Parameterized constructor for the \doxylink{classPinhole}{Pinhole} class. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classPinhole_a321a0155c4c17599c2bebfa373b65b1e}{Pinhole}} (const \mbox{\hyperlink{classPinhole}{Pinhole}} \&model)
+\begin{DoxyCompactList}\small\item\em Copy constructor for the \doxylink{classPinhole}{Pinhole} class. \end{DoxyCompactList}\item 
+std\+::array$<$ double, 2 $>$ \mbox{\hyperlink{classPinhole_a4298a63a90b0836cf157a83b5eb16bb1}{project}} (const Point3 \&point\+\_\+3d) const override
+\begin{DoxyCompactList}\small\item\em Projects a 3D point to a 2D point using intrinsic and extrinsic parameters. \end{DoxyCompactList}\item 
+Point3 \mbox{\hyperlink{classPinhole_afe7679d9681b99f699bdd0400c5a4339}{backproject}} (const std\+::array$<$ double, 2 $>$ \&point\+\_\+2d) const
+\begin{DoxyCompactList}\small\item\em Backprojects a 2D point to a 3D ray. \end{DoxyCompactList}\item 
+virtual const std\+::string \mbox{\hyperlink{classPinhole_aebe5e12b4ccbc4606a59bf0412f83327}{get\+Model\+Name}} () const override
+\begin{DoxyCompactList}\small\item\em Gets the model name. \end{DoxyCompactList}\item 
+virtual std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classPinhole}{Pinhole}} $>$ \mbox{\hyperlink{classPinhole_a049b8e770b5e5dfc397c1d15aaf9f2c2}{get\+Pinhole}} () const override
+\begin{DoxyCompactList}\small\item\em Gets a shared pointer to a \doxylink{classPinhole}{Pinhole} model. \end{DoxyCompactList}\item 
+std\+::vector$<$ double $>$ \mbox{\hyperlink{classPinhole_a48a8ecce95bfb14c69a53eb0732c8702}{get\+Principal\+Point}} () const
+\begin{DoxyCompactList}\small\item\em Gets the principal point. \end{DoxyCompactList}\item 
+std\+::vector$<$ double $>$ \mbox{\hyperlink{classPinhole_a57909e5ec3d64bfe651e7073230729ab}{get\+Focal\+Length}} () const
+\begin{DoxyCompactList}\small\item\em Gets the focal length. \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{classPinhole_aa1d2bde642f28001927768179405cc87}{get\+Skew}} () const
+\begin{DoxyCompactList}\small\item\em Gets the skew. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classPinhole_a00674d40893163735e0fad1ddcc435ee}{set\+Principal\+Point}} (std\+::vector$<$ double $>$ principal\+\_\+point)
+\begin{DoxyCompactList}\small\item\em Sets the principal point. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classPinhole_ac3f1ff7136f7906eaaac9d9b1cd8249c}{set\+Focal\+Length}} (std\+::vector$<$ double $>$ focal\+\_\+length)
+\begin{DoxyCompactList}\small\item\em Sets the focal length. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classPinhole_a12163619e29f10e23b0024665aebc41d}{set\+Skew}} (double skew)
+\begin{DoxyCompactList}\small\item\em Sets the skew. \end{DoxyCompactList}\item 
+std\+::vector$<$ Point2 $>$ \mbox{\hyperlink{classPinhole_a6ae3fa443671dd7a681711f3ff2bd46b}{project}} (const std\+::vector$<$ Point3 $>$ \&points\+\_\+3d) const
+\begin{DoxyCompactList}\small\item\em Projects 3D points to 2D points using the camera model. \end{DoxyCompactList}\item 
+std\+::vector$<$ std\+::vector$<$ Point2 $>$ $>$ \mbox{\hyperlink{classPinhole_a2d4cb6f9297cffe56d4936743f0cb358}{project}} (const std\+::vector$<$ std\+::vector$<$ Point3 $>$ $>$ \&points\+\_\+3d1) const
+\begin{DoxyCompactList}\small\item\em Projects 2D vectors of 3D points to 2D points using the camera model. \end{DoxyCompactList}\item 
+std\+::vector$<$ std\+::vector$<$ std\+::array$<$ double, 3 $>$ $>$ $>$ \mbox{\hyperlink{classPinhole_a0fa46f041586bb492f0bd5e525e4a020}{backproject}} (const std\+::vector$<$ std\+::vector$<$ double $>$ $>$ \&image) const
+\begin{DoxyCompactList}\small\item\em Backprojects a 2D vector of 2D points to 3D rays using the camera model. \end{DoxyCompactList}\item 
+std\+::vector$<$ Point3 $>$ \mbox{\hyperlink{classPinhole_aef54da14254e193c05f01794cc1e2cc0}{backproject}} (const std\+::vector$<$ Point2 $>$ \&points\+\_\+2d) const
+\begin{DoxyCompactList}\small\item\em Backprojects 2D points to 3D rays using the camera model. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{classCamera}{Camera}}}
+\begin{DoxyCompactItemize}
+\item 
+{\bfseries Camera} ()
+\begin{DoxyCompactList}\small\item\em Default constructor for the \doxylink{classCamera}{Camera} class. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classCamera_ae4dce82bbbae84426aa18223438ea3b2}{Camera}} (std\+::vector$<$ int $>$ image\+\_\+size, Point3 rotation, Point3 translation)
+\begin{DoxyCompactList}\small\item\em Parameterized constructor for the \doxylink{classCamera}{Camera} class. \end{DoxyCompactList}\item 
+std\+::string \mbox{\hyperlink{classCamera_a52aedf294fdf857f9a41e124c7927b43}{get\+Parameter\+Display\+String}} () const
+\begin{DoxyCompactList}\small\item\em Returns a string with the camera parameters for display. \end{DoxyCompactList}\item 
+void {\bfseries display} () const
+\begin{DoxyCompactList}\small\item\em Displays the camera parameters to the console. \end{DoxyCompactList}\item 
+std\+::vector$<$ int $>$ \mbox{\hyperlink{classCamera_ae647b7b651bdc664118d03e5f7f66616}{get\+Image\+Size}} () const
+\begin{DoxyCompactList}\small\item\em Gets the image size. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classCamera_a7131f2a763a841f7c6a93a79981ffb72}{set\+Image\+Size}} (std\+::vector$<$ int $>$ image\+\_\+size)
+\begin{DoxyCompactList}\small\item\em Sets the image size. \end{DoxyCompactList}\item 
+std\+::vector$<$ Point2 $>$ \mbox{\hyperlink{classCamera_a6ae3fa443671dd7a681711f3ff2bd46b}{project}} (const std\+::vector$<$ Point3 $>$ \&points\+\_\+3d) const
+\begin{DoxyCompactList}\small\item\em Projects 3D points to 2D points using the camera model. \end{DoxyCompactList}\item 
+std\+::vector$<$ std\+::vector$<$ Point2 $>$ $>$ \mbox{\hyperlink{classCamera_a2d4cb6f9297cffe56d4936743f0cb358}{project}} (const std\+::vector$<$ std\+::vector$<$ Point3 $>$ $>$ \&points\+\_\+3d1) const
+\begin{DoxyCompactList}\small\item\em Projects 2D vectors of 3D points to 2D points using the camera model. \end{DoxyCompactList}\item 
+std\+::vector$<$ std\+::vector$<$ std\+::array$<$ double, 3 $>$ $>$ $>$ \mbox{\hyperlink{classCamera_a0fa46f041586bb492f0bd5e525e4a020}{backproject}} (const std\+::vector$<$ std\+::vector$<$ double $>$ $>$ \&image) const
+\begin{DoxyCompactList}\small\item\em Backprojects a 2D vector of 2D points to 3D rays using the camera model. \end{DoxyCompactList}\item 
+std\+::vector$<$ Point3 $>$ \mbox{\hyperlink{classCamera_aef54da14254e193c05f01794cc1e2cc0}{backproject}} (const std\+::vector$<$ Point2 $>$ \&points\+\_\+2d) const
+\begin{DoxyCompactList}\small\item\em Backprojects 2D points to 3D rays using the camera model. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classCamera_a8f46c6f364430fa41f0b96aa62c7f158}{set\+Translation}} (Point3 translation)
+\begin{DoxyCompactList}\small\item\em Sets the translation vector. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classCamera_a53ac33421a4e50f8a94330540d6971f4}{set\+Rotation}} (Point3 rotation)
+\begin{DoxyCompactList}\small\item\em Sets the rotation vector. \end{DoxyCompactList}\item 
+const std\+::vector$<$ Point3 $>$ \mbox{\hyperlink{classCamera_a5d9ce2104ac617235356c9ef2734049a}{world\+To\+Camera\+Pnts}} (const std\+::vector$<$ Point3 $>$ \&world\+\_\+points) const
+\begin{DoxyCompactList}\small\item\em Transforms world points to camera points. \end{DoxyCompactList}\item 
+const std\+::vector$<$ Point3 $>$ \mbox{\hyperlink{classCamera_a5cb55aa775a0213abbfe85122112b16a}{camera\+To\+World\+Pnts}} (const std\+::vector$<$ Point3 $>$ \&world\+\_\+points) const
+\begin{DoxyCompactList}\small\item\em Transforms camera points to world points. \end{DoxyCompactList}\item 
+const Point3 \mbox{\hyperlink{classCamera_a7fcbbda82d69c6b3407d3397b59336fb}{world\+To\+Camera\+Pnts}} (const Point3 \&world\+\_\+point) const
+\begin{DoxyCompactList}\small\item\em Transforms a single world point to a camera point. \end{DoxyCompactList}\item 
+const Point3 \mbox{\hyperlink{classCamera_a543532ed983ca1232c3c7e0d620c1c8d}{camera\+To\+World\+Pnts}} (const Point3 \&world\+\_\+point) const
+\begin{DoxyCompactList}\small\item\em Transforms a single camera point to a world point. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classCamera_a0ad27316f530acbc22702832bbc84e11}{save}} (const std\+::string \&file\+Name) const
+\begin{DoxyCompactList}\small\item\em Saves the \doxylink{classCamera}{Camera} object to a file. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classPinhole}{Pinhole}} $>$ \mbox{\hyperlink{classPinhole_adc1a453dfec2b13f95a3abefbb23a982}{load}} (const std\+::string \&file\+Name)
+\begin{DoxyCompactList}\small\item\em Loads a \doxylink{classPinhole}{Pinhole} model from a file. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Member Functions inherited from \mbox{\hyperlink{classCamera}{Camera}}}
+\begin{DoxyCompactItemize}
+\item 
+static std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classCamera}{Camera}} $>$ \mbox{\hyperlink{classCamera_ac7fc1f6c7e0b0560097c3ab69d4fa533}{load}} (const std\+::string \&file\+Name)
+\begin{DoxyCompactList}\small\item\em Static method to load a camera based on file type. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\label{classPinhole_a0bd6c9c7684c823a9bf3a88a60b3ee10} 
+\index{Pinhole@{Pinhole}!Pinhole@{Pinhole}}
+\index{Pinhole@{Pinhole}!Pinhole@{Pinhole}}
+\doxysubsubsection{\texorpdfstring{Pinhole()}{Pinhole()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily Pinhole\+::\+Pinhole (\begin{DoxyParamCaption}\item[{const std\+::vector$<$ double $>$ \&}]{focal\+\_\+length,  }\item[{const std\+::vector$<$ double $>$ \&}]{principal\+\_\+point,  }\item[{const double \&}]{skew,  }\item[{const std\+::vector$<$ int $>$ \&}]{image\+\_\+size,  }\item[{const Point3 \&}]{rotation = {\ttfamily \{~0.0,~0.0,~0.0~\}},  }\item[{const Point3 \&}]{translation = {\ttfamily \{~0.0,~0.0,~0.0~\}} }\end{DoxyParamCaption})}
+
+
+
+Parameterized constructor for the \doxylink{classPinhole}{Pinhole} class. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em focal\+\_\+length} & Vector of focal length values. \\
+\hline
+{\em principal\+\_\+point} & Vector of principal point values. \\
+\hline
+{\em skew} & value of skew term. \\
+\hline
+{\em image\+\_\+size} & Vector of image size dimensions. \\
+\hline
+{\em rotation} & Rotation vector. \\
+\hline
+{\em translation} & Translation vector. \\
+\hline
+\end{DoxyParams}
+\label{classPinhole_a321a0155c4c17599c2bebfa373b65b1e} 
+\index{Pinhole@{Pinhole}!Pinhole@{Pinhole}}
+\index{Pinhole@{Pinhole}!Pinhole@{Pinhole}}
+\doxysubsubsection{\texorpdfstring{Pinhole()}{Pinhole()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily Pinhole\+::\+Pinhole (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classPinhole}{Pinhole}} \&}]{model }\end{DoxyParamCaption})}
+
+
+
+Copy constructor for the \doxylink{classPinhole}{Pinhole} class. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em model} & The \doxylink{classPinhole}{Pinhole} model to copy from. \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\label{classPinhole_afe7679d9681b99f699bdd0400c5a4339} 
+\index{Pinhole@{Pinhole}!backproject@{backproject}}
+\index{backproject@{backproject}!Pinhole@{Pinhole}}
+\doxysubsubsection{\texorpdfstring{backproject()}{backproject()}\hspace{0.1cm}{\footnotesize\ttfamily [1/3]}}
+{\footnotesize\ttfamily Point3 Pinhole\+::backproject (\begin{DoxyParamCaption}\item[{const std\+::array$<$ double, 2 $>$ \&}]{point\+\_\+2d }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Backprojects a 2D point to a 3D ray. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em point\+\_\+2d} & The 2D point to backproject. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The backprojected 3D ray. 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{classCamera}{Camera}}.
+
+\label{classPinhole_aef54da14254e193c05f01794cc1e2cc0} 
+\index{Pinhole@{Pinhole}!backproject@{backproject}}
+\index{backproject@{backproject}!Pinhole@{Pinhole}}
+\doxysubsubsection{\texorpdfstring{backproject()}{backproject()}\hspace{0.1cm}{\footnotesize\ttfamily [2/3]}}
+{\footnotesize\ttfamily std\+::vector$<$ Point3 $>$ Camera\+::backproject (\begin{DoxyParamCaption}\item[{const std\+::vector$<$ Point2 $>$ \&}]{points\+\_\+2d }\end{DoxyParamCaption}) const}
+
+
+
+Backprojects 2D points to 3D rays using the camera model. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em points\+\_\+2d} & A vector of 2D points. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A vector of backprojected 3D rays. 
+\end{DoxyReturn}
+\label{classPinhole_a0fa46f041586bb492f0bd5e525e4a020} 
+\index{Pinhole@{Pinhole}!backproject@{backproject}}
+\index{backproject@{backproject}!Pinhole@{Pinhole}}
+\doxysubsubsection{\texorpdfstring{backproject()}{backproject()}\hspace{0.1cm}{\footnotesize\ttfamily [3/3]}}
+{\footnotesize\ttfamily std\+::vector$<$ std\+::vector$<$ std\+::array$<$ double, 3 $>$ $>$ $>$ Camera\+::backproject (\begin{DoxyParamCaption}\item[{const std\+::vector$<$ std\+::vector$<$ double $>$ $>$ \&}]{image }\end{DoxyParamCaption}) const}
+
+
+
+Backprojects a 2D vector of 2D points to 3D rays using the camera model. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em image} & A 2D vector of 2D points. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A 2D vector of backprojected 3D rays. 
+\end{DoxyReturn}
+\label{classPinhole_a57909e5ec3d64bfe651e7073230729ab} 
+\index{Pinhole@{Pinhole}!getFocalLength@{getFocalLength}}
+\index{getFocalLength@{getFocalLength}!Pinhole@{Pinhole}}
+\doxysubsubsection{\texorpdfstring{getFocalLength()}{getFocalLength()}}
+{\footnotesize\ttfamily std\+::vector$<$ double $>$ Pinhole\+::get\+Focal\+Length (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Gets the focal length. 
+
+\begin{DoxyReturn}{Returns}
+The focal length. 
+\end{DoxyReturn}
+\label{classPinhole_aebe5e12b4ccbc4606a59bf0412f83327} 
+\index{Pinhole@{Pinhole}!getModelName@{getModelName}}
+\index{getModelName@{getModelName}!Pinhole@{Pinhole}}
+\doxysubsubsection{\texorpdfstring{getModelName()}{getModelName()}}
+{\footnotesize\ttfamily const std\+::string Pinhole\+::get\+Model\+Name (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Gets the model name. 
+
+\begin{DoxyReturn}{Returns}
+A string containing the model name. 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{classCamera}{Camera}}.
+
+\label{classPinhole_a049b8e770b5e5dfc397c1d15aaf9f2c2} 
+\index{Pinhole@{Pinhole}!getPinhole@{getPinhole}}
+\index{getPinhole@{getPinhole}!Pinhole@{Pinhole}}
+\doxysubsubsection{\texorpdfstring{getPinhole()}{getPinhole()}}
+{\footnotesize\ttfamily std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classPinhole}{Pinhole}} $>$ Pinhole\+::get\+Pinhole (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Gets a shared pointer to a \doxylink{classPinhole}{Pinhole} model. 
+
+\begin{DoxyReturn}{Returns}
+A shared pointer to a \doxylink{classPinhole}{Pinhole} model. 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{classCamera}{Camera}}.
+
+\label{classPinhole_a48a8ecce95bfb14c69a53eb0732c8702} 
+\index{Pinhole@{Pinhole}!getPrincipalPoint@{getPrincipalPoint}}
+\index{getPrincipalPoint@{getPrincipalPoint}!Pinhole@{Pinhole}}
+\doxysubsubsection{\texorpdfstring{getPrincipalPoint()}{getPrincipalPoint()}}
+{\footnotesize\ttfamily std\+::vector$<$ double $>$ Pinhole\+::get\+Principal\+Point (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Gets the principal point. 
+
+\begin{DoxyReturn}{Returns}
+The principal point. 
+\end{DoxyReturn}
+\label{classPinhole_aa1d2bde642f28001927768179405cc87} 
+\index{Pinhole@{Pinhole}!getSkew@{getSkew}}
+\index{getSkew@{getSkew}!Pinhole@{Pinhole}}
+\doxysubsubsection{\texorpdfstring{getSkew()}{getSkew()}}
+{\footnotesize\ttfamily double Pinhole\+::get\+Skew (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Gets the skew. 
+
+\begin{DoxyReturn}{Returns}
+The skew. 
+\end{DoxyReturn}
+\label{classPinhole_adc1a453dfec2b13f95a3abefbb23a982} 
+\index{Pinhole@{Pinhole}!load@{load}}
+\index{load@{load}!Pinhole@{Pinhole}}
+\doxysubsubsection{\texorpdfstring{load()}{load()}}
+{\footnotesize\ttfamily std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classPinhole}{Pinhole}} $>$ Pinhole\+::load (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{file\+Name }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Loads a \doxylink{classPinhole}{Pinhole} model from a file. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em file\+Name} & The path of the file to load the model from. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A shared pointer to the loaded \doxylink{classPinhole}{Pinhole} model. 
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em std\+::invalid\+\_\+argument} & if the model contained in the imported file is not a \doxylink{classPinhole}{Pinhole} model. \\
+\hline
+\end{DoxyExceptions}
+\label{classPinhole_a4298a63a90b0836cf157a83b5eb16bb1} 
+\index{Pinhole@{Pinhole}!project@{project}}
+\index{project@{project}!Pinhole@{Pinhole}}
+\doxysubsubsection{\texorpdfstring{project()}{project()}\hspace{0.1cm}{\footnotesize\ttfamily [1/3]}}
+{\footnotesize\ttfamily std\+::array$<$ double, 2 $>$ Pinhole\+::project (\begin{DoxyParamCaption}\item[{const Point3 \&}]{point\+\_\+3d }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Projects a 3D point to a 2D point using intrinsic and extrinsic parameters. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em point\+\_\+3d} & The 3D point to project. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The projected 2D point. 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{classCamera}{Camera}}.
+
+\label{classPinhole_a6ae3fa443671dd7a681711f3ff2bd46b} 
+\index{Pinhole@{Pinhole}!project@{project}}
+\index{project@{project}!Pinhole@{Pinhole}}
+\doxysubsubsection{\texorpdfstring{project()}{project()}\hspace{0.1cm}{\footnotesize\ttfamily [2/3]}}
+{\footnotesize\ttfamily std\+::vector$<$ Point2 $>$ Camera\+::project (\begin{DoxyParamCaption}\item[{const std\+::vector$<$ Point3 $>$ \&}]{points\+\_\+3d }\end{DoxyParamCaption}) const}
+
+
+
+Projects 3D points to 2D points using the camera model. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em points\+\_\+3d} & A vector of 3D points. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A vector of projected 2D points. 
+\end{DoxyReturn}
+\label{classPinhole_a2d4cb6f9297cffe56d4936743f0cb358} 
+\index{Pinhole@{Pinhole}!project@{project}}
+\index{project@{project}!Pinhole@{Pinhole}}
+\doxysubsubsection{\texorpdfstring{project()}{project()}\hspace{0.1cm}{\footnotesize\ttfamily [3/3]}}
+{\footnotesize\ttfamily std\+::vector$<$ std\+::vector$<$ Point2 $>$ $>$ Camera\+::project (\begin{DoxyParamCaption}\item[{const std\+::vector$<$ std\+::vector$<$ Point3 $>$ $>$ \&}]{points\+\_\+3d }\end{DoxyParamCaption}) const}
+
+
+
+Projects 2D vectors of 3D points to 2D points using the camera model. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em points\+\_\+3d} & A 2D vector of 3D points. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A 2D vector of projected 2D points. 
+\end{DoxyReturn}
+\label{classPinhole_ac3f1ff7136f7906eaaac9d9b1cd8249c} 
+\index{Pinhole@{Pinhole}!setFocalLength@{setFocalLength}}
+\index{setFocalLength@{setFocalLength}!Pinhole@{Pinhole}}
+\doxysubsubsection{\texorpdfstring{setFocalLength()}{setFocalLength()}}
+{\footnotesize\ttfamily void Pinhole\+::set\+Focal\+Length (\begin{DoxyParamCaption}\item[{std\+::vector$<$ double $>$}]{focal\+\_\+length }\end{DoxyParamCaption})}
+
+
+
+Sets the focal length. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em focal\+\_\+length} & A vector containing the new focal length values. \\
+\hline
+\end{DoxyParams}
+\label{classPinhole_a00674d40893163735e0fad1ddcc435ee} 
+\index{Pinhole@{Pinhole}!setPrincipalPoint@{setPrincipalPoint}}
+\index{setPrincipalPoint@{setPrincipalPoint}!Pinhole@{Pinhole}}
+\doxysubsubsection{\texorpdfstring{setPrincipalPoint()}{setPrincipalPoint()}}
+{\footnotesize\ttfamily void Pinhole\+::set\+Principal\+Point (\begin{DoxyParamCaption}\item[{std\+::vector$<$ double $>$}]{principal\+\_\+point }\end{DoxyParamCaption})}
+
+
+
+Sets the principal point. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em principal\+\_\+point} & A vector containing the new principal point values. \\
+\hline
+\end{DoxyParams}
+\label{classPinhole_a12163619e29f10e23b0024665aebc41d} 
+\index{Pinhole@{Pinhole}!setSkew@{setSkew}}
+\index{setSkew@{setSkew}!Pinhole@{Pinhole}}
+\doxysubsubsection{\texorpdfstring{setSkew()}{setSkew()}}
+{\footnotesize\ttfamily void Pinhole\+::set\+Skew (\begin{DoxyParamCaption}\item[{double}]{skew }\end{DoxyParamCaption})}
+
+
+
+Sets the skew. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em skew} & A double containing the new skew value. \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+include/camera/pinhole.\+h\item 
+src/camera/pinhole.\+cpp\end{DoxyCompactItemize}

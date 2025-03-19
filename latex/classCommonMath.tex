@@ -1,0 +1,553 @@
+\doxysection{Common\+Math Class Reference}
+\label{classCommonMath}\index{CommonMath@{CommonMath}}
+\doxysubsubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static double \mbox{\hyperlink{classCommonMath_a402311f93539f2b8956424500377762f}{evaluate\+Polynomial}} (const std\+::vector$<$ double $>$ \&coeffs, double x)
+\begin{DoxyCompactList}\small\item\em Evaluates a polynomial at a given value x. \end{DoxyCompactList}\item 
+static bool \mbox{\hyperlink{classCommonMath_a6436d1890cd8bff4ef675165af83207f}{is\+Zero}} (const std\+::vector$<$ double $>$ \&v)
+\begin{DoxyCompactList}\small\item\em Checks if all elements in a vector are zero. \end{DoxyCompactList}\item 
+static double \mbox{\hyperlink{classCommonMath_a1afffc38797caf1cafe5b4d321f0a36b}{evaluate\+Fourier}} (const std\+::vector$<$ double $>$ \&fourier\+\_\+coeff, double phi)
+\begin{DoxyCompactList}\small\item\em Evaluates a Fourier series at a given value phi. \end{DoxyCompactList}\item 
+static std\+::vector$<$ Point3 $>$ \mbox{\hyperlink{classCommonMath_ae52092fc7a7a9854eb0fa9264f386b7a}{transform\+Points}} (const std\+::vector$<$ Point3 $>$ \&points, const Matrix3x3 \&rotation\+\_\+matrix, const Point3 \&translation)
+\begin{DoxyCompactList}\small\item\em Transforms a list of points using a given rotation matrix and translation vector. \end{DoxyCompactList}\item 
+static Point3 \mbox{\hyperlink{classCommonMath_af85d746d27c9d67e4f6c32e7e1be38d0}{transform\+Point}} (const Point3 \&point, const Matrix3x3 \&rotation\+\_\+matrix, const Point3 \&translation)
+\begin{DoxyCompactList}\small\item\em Transforms a point using a given rotation matrix and translation vector. \end{DoxyCompactList}\item 
+static Point3 \mbox{\hyperlink{classCommonMath_a48867c34e3bc25068915ad032bd7e01f}{rotate\+Point}} (const Point3 \&point, const Matrix3x3 \&rotation\+\_\+matrix)
+\begin{DoxyCompactList}\small\item\em Rotates a point using a given rotation matrix. \end{DoxyCompactList}\item 
+static std\+::vector$<$ Point3 $>$ \mbox{\hyperlink{classCommonMath_a89be2dd7acead123484bcb7821bf9ce1}{rotate\+Points}} (const std\+::vector$<$ Point3 $>$ \&points, const Matrix3x3 \&rotation\+\_\+matrix)
+\begin{DoxyCompactList}\small\item\em Rotates a list of points using a given rotation matrix. \end{DoxyCompactList}\item 
+static Matrix3x3 \mbox{\hyperlink{classCommonMath_a4bd628d8f318ae3944ac40dbe29493b9}{rotation\+Inverse}} (const Matrix3x3 \&rotation\+\_\+matrix)
+\begin{DoxyCompactList}\small\item\em Computes the inverse of a rotation matrix. \end{DoxyCompactList}\item 
+static std\+::vector$<$ std\+::vector$<$ double $>$ $>$ \mbox{\hyperlink{classCommonMath_abe8dd762e94f1fcef3b0d524bb84b773}{transpose\+Matrix}} (const std\+::vector$<$ std\+::vector$<$ double $>$ $>$ \&matrix)
+\begin{DoxyCompactList}\small\item\em Transposes a given matrix. \end{DoxyCompactList}\item 
+static std\+::vector$<$ std\+::array$<$ double, 3 $>$ $>$ \mbox{\hyperlink{classCommonMath_a27715751c5bc495f3bd60a5c7e4ddf58}{intersect\+Rays}} (std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classCamera}{Camera}} $>$ cameraL, std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classCamera}{Camera}} $>$ cameraR, const std\+::vector$<$ Point3 $>$ \&raysL, const std\+::vector$<$ Point3 $>$ \&raysR)
+\begin{DoxyCompactList}\small\item\em Computes the intersection of rays from two cameras. \end{DoxyCompactList}\item 
+static int \mbox{\hyperlink{classCommonMath_aab07985ccf7c25663c4324714c66e3aa}{line\+Line\+Intersect}} (Point3 p1, Point3 p2, Point3 p3, Point3 p4, Point3 \&pa, Point3 \&pb, double \&mua, double \&mub)
+\begin{DoxyCompactList}\small\item\em Computes the intersection of two lines. \end{DoxyCompactList}\item 
+static void \mbox{\hyperlink{classCommonMath_ada7905c66f65f655e9d705a6ad15f4a9}{stereo\+Rectify}} (std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classPinhole}{Pinhole}} $>$ cameraL, std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classPinhole}{Pinhole}} $>$ cameraR, Matrix3x3 \&Rl, Matrix3x3 \&Rr)
+\begin{DoxyCompactList}\small\item\em Performs stereo rectification for two pinhole cameras. \end{DoxyCompactList}\item 
+static double \mbox{\hyperlink{classCommonMath_adadc6c4041a9eb7a565750ce3c5b0dff}{norm}} (const Point3 \&vec)
+\begin{DoxyCompactList}\small\item\em Computes the Euclidean norm of a 3D vector. \end{DoxyCompactList}\item 
+static Point3 \mbox{\hyperlink{classCommonMath_ae2ac72981aeedca3e8fead1304a960ce}{cross}} (const Point3 \&lhs, const Point3 \&rhs)
+\begin{DoxyCompactList}\small\item\em Computes the cross product of two 3D vectors. \end{DoxyCompactList}\item 
+static Matrix3x3 \mbox{\hyperlink{classCommonMath_af964fbfe6353b50f2a61f4cf5eafe3eb}{matrix\+Log3}} (const Matrix3x3 \&R)
+\begin{DoxyCompactList}\small\item\em Computes the matrix logarithm of a rotation matrix. \end{DoxyCompactList}\item 
+static Matrix3x3 \mbox{\hyperlink{classCommonMath_a5680d687fc1f61d7f5977f0d51e08220}{matrix\+Exp3}} (const Matrix3x3 \&so3mat)
+\begin{DoxyCompactList}\small\item\em Computes the matrix exponential of a skew-\/symmetric matrix (so(3) matrix). \end{DoxyCompactList}\item 
+static Matrix3x3 \mbox{\hyperlink{classCommonMath_ad6288b94c5cfdf4560a00fa3e76b17de}{vec\+Toso3}} (const Point3 \&omg)
+\begin{DoxyCompactList}\small\item\em Converts a 3D rotation vector to a skew-\/symmetric matrix (so(3) matrix). \end{DoxyCompactList}\item 
+static Point3 \mbox{\hyperlink{classCommonMath_a28b18683ddac52fcac36f470fe030d22}{so3\+To\+Vec}} (const Matrix3x3 \&so3mat)
+\begin{DoxyCompactList}\small\item\em Converts a skew-\/symmetric matrix (so(3) matrix) to a 3D rotation vector. \end{DoxyCompactList}\item 
+static void \mbox{\hyperlink{classCommonMath_a3a55137cd6682dc2e634338ad598be95}{axis\+Ang3}} (const Point3 \&omgtheta, Point3 \&omghat, double \&theta)
+\begin{DoxyCompactList}\small\item\em Converts an angular velocity vector to a unit vector and angle. \end{DoxyCompactList}\item 
+static bool \mbox{\hyperlink{classCommonMath_aa53dce11bc6f0276003c844d4a41c6da}{near\+Zero}} (double val)
+\begin{DoxyCompactList}\small\item\em Checks if a value is near zero. \end{DoxyCompactList}\item 
+static Matrix3x3 \mbox{\hyperlink{classCommonMath_a8b6c0bdd497d5f43d1b583b64eabe897}{euler\+To\+Rot}} (const Point3 \&rotation)
+\begin{DoxyCompactList}\small\item\em Converts Euler angles to a rotation matrix. \end{DoxyCompactList}\item 
+static std\+::vector$<$ std\+::vector$<$ double $>$ $>$ \mbox{\hyperlink{classCommonMath_a0d584fa813c8f8e78a04e68fc7a570cd}{interp2}} (const std\+::vector$<$ std\+::vector$<$ double $>$ $>$ \&img, const std\+::vector$<$ std\+::vector$<$ double $>$ $>$ \&Xd, const std\+::vector$<$ std\+::vector$<$ double $>$ $>$ \&Yd)
+\begin{DoxyCompactList}\small\item\em Performs bilinear interpolation on a 2D image at given coordinates. \end{DoxyCompactList}\item 
+static std\+::vector$<$ std\+::vector$<$ std\+::vector$<$ double $>$ $>$ $>$ \mbox{\hyperlink{classCommonMath_ae06659dc1843a89eb275d9421a610347}{interp2}} (const std\+::vector$<$ std\+::vector$<$ std\+::vector$<$ double $>$ $>$ $>$ \&img, const std\+::vector$<$ std\+::vector$<$ double $>$ $>$ \&Xd, const std\+::vector$<$ std\+::vector$<$ double $>$ $>$ \&Y)
+\begin{DoxyCompactList}\small\item\em Performs bilinear interpolation on a 3D image at given coordinates. \end{DoxyCompactList}\item 
+static double \mbox{\hyperlink{classCommonMath_aa9a260fbcbd25fc27d21cc454bf61c48}{bilinear\+Interpolate}} (const std\+::vector$<$ std\+::vector$<$ double $>$ $>$ \&img, double x, double y)
+\begin{DoxyCompactList}\small\item\em Performs bilinear interpolation on a single point in a 2D image. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Member Function Documentation}
+\label{classCommonMath_a3a55137cd6682dc2e634338ad598be95} 
+\index{CommonMath@{CommonMath}!axisAng3@{axisAng3}}
+\index{axisAng3@{axisAng3}!CommonMath@{CommonMath}}
+\doxysubsubsection{\texorpdfstring{axisAng3()}{axisAng3()}}
+{\footnotesize\ttfamily void Common\+Math\+::axis\+Ang3 (\begin{DoxyParamCaption}\item[{const Point3 \&}]{omgtheta,  }\item[{Point3 \&}]{omghat,  }\item[{double \&}]{theta }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Converts an angular velocity vector to a unit vector and angle. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em omgtheta} & The angular velocity vector. \\
+\hline
+{\em omghat} & The unit vector. \\
+\hline
+{\em theta} & The angle. \\
+\hline
+\end{DoxyParams}
+\label{classCommonMath_aa9a260fbcbd25fc27d21cc454bf61c48} 
+\index{CommonMath@{CommonMath}!bilinearInterpolate@{bilinearInterpolate}}
+\index{bilinearInterpolate@{bilinearInterpolate}!CommonMath@{CommonMath}}
+\doxysubsubsection{\texorpdfstring{bilinearInterpolate()}{bilinearInterpolate()}}
+{\footnotesize\ttfamily double Common\+Math\+::bilinear\+Interpolate (\begin{DoxyParamCaption}\item[{const std\+::vector$<$ std\+::vector$<$ double $>$ $>$ \&}]{img,  }\item[{double}]{x,  }\item[{double}]{y }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Performs bilinear interpolation on a single point in a 2D image. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em img} & The source image. \\
+\hline
+{\em x} & The x-\/coordinate for interpolation. \\
+\hline
+{\em y} & The y-\/coordinate for interpolation. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The interpolated value. 
+\end{DoxyReturn}
+\label{classCommonMath_ae2ac72981aeedca3e8fead1304a960ce} 
+\index{CommonMath@{CommonMath}!cross@{cross}}
+\index{cross@{cross}!CommonMath@{CommonMath}}
+\doxysubsubsection{\texorpdfstring{cross()}{cross()}}
+{\footnotesize\ttfamily Point3 Common\+Math\+::cross (\begin{DoxyParamCaption}\item[{const Point3 \&}]{lhs,  }\item[{const Point3 \&}]{rhs }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Computes the cross product of two 3D vectors. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em lhs} & The left-\/hand side vector. \\
+\hline
+{\em rhs} & The right-\/hand side vector. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The cross product vector. 
+\end{DoxyReturn}
+\label{classCommonMath_a8b6c0bdd497d5f43d1b583b64eabe897} 
+\index{CommonMath@{CommonMath}!eulerToRot@{eulerToRot}}
+\index{eulerToRot@{eulerToRot}!CommonMath@{CommonMath}}
+\doxysubsubsection{\texorpdfstring{eulerToRot()}{eulerToRot()}}
+{\footnotesize\ttfamily Matrix3x3 Common\+Math\+::euler\+To\+Rot (\begin{DoxyParamCaption}\item[{const Point3 \&}]{rotation }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Converts Euler angles to a rotation matrix. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em rotation} & The Euler angles (rx, ry, rz). \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The rotation matrix. 
+\end{DoxyReturn}
+\label{classCommonMath_a1afffc38797caf1cafe5b4d321f0a36b} 
+\index{CommonMath@{CommonMath}!evaluateFourier@{evaluateFourier}}
+\index{evaluateFourier@{evaluateFourier}!CommonMath@{CommonMath}}
+\doxysubsubsection{\texorpdfstring{evaluateFourier()}{evaluateFourier()}}
+{\footnotesize\ttfamily double Common\+Math\+::evaluate\+Fourier (\begin{DoxyParamCaption}\item[{const std\+::vector$<$ double $>$ \&}]{fourier\+\_\+coeff,  }\item[{double}]{phi }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Evaluates a Fourier series at a given value phi. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em fourier\+\_\+coeff} & The Fourier coefficients. \\
+\hline
+{\em phi} & The value at which to evaluate the Fourier series. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The result of the Fourier series evaluation. 
+\end{DoxyReturn}
+\label{classCommonMath_a402311f93539f2b8956424500377762f} 
+\index{CommonMath@{CommonMath}!evaluatePolynomial@{evaluatePolynomial}}
+\index{evaluatePolynomial@{evaluatePolynomial}!CommonMath@{CommonMath}}
+\doxysubsubsection{\texorpdfstring{evaluatePolynomial()}{evaluatePolynomial()}}
+{\footnotesize\ttfamily double Common\+Math\+::evaluate\+Polynomial (\begin{DoxyParamCaption}\item[{const std\+::vector$<$ double $>$ \&}]{coeffs,  }\item[{double}]{x }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Evaluates a polynomial at a given value x. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em coeffs} & The coefficients of the polynomial, where coeffs\mbox{[}i\mbox{]} is the coefficient for x\texorpdfstring{$^\wedge$}{\string^}i. \\
+\hline
+{\em x} & The value at which to evaluate the polynomial. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The result of the polynomial evaluation. 
+\end{DoxyReturn}
+\label{classCommonMath_a0d584fa813c8f8e78a04e68fc7a570cd} 
+\index{CommonMath@{CommonMath}!interp2@{interp2}}
+\index{interp2@{interp2}!CommonMath@{CommonMath}}
+\doxysubsubsection{\texorpdfstring{interp2()}{interp2()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily std\+::vector$<$ std\+::vector$<$ double $>$ $>$ Common\+Math\+::interp2 (\begin{DoxyParamCaption}\item[{const std\+::vector$<$ std\+::vector$<$ double $>$ $>$ \&}]{img,  }\item[{const std\+::vector$<$ std\+::vector$<$ double $>$ $>$ \&}]{Xd,  }\item[{const std\+::vector$<$ std\+::vector$<$ double $>$ $>$ \&}]{Yd }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Performs bilinear interpolation on a 2D image at given coordinates. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em img} & The source image. \\
+\hline
+{\em Xd} & The x-\/coordinates for interpolation. \\
+\hline
+{\em Yd} & The y-\/coordinates for interpolation. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The interpolated image. 
+\end{DoxyReturn}
+\label{classCommonMath_ae06659dc1843a89eb275d9421a610347} 
+\index{CommonMath@{CommonMath}!interp2@{interp2}}
+\index{interp2@{interp2}!CommonMath@{CommonMath}}
+\doxysubsubsection{\texorpdfstring{interp2()}{interp2()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily std\+::vector$<$ std\+::vector$<$ std\+::vector$<$ double $>$ $>$ $>$ Common\+Math\+::interp2 (\begin{DoxyParamCaption}\item[{const std\+::vector$<$ std\+::vector$<$ std\+::vector$<$ double $>$ $>$ $>$ \&}]{img,  }\item[{const std\+::vector$<$ std\+::vector$<$ double $>$ $>$ \&}]{Xd,  }\item[{const std\+::vector$<$ std\+::vector$<$ double $>$ $>$ \&}]{Yd }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Performs bilinear interpolation on a 3D image at given coordinates. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em img} & The source image. \\
+\hline
+{\em Xd} & The x-\/coordinates for interpolation. \\
+\hline
+{\em Yd} & The y-\/coordinates for interpolation. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The interpolated image. 
+\end{DoxyReturn}
+\label{classCommonMath_a27715751c5bc495f3bd60a5c7e4ddf58} 
+\index{CommonMath@{CommonMath}!intersectRays@{intersectRays}}
+\index{intersectRays@{intersectRays}!CommonMath@{CommonMath}}
+\doxysubsubsection{\texorpdfstring{intersectRays()}{intersectRays()}}
+{\footnotesize\ttfamily std\+::vector$<$ Point3 $>$ Common\+Math\+::intersect\+Rays (\begin{DoxyParamCaption}\item[{std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classCamera}{Camera}} $>$}]{cameraL,  }\item[{std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classCamera}{Camera}} $>$}]{cameraR,  }\item[{const std\+::vector$<$ Point3 $>$ \&}]{raysL,  }\item[{const std\+::vector$<$ Point3 $>$ \&}]{raysR }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Computes the intersection of rays from two cameras. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em cameraL} & The left camera. \\
+\hline
+{\em cameraR} & The right camera. \\
+\hline
+{\em raysL} & The rays from the left camera. \\
+\hline
+{\em raysR} & The rays from the right camera. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The 3D intersection points. 
+\end{DoxyReturn}
+\label{classCommonMath_a6436d1890cd8bff4ef675165af83207f} 
+\index{CommonMath@{CommonMath}!isZero@{isZero}}
+\index{isZero@{isZero}!CommonMath@{CommonMath}}
+\doxysubsubsection{\texorpdfstring{isZero()}{isZero()}}
+{\footnotesize\ttfamily bool Common\+Math\+::is\+Zero (\begin{DoxyParamCaption}\item[{const std\+::vector$<$ double $>$ \&}]{v }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Checks if all elements in a vector are zero. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em v} & The vector to check. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+True if all elements are zero, false otherwise. 
+\end{DoxyReturn}
+\label{classCommonMath_aab07985ccf7c25663c4324714c66e3aa} 
+\index{CommonMath@{CommonMath}!lineLineIntersect@{lineLineIntersect}}
+\index{lineLineIntersect@{lineLineIntersect}!CommonMath@{CommonMath}}
+\doxysubsubsection{\texorpdfstring{lineLineIntersect()}{lineLineIntersect()}}
+{\footnotesize\ttfamily int Common\+Math\+::line\+Line\+Intersect (\begin{DoxyParamCaption}\item[{Point3}]{p1,  }\item[{Point3}]{p2,  }\item[{Point3}]{p3,  }\item[{Point3}]{p4,  }\item[{Point3 \&}]{pa,  }\item[{Point3 \&}]{pb,  }\item[{double \&}]{mua,  }\item[{double \&}]{mub }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Computes the intersection of two lines. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em p1} & The first point of the first line. \\
+\hline
+{\em p2} & The second point of the first line. \\
+\hline
+{\em p3} & The first point of the second line. \\
+\hline
+{\em p4} & The second point of the second line. \\
+\hline
+{\em pa} & The intersection point on the first line. \\
+\hline
+{\em pb} & The intersection point on the second line. \\
+\hline
+{\em mua} & The parameter of the intersection point on the first line. \\
+\hline
+{\em mub} & The parameter of the intersection point on the second line. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+True if there is an intersection, false otherwise. 
+\end{DoxyReturn}
+\label{classCommonMath_a5680d687fc1f61d7f5977f0d51e08220} 
+\index{CommonMath@{CommonMath}!matrixExp3@{matrixExp3}}
+\index{matrixExp3@{matrixExp3}!CommonMath@{CommonMath}}
+\doxysubsubsection{\texorpdfstring{matrixExp3()}{matrixExp3()}}
+{\footnotesize\ttfamily Matrix3x3 Common\+Math\+::matrix\+Exp3 (\begin{DoxyParamCaption}\item[{const Matrix3x3 \&}]{so3mat }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Computes the matrix exponential of a skew-\/symmetric matrix (so(3) matrix). 
+
+
+\begin{DoxyParams}{Parameters}
+{\em so3mat} & The skew-\/symmetric matrix. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The rotation matrix. 
+\end{DoxyReturn}
+\label{classCommonMath_af964fbfe6353b50f2a61f4cf5eafe3eb} 
+\index{CommonMath@{CommonMath}!matrixLog3@{matrixLog3}}
+\index{matrixLog3@{matrixLog3}!CommonMath@{CommonMath}}
+\doxysubsubsection{\texorpdfstring{matrixLog3()}{matrixLog3()}}
+{\footnotesize\ttfamily std\+::array$<$ Point3, 3 $>$ Common\+Math\+::matrix\+Log3 (\begin{DoxyParamCaption}\item[{const Matrix3x3 \&}]{R }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Computes the matrix logarithm of a rotation matrix. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em R} & The rotation matrix. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The matrix logarithm. 
+\end{DoxyReturn}
+\label{classCommonMath_aa53dce11bc6f0276003c844d4a41c6da} 
+\index{CommonMath@{CommonMath}!nearZero@{nearZero}}
+\index{nearZero@{nearZero}!CommonMath@{CommonMath}}
+\doxysubsubsection{\texorpdfstring{nearZero()}{nearZero()}}
+{\footnotesize\ttfamily bool Common\+Math\+::near\+Zero (\begin{DoxyParamCaption}\item[{double}]{val }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Checks if a value is near zero. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em val} & The value to check. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+True if the value is near zero, false otherwise. 
+\end{DoxyReturn}
+\label{classCommonMath_adadc6c4041a9eb7a565750ce3c5b0dff} 
+\index{CommonMath@{CommonMath}!norm@{norm}}
+\index{norm@{norm}!CommonMath@{CommonMath}}
+\doxysubsubsection{\texorpdfstring{norm()}{norm()}}
+{\footnotesize\ttfamily double Common\+Math\+::norm (\begin{DoxyParamCaption}\item[{const Point3 \&}]{vec }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Computes the Euclidean norm of a 3D vector. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em vec} & The vector. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The norm of the vector. 
+\end{DoxyReturn}
+\label{classCommonMath_a48867c34e3bc25068915ad032bd7e01f} 
+\index{CommonMath@{CommonMath}!rotatePoint@{rotatePoint}}
+\index{rotatePoint@{rotatePoint}!CommonMath@{CommonMath}}
+\doxysubsubsection{\texorpdfstring{rotatePoint()}{rotatePoint()}}
+{\footnotesize\ttfamily Point3 Common\+Math\+::rotate\+Point (\begin{DoxyParamCaption}\item[{const Point3 \&}]{point,  }\item[{const Matrix3x3 \&}]{rotation\+\_\+matrix }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Rotates a point using a given rotation matrix. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em point} & The point to rotate. \\
+\hline
+{\em rotation\+\_\+matrix} & The rotation matrix. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The rotated point. 
+\end{DoxyReturn}
+\label{classCommonMath_a89be2dd7acead123484bcb7821bf9ce1} 
+\index{CommonMath@{CommonMath}!rotatePoints@{rotatePoints}}
+\index{rotatePoints@{rotatePoints}!CommonMath@{CommonMath}}
+\doxysubsubsection{\texorpdfstring{rotatePoints()}{rotatePoints()}}
+{\footnotesize\ttfamily std\+::vector$<$ Point3 $>$ Common\+Math\+::rotate\+Points (\begin{DoxyParamCaption}\item[{const std\+::vector$<$ Point3 $>$ \&}]{points,  }\item[{const Matrix3x3 \&}]{rotation\+\_\+matrix }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Rotates a list of points using a given rotation matrix. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em points} & The list of points to rotate. \\
+\hline
+{\em rotation\+\_\+matrix} & The rotation matrix. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The list of rotated points. 
+\end{DoxyReturn}
+\label{classCommonMath_a4bd628d8f318ae3944ac40dbe29493b9} 
+\index{CommonMath@{CommonMath}!rotationInverse@{rotationInverse}}
+\index{rotationInverse@{rotationInverse}!CommonMath@{CommonMath}}
+\doxysubsubsection{\texorpdfstring{rotationInverse()}{rotationInverse()}}
+{\footnotesize\ttfamily Matrix3x3 Common\+Math\+::rotation\+Inverse (\begin{DoxyParamCaption}\item[{const Matrix3x3 \&}]{rotation\+\_\+matrix }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Computes the inverse of a rotation matrix. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em rotation\+\_\+matrix} & The rotation matrix. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The inverse rotation matrix. 
+\end{DoxyReturn}
+\label{classCommonMath_a28b18683ddac52fcac36f470fe030d22} 
+\index{CommonMath@{CommonMath}!so3ToVec@{so3ToVec}}
+\index{so3ToVec@{so3ToVec}!CommonMath@{CommonMath}}
+\doxysubsubsection{\texorpdfstring{so3ToVec()}{so3ToVec()}}
+{\footnotesize\ttfamily Point3 Common\+Math\+::so3\+To\+Vec (\begin{DoxyParamCaption}\item[{const Matrix3x3 \&}]{so3mat }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Converts a skew-\/symmetric matrix (so(3) matrix) to a 3D rotation vector. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em so3mat} & The skew-\/symmetric matrix. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The 3D rotation vector. 
+\end{DoxyReturn}
+\label{classCommonMath_ada7905c66f65f655e9d705a6ad15f4a9} 
+\index{CommonMath@{CommonMath}!stereoRectify@{stereoRectify}}
+\index{stereoRectify@{stereoRectify}!CommonMath@{CommonMath}}
+\doxysubsubsection{\texorpdfstring{stereoRectify()}{stereoRectify()}}
+{\footnotesize\ttfamily void Common\+Math\+::stereo\+Rectify (\begin{DoxyParamCaption}\item[{std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classPinhole}{Pinhole}} $>$}]{cameraL,  }\item[{std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classPinhole}{Pinhole}} $>$}]{cameraR,  }\item[{Matrix3x3 \&}]{Rl,  }\item[{Matrix3x3 \&}]{Rr }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Performs stereo rectification for two pinhole cameras. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em cameraL} & The left camera. \\
+\hline
+{\em cameraR} & The right camera. \\
+\hline
+{\em Rl} & The output rotation matrix for the left camera. \\
+\hline
+{\em Rr} & The output rotation matrix for the right camera. \\
+\hline
+\end{DoxyParams}
+\label{classCommonMath_af85d746d27c9d67e4f6c32e7e1be38d0} 
+\index{CommonMath@{CommonMath}!transformPoint@{transformPoint}}
+\index{transformPoint@{transformPoint}!CommonMath@{CommonMath}}
+\doxysubsubsection{\texorpdfstring{transformPoint()}{transformPoint()}}
+{\footnotesize\ttfamily Point3 Common\+Math\+::transform\+Point (\begin{DoxyParamCaption}\item[{const Point3 \&}]{point,  }\item[{const Matrix3x3 \&}]{rotation\+\_\+matrix,  }\item[{const Point3 \&}]{translation }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Transforms a point using a given rotation matrix and translation vector. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em point} & The point to transform. \\
+\hline
+{\em rotation\+\_\+matrix} & The rotation matrix. \\
+\hline
+{\em translation} & The translation vector. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The transformed point. 
+\end{DoxyReturn}
+\label{classCommonMath_ae52092fc7a7a9854eb0fa9264f386b7a} 
+\index{CommonMath@{CommonMath}!transformPoints@{transformPoints}}
+\index{transformPoints@{transformPoints}!CommonMath@{CommonMath}}
+\doxysubsubsection{\texorpdfstring{transformPoints()}{transformPoints()}}
+{\footnotesize\ttfamily std\+::vector$<$ Point3 $>$ Common\+Math\+::transform\+Points (\begin{DoxyParamCaption}\item[{const std\+::vector$<$ Point3 $>$ \&}]{points,  }\item[{const Matrix3x3 \&}]{rotation\+\_\+matrix,  }\item[{const Point3 \&}]{translation }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Transforms a list of points using a given rotation matrix and translation vector. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em points} & The list of points to transform. \\
+\hline
+{\em rotation\+\_\+matrix} & The rotation matrix. \\
+\hline
+{\em translation} & The translation vector. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The list of transformed points. 
+\end{DoxyReturn}
+\label{classCommonMath_abe8dd762e94f1fcef3b0d524bb84b773} 
+\index{CommonMath@{CommonMath}!transposeMatrix@{transposeMatrix}}
+\index{transposeMatrix@{transposeMatrix}!CommonMath@{CommonMath}}
+\doxysubsubsection{\texorpdfstring{transposeMatrix()}{transposeMatrix()}}
+{\footnotesize\ttfamily std\+::vector$<$ std\+::vector$<$ double $>$ $>$ Common\+Math\+::transpose\+Matrix (\begin{DoxyParamCaption}\item[{const std\+::vector$<$ std\+::vector$<$ double $>$ $>$ \&}]{matrix }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Transposes a given matrix. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em matrix} & The matrix to transpose. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The transposed matrix. 
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em std\+::invalid\+\_\+argument} & if the matrix rows are of inconsistent size. \\
+\hline
+\end{DoxyExceptions}
+\label{classCommonMath_ad6288b94c5cfdf4560a00fa3e76b17de} 
+\index{CommonMath@{CommonMath}!vecToso3@{vecToso3}}
+\index{vecToso3@{vecToso3}!CommonMath@{CommonMath}}
+\doxysubsubsection{\texorpdfstring{vecToso3()}{vecToso3()}}
+{\footnotesize\ttfamily Matrix3x3 Common\+Math\+::vec\+Toso3 (\begin{DoxyParamCaption}\item[{const Point3 \&}]{omg }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Converts a 3D rotation vector to a skew-\/symmetric matrix (so(3) matrix). 
+
+
+\begin{DoxyParams}{Parameters}
+{\em omg} & The 3D rotation vector. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The skew-\/symmetric matrix. 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+include/utilities/common\+\_\+math.\+h\item 
+src/utilities/common\+\_\+math.\+cpp\end{DoxyCompactItemize}

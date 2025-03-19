@@ -1,0 +1,114 @@
+\doxysection{Remapper Class Reference}
+\label{classRemapper}\index{Remapper@{Remapper}}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classRemapper_a3deda8867de76ce5ad48d07a34eff0e7}{Remapper}} (const std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classCamera}{Camera}} $>$ \&cam\+\_\+source)
+\begin{DoxyCompactList}\small\item\em Constructs a \doxylink{classRemapper}{Remapper} with a source camera and automatically selects the result of get\+Pinhole as the target camera. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classRemapper_a49f6e2b0d2fc527527fb09e1204dad2e}{Remapper}} (const std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classCamera}{Camera}} $>$ \&cam\+\_\+source, const std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classCamera}{Camera}} $>$ \&cam\+\_\+target)
+\begin{DoxyCompactList}\small\item\em Constructs a \doxylink{classRemapper}{Remapper} with a source and a target camera. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classRemapper_a3bf0e86fe48f4689004b0e47e6cf30a1}{Remapper}} (const std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classCamera}{Camera}} $>$ \&cam\+\_\+source, const std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classCamera}{Camera}} $>$ \&cam\+\_\+target, const Matrix3x3 \&rotation\+\_\+matrix)
+\begin{DoxyCompactList}\small\item\em Constructs a \doxylink{classRemapper}{Remapper} with a source camera, a target camera, and a rotation matrix. \end{DoxyCompactList}\item 
+std\+::vector$<$ std\+::vector$<$ std\+::vector$<$ double $>$ $>$ $>$ \mbox{\hyperlink{classRemapper_a4a20b3d905019a4377a6bc261d86b48f}{undistort}} (const std\+::vector$<$ std\+::vector$<$ std\+::vector$<$ double $>$ $>$ $>$ \&image)
+\begin{DoxyCompactList}\small\item\em Removes distortion from an image following the mapping from source to target. \end{DoxyCompactList}\item 
+std\+::vector$<$ std\+::vector$<$ std\+::vector$<$ double $>$ $>$ $>$ \mbox{\hyperlink{classRemapper_a5525b50252c84cb67df97f1c7eecc308}{distort}} (const std\+::vector$<$ std\+::vector$<$ std\+::vector$<$ double $>$ $>$ $>$ \&image)
+\begin{DoxyCompactList}\small\item\em Applies distortion to an image following the mapping from target to source. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\label{classRemapper_a3deda8867de76ce5ad48d07a34eff0e7} 
+\index{Remapper@{Remapper}!Remapper@{Remapper}}
+\index{Remapper@{Remapper}!Remapper@{Remapper}}
+\doxysubsubsection{\texorpdfstring{Remapper()}{Remapper()}\hspace{0.1cm}{\footnotesize\ttfamily [1/3]}}
+{\footnotesize\ttfamily Remapper\+::\+Remapper (\begin{DoxyParamCaption}\item[{const std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classCamera}{Camera}} $>$ \&}]{cam\+\_\+source }\end{DoxyParamCaption})}
+
+
+
+Constructs a \doxylink{classRemapper}{Remapper} with a source camera and automatically selects the result of get\+Pinhole as the target camera. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em cam\+\_\+source} & Shared pointer to the source \doxylink{classCamera}{Camera} object. \\
+\hline
+\end{DoxyParams}
+\label{classRemapper_a49f6e2b0d2fc527527fb09e1204dad2e} 
+\index{Remapper@{Remapper}!Remapper@{Remapper}}
+\index{Remapper@{Remapper}!Remapper@{Remapper}}
+\doxysubsubsection{\texorpdfstring{Remapper()}{Remapper()}\hspace{0.1cm}{\footnotesize\ttfamily [2/3]}}
+{\footnotesize\ttfamily Remapper\+::\+Remapper (\begin{DoxyParamCaption}\item[{const std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classCamera}{Camera}} $>$ \&}]{cam\+\_\+source,  }\item[{const std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classCamera}{Camera}} $>$ \&}]{cam\+\_\+target }\end{DoxyParamCaption})}
+
+
+
+Constructs a \doxylink{classRemapper}{Remapper} with a source and a target camera. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em cam\+\_\+source} & Shared pointer to the source \doxylink{classCamera}{Camera} object. \\
+\hline
+{\em cam\+\_\+target} & Shared pointer to the target \doxylink{classCamera}{Camera} object. \\
+\hline
+\end{DoxyParams}
+\label{classRemapper_a3bf0e86fe48f4689004b0e47e6cf30a1} 
+\index{Remapper@{Remapper}!Remapper@{Remapper}}
+\index{Remapper@{Remapper}!Remapper@{Remapper}}
+\doxysubsubsection{\texorpdfstring{Remapper()}{Remapper()}\hspace{0.1cm}{\footnotesize\ttfamily [3/3]}}
+{\footnotesize\ttfamily Remapper\+::\+Remapper (\begin{DoxyParamCaption}\item[{const std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classCamera}{Camera}} $>$ \&}]{cam\+\_\+source,  }\item[{const std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classCamera}{Camera}} $>$ \&}]{cam\+\_\+target,  }\item[{const Matrix3x3 \&}]{rotation\+\_\+matrix }\end{DoxyParamCaption})}
+
+
+
+Constructs a \doxylink{classRemapper}{Remapper} with a source camera, a target camera, and a rotation matrix. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em cam\+\_\+source} & Shared pointer to the source \doxylink{classCamera}{Camera} object. \\
+\hline
+{\em cam\+\_\+target} & Shared pointer to the target \doxylink{classCamera}{Camera} object. \\
+\hline
+{\em rotation\+\_\+matrix} & The rotation matrix used to map source to target. \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\label{classRemapper_a5525b50252c84cb67df97f1c7eecc308} 
+\index{Remapper@{Remapper}!distort@{distort}}
+\index{distort@{distort}!Remapper@{Remapper}}
+\doxysubsubsection{\texorpdfstring{distort()}{distort()}}
+{\footnotesize\ttfamily std\+::vector$<$ std\+::vector$<$ std\+::vector$<$ double $>$ $>$ $>$ Remapper\+::distort (\begin{DoxyParamCaption}\item[{const std\+::vector$<$ std\+::vector$<$ std\+::vector$<$ double $>$ $>$ $>$ \&}]{image }\end{DoxyParamCaption})}
+
+
+
+Applies distortion to an image following the mapping from target to source. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em image} & The input image to be distorted. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The distorted image. 
+\end{DoxyReturn}
+\label{classRemapper_a4a20b3d905019a4377a6bc261d86b48f} 
+\index{Remapper@{Remapper}!undistort@{undistort}}
+\index{undistort@{undistort}!Remapper@{Remapper}}
+\doxysubsubsection{\texorpdfstring{undistort()}{undistort()}}
+{\footnotesize\ttfamily std\+::vector$<$ std\+::vector$<$ std\+::vector$<$ double $>$ $>$ $>$ Remapper\+::undistort (\begin{DoxyParamCaption}\item[{const std\+::vector$<$ std\+::vector$<$ std\+::vector$<$ double $>$ $>$ $>$ \&}]{image }\end{DoxyParamCaption})}
+
+
+
+Removes distortion from an image following the mapping from source to target. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em image} & The input image to be undistorted. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The undistorted image. 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+include/remapper/remapper.\+h\item 
+src/remapper/remapper.\+cpp\end{DoxyCompactItemize}

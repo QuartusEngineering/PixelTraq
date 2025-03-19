@@ -1,0 +1,510 @@
+\doxysection{Brown\+Conrady Class Reference}
+\label{classBrownConrady}\index{BrownConrady@{BrownConrady}}
+Inheritance diagram for Brown\+Conrady\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{classBrownConrady}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\label{classBrownConrady_a78647dc26bbb31cf83805a3e13aa8d16} 
+{\bfseries Brown\+Conrady} ()
+\begin{DoxyCompactList}\small\item\em Default constructor for the \doxylink{classBrownConrady}{Brown\+Conrady} class. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classBrownConrady_a22e94816266e9dae08557b1b0ad7d1a6}{Brown\+Conrady}} (const std\+::vector$<$ double $>$ \&focal\+\_\+length, const std\+::vector$<$ double $>$ \&principal\+\_\+point, const std\+::vector$<$ int $>$ \&image\+\_\+size, const std\+::vector$<$ double $>$ \&radial\+\_\+distortion=\{\}, const std\+::vector$<$ double $>$ \&tangential\+\_\+distortion=\{\}, const std\+::vector$<$ double $>$ \&tangential\+\_\+distortion\+\_\+polycoeff=\{\}, const Point3 \&rotation=\{ 0.\+0, 0.\+0, 0.\+0 \}, const Point3 \&translation=\{ 0.\+0, 0.\+0, 0.\+0 \})
+\begin{DoxyCompactList}\small\item\em Parameterized constructor for the \doxylink{classBrownConrady}{Brown\+Conrady} class. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classBrownConrady_a3605b83b4629070587fc6411db0235d5}{Brown\+Conrady}} (const \mbox{\hyperlink{classBrownConrady}{Brown\+Conrady}} \&model)
+\begin{DoxyCompactList}\small\item\em Copy constructor for the \doxylink{classBrownConrady}{Brown\+Conrady} class. \end{DoxyCompactList}\item 
+std\+::array$<$ double, 2 $>$ \mbox{\hyperlink{classBrownConrady_a778013253f14b4927be2e08fef847c1c}{project}} (const Point3 \&point\+\_\+3d) const override
+\begin{DoxyCompactList}\small\item\em Projects a 3D point to a 2D point using intrinsic and extrinsic parameters. \end{DoxyCompactList}\item 
+Point3 \mbox{\hyperlink{classBrownConrady_ac6163059569f6604b9d383adbdaa1172}{backproject}} (const std\+::array$<$ double, 2 $>$ \&point\+\_\+2d) const override
+\begin{DoxyCompactList}\small\item\em Backprojects a 2D point to a 3D ray. \end{DoxyCompactList}\item 
+virtual const std\+::string \mbox{\hyperlink{classBrownConrady_a334ebefb8804f973f173f6b5d03db99e}{get\+Model\+Name}} () const override
+\begin{DoxyCompactList}\small\item\em Gets the model name. \end{DoxyCompactList}\item 
+virtual std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classPinhole}{Pinhole}} $>$ \mbox{\hyperlink{classBrownConrady_a2627a2054ffe39166c10f8e851d33041}{get\+Pinhole}} () const override
+\begin{DoxyCompactList}\small\item\em Gets a shared pointer to a \doxylink{classPinhole}{Pinhole} model. \end{DoxyCompactList}\item 
+std\+::vector$<$ double $>$ \mbox{\hyperlink{classBrownConrady_aac93b47f7b85ab9877c523c8e4e3eefa}{get\+Principal\+Point}} () const
+\begin{DoxyCompactList}\small\item\em Gets the principal point. \end{DoxyCompactList}\item 
+std\+::vector$<$ double $>$ \mbox{\hyperlink{classBrownConrady_a19d36dc93640630d91fe1fb53cceccbb}{get\+Focal\+Length}} () const
+\begin{DoxyCompactList}\small\item\em Gets the focal length. \end{DoxyCompactList}\item 
+std\+::vector$<$ double $>$ \mbox{\hyperlink{classBrownConrady_af622245827306910bef5ed6675ef5c55}{get\+Radial\+Dist\+Coeffs}} () const
+\begin{DoxyCompactList}\small\item\em Gets the radial distortion coefficients. The radial distortion is defined by the equation\+: \end{DoxyCompactList}\item 
+std\+::vector$<$ double $>$ \mbox{\hyperlink{classBrownConrady_aeb6cda1cdac8183c86937050b210ef12}{get\+Tangential\+Dist\+Coeffs}} () const
+\begin{DoxyCompactList}\small\item\em Gets the tangential distortion coefficients. \end{DoxyCompactList}\item 
+std\+::vector$<$ double $>$ \mbox{\hyperlink{classBrownConrady_a40d4586ef9518b595eef4e154557c300}{get\+Tangential\+Polynominal\+Dist\+Coeffs}} () const
+\begin{DoxyCompactList}\small\item\em Gets the tangential polynomial distortion coefficients. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classBrownConrady_ac9aab593db57112c2be96b435a9113ac}{get\+Backproject\+Settings}} (double \&threshold, int \&iterations) const
+\begin{DoxyCompactList}\small\item\em Gets the backprojection settings. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classBrownConrady_abb4f0adee74673a6bbe328bfd6c4b827}{set\+Principal\+Point}} (std\+::vector$<$ double $>$ principal\+\_\+point)
+\begin{DoxyCompactList}\small\item\em Sets the principal point. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classBrownConrady_a634a9f0da36689f6ac5e669ae7747a77}{set\+Focal\+Length}} (std\+::vector$<$ double $>$ focal\+\_\+length)
+\begin{DoxyCompactList}\small\item\em Sets the focal length. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classBrownConrady_ad95aadc2133e4879a693b79f338d9e21}{set\+Radial\+Dist\+Coeffs}} (std\+::vector$<$ double $>$ radial\+\_\+dist\+\_\+coeffs)
+\begin{DoxyCompactList}\small\item\em Sets the radial distortion coefficients. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classBrownConrady_a793d6a68dd1d4926ccdd1a52779d36b3}{set\+Tangential\+Dist\+Coeffs}} (std\+::vector$<$ double $>$ tangential\+\_\+dist\+\_\+coeffs)
+\begin{DoxyCompactList}\small\item\em Sets the tangential distortion coefficients. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classBrownConrady_a9a1204b2d868e264f5fd475efb3c02ef}{set\+Tangential\+Polynominal\+Dist\+Coeffs}} (std\+::vector$<$ double $>$ tangential\+\_\+polynomial\+\_\+dist\+\_\+coeffs)
+\begin{DoxyCompactList}\small\item\em Sets the tangential polynomial distortion coefficients. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classBrownConrady_afc2321733756d400be12d12c696fac14}{set\+Backproject\+Settings}} (double threshold, int iterations)
+\begin{DoxyCompactList}\small\item\em Sets the backprojection settings. \end{DoxyCompactList}\item 
+std\+::vector$<$ Point2 $>$ \mbox{\hyperlink{classBrownConrady_a6ae3fa443671dd7a681711f3ff2bd46b}{project}} (const std\+::vector$<$ Point3 $>$ \&points\+\_\+3d) const
+\begin{DoxyCompactList}\small\item\em Projects 3D points to 2D points using the camera model. \end{DoxyCompactList}\item 
+std\+::vector$<$ std\+::vector$<$ Point2 $>$ $>$ \mbox{\hyperlink{classBrownConrady_a2d4cb6f9297cffe56d4936743f0cb358}{project}} (const std\+::vector$<$ std\+::vector$<$ Point3 $>$ $>$ \&points\+\_\+3d1) const
+\begin{DoxyCompactList}\small\item\em Projects 2D vectors of 3D points to 2D points using the camera model. \end{DoxyCompactList}\item 
+std\+::vector$<$ std\+::vector$<$ std\+::array$<$ double, 3 $>$ $>$ $>$ \mbox{\hyperlink{classBrownConrady_a0fa46f041586bb492f0bd5e525e4a020}{backproject}} (const std\+::vector$<$ std\+::vector$<$ double $>$ $>$ \&image) const
+\begin{DoxyCompactList}\small\item\em Backprojects a 2D vector of 2D points to 3D rays using the camera model. \end{DoxyCompactList}\item 
+std\+::vector$<$ Point3 $>$ \mbox{\hyperlink{classBrownConrady_aef54da14254e193c05f01794cc1e2cc0}{backproject}} (const std\+::vector$<$ Point2 $>$ \&points\+\_\+2d) const
+\begin{DoxyCompactList}\small\item\em Backprojects 2D points to 3D rays using the camera model. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{classCamera}{Camera}}}
+\begin{DoxyCompactItemize}
+\item 
+{\bfseries Camera} ()
+\begin{DoxyCompactList}\small\item\em Default constructor for the \doxylink{classCamera}{Camera} class. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classCamera_ae4dce82bbbae84426aa18223438ea3b2}{Camera}} (std\+::vector$<$ int $>$ image\+\_\+size, Point3 rotation, Point3 translation)
+\begin{DoxyCompactList}\small\item\em Parameterized constructor for the \doxylink{classCamera}{Camera} class. \end{DoxyCompactList}\item 
+std\+::string \mbox{\hyperlink{classCamera_a52aedf294fdf857f9a41e124c7927b43}{get\+Parameter\+Display\+String}} () const
+\begin{DoxyCompactList}\small\item\em Returns a string with the camera parameters for display. \end{DoxyCompactList}\item 
+void {\bfseries display} () const
+\begin{DoxyCompactList}\small\item\em Displays the camera parameters to the console. \end{DoxyCompactList}\item 
+std\+::vector$<$ int $>$ \mbox{\hyperlink{classCamera_ae647b7b651bdc664118d03e5f7f66616}{get\+Image\+Size}} () const
+\begin{DoxyCompactList}\small\item\em Gets the image size. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classCamera_a7131f2a763a841f7c6a93a79981ffb72}{set\+Image\+Size}} (std\+::vector$<$ int $>$ image\+\_\+size)
+\begin{DoxyCompactList}\small\item\em Sets the image size. \end{DoxyCompactList}\item 
+std\+::vector$<$ Point2 $>$ \mbox{\hyperlink{classCamera_a6ae3fa443671dd7a681711f3ff2bd46b}{project}} (const std\+::vector$<$ Point3 $>$ \&points\+\_\+3d) const
+\begin{DoxyCompactList}\small\item\em Projects 3D points to 2D points using the camera model. \end{DoxyCompactList}\item 
+std\+::vector$<$ std\+::vector$<$ Point2 $>$ $>$ \mbox{\hyperlink{classCamera_a2d4cb6f9297cffe56d4936743f0cb358}{project}} (const std\+::vector$<$ std\+::vector$<$ Point3 $>$ $>$ \&points\+\_\+3d1) const
+\begin{DoxyCompactList}\small\item\em Projects 2D vectors of 3D points to 2D points using the camera model. \end{DoxyCompactList}\item 
+std\+::vector$<$ std\+::vector$<$ std\+::array$<$ double, 3 $>$ $>$ $>$ \mbox{\hyperlink{classCamera_a0fa46f041586bb492f0bd5e525e4a020}{backproject}} (const std\+::vector$<$ std\+::vector$<$ double $>$ $>$ \&image) const
+\begin{DoxyCompactList}\small\item\em Backprojects a 2D vector of 2D points to 3D rays using the camera model. \end{DoxyCompactList}\item 
+std\+::vector$<$ Point3 $>$ \mbox{\hyperlink{classCamera_aef54da14254e193c05f01794cc1e2cc0}{backproject}} (const std\+::vector$<$ Point2 $>$ \&points\+\_\+2d) const
+\begin{DoxyCompactList}\small\item\em Backprojects 2D points to 3D rays using the camera model. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classCamera_a8f46c6f364430fa41f0b96aa62c7f158}{set\+Translation}} (Point3 translation)
+\begin{DoxyCompactList}\small\item\em Sets the translation vector. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classCamera_a53ac33421a4e50f8a94330540d6971f4}{set\+Rotation}} (Point3 rotation)
+\begin{DoxyCompactList}\small\item\em Sets the rotation vector. \end{DoxyCompactList}\item 
+const std\+::vector$<$ Point3 $>$ \mbox{\hyperlink{classCamera_a5d9ce2104ac617235356c9ef2734049a}{world\+To\+Camera\+Pnts}} (const std\+::vector$<$ Point3 $>$ \&world\+\_\+points) const
+\begin{DoxyCompactList}\small\item\em Transforms world points to camera points. \end{DoxyCompactList}\item 
+const std\+::vector$<$ Point3 $>$ \mbox{\hyperlink{classCamera_a5cb55aa775a0213abbfe85122112b16a}{camera\+To\+World\+Pnts}} (const std\+::vector$<$ Point3 $>$ \&world\+\_\+points) const
+\begin{DoxyCompactList}\small\item\em Transforms camera points to world points. \end{DoxyCompactList}\item 
+const Point3 \mbox{\hyperlink{classCamera_a7fcbbda82d69c6b3407d3397b59336fb}{world\+To\+Camera\+Pnts}} (const Point3 \&world\+\_\+point) const
+\begin{DoxyCompactList}\small\item\em Transforms a single world point to a camera point. \end{DoxyCompactList}\item 
+const Point3 \mbox{\hyperlink{classCamera_a543532ed983ca1232c3c7e0d620c1c8d}{camera\+To\+World\+Pnts}} (const Point3 \&world\+\_\+point) const
+\begin{DoxyCompactList}\small\item\em Transforms a single camera point to a world point. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classCamera_a0ad27316f530acbc22702832bbc84e11}{save}} (const std\+::string \&file\+Name) const
+\begin{DoxyCompactList}\small\item\em Saves the \doxylink{classCamera}{Camera} object to a file. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classBrownConrady}{Brown\+Conrady}} $>$ \mbox{\hyperlink{classBrownConrady_a8e240d66be88269ea79958d0c0e73b91}{load}} (const std\+::string \&file\+Name)
+\begin{DoxyCompactList}\small\item\em Loads a \doxylink{classBrownConrady}{Brown\+Conrady} model from a file. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Member Functions inherited from \mbox{\hyperlink{classCamera}{Camera}}}
+\begin{DoxyCompactItemize}
+\item 
+static std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classCamera}{Camera}} $>$ \mbox{\hyperlink{classCamera_ac7fc1f6c7e0b0560097c3ab69d4fa533}{load}} (const std\+::string \&file\+Name)
+\begin{DoxyCompactList}\small\item\em Static method to load a camera based on file type. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\label{classBrownConrady_a22e94816266e9dae08557b1b0ad7d1a6} 
+\index{BrownConrady@{BrownConrady}!BrownConrady@{BrownConrady}}
+\index{BrownConrady@{BrownConrady}!BrownConrady@{BrownConrady}}
+\doxysubsubsection{\texorpdfstring{BrownConrady()}{BrownConrady()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily Brown\+Conrady\+::\+Brown\+Conrady (\begin{DoxyParamCaption}\item[{const std\+::vector$<$ double $>$ \&}]{focal\+\_\+length,  }\item[{const std\+::vector$<$ double $>$ \&}]{principal\+\_\+point,  }\item[{const std\+::vector$<$ int $>$ \&}]{image\+\_\+size,  }\item[{const std\+::vector$<$ double $>$ \&}]{radial\+\_\+distortion = {\ttfamily \{\}},  }\item[{const std\+::vector$<$ double $>$ \&}]{tangential\+\_\+distortion = {\ttfamily \{\}},  }\item[{const std\+::vector$<$ double $>$ \&}]{tangential\+\_\+distortion\+\_\+polycoeff = {\ttfamily \{\}},  }\item[{const Point3 \&}]{rotation = {\ttfamily \{~0.0,~0.0,~0.0~\}},  }\item[{const Point3 \&}]{translation = {\ttfamily \{~0.0,~0.0,~0.0~\}} }\end{DoxyParamCaption})}
+
+
+
+Parameterized constructor for the \doxylink{classBrownConrady}{Brown\+Conrady} class. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em focal\+\_\+length} & Vector of focal length values. \\
+\hline
+{\em principal\+\_\+point} & Vector of principal point values. \\
+\hline
+{\em image\+\_\+size} & Vector of image size dimensions. \\
+\hline
+{\em radial\+\_\+distortion} & Vector of symmetric radial distortion coefficients. \\
+\hline
+{\em tangential\+\_\+distortion} & Vector of tangential distortion coefficients. \\
+\hline
+{\em tangential\+\_\+distortion\+\_\+polycoeff} & Vector of fourier tangential distortion polynomial coefficients. \\
+\hline
+{\em rotation} & Rotation vector. \\
+\hline
+{\em translation} & Translation vector. \\
+\hline
+\end{DoxyParams}
+\label{classBrownConrady_a3605b83b4629070587fc6411db0235d5} 
+\index{BrownConrady@{BrownConrady}!BrownConrady@{BrownConrady}}
+\index{BrownConrady@{BrownConrady}!BrownConrady@{BrownConrady}}
+\doxysubsubsection{\texorpdfstring{BrownConrady()}{BrownConrady()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily Brown\+Conrady\+::\+Brown\+Conrady (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classBrownConrady}{Brown\+Conrady}} \&}]{model }\end{DoxyParamCaption})}
+
+
+
+Copy constructor for the \doxylink{classBrownConrady}{Brown\+Conrady} class. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em model} & The \doxylink{classBrownConrady}{Brown\+Conrady} model to copy from. \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\label{classBrownConrady_ac6163059569f6604b9d383adbdaa1172} 
+\index{BrownConrady@{BrownConrady}!backproject@{backproject}}
+\index{backproject@{backproject}!BrownConrady@{BrownConrady}}
+\doxysubsubsection{\texorpdfstring{backproject()}{backproject()}\hspace{0.1cm}{\footnotesize\ttfamily [1/3]}}
+{\footnotesize\ttfamily Point3 Brown\+Conrady\+::backproject (\begin{DoxyParamCaption}\item[{const std\+::array$<$ double, 2 $>$ \&}]{point\+\_\+2d }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Backprojects a 2D point to a 3D ray. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em point\+\_\+2d} & The 2D point to backproject. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The backprojected 3D ray. 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{classCamera}{Camera}}.
+
+\label{classBrownConrady_aef54da14254e193c05f01794cc1e2cc0} 
+\index{BrownConrady@{BrownConrady}!backproject@{backproject}}
+\index{backproject@{backproject}!BrownConrady@{BrownConrady}}
+\doxysubsubsection{\texorpdfstring{backproject()}{backproject()}\hspace{0.1cm}{\footnotesize\ttfamily [2/3]}}
+{\footnotesize\ttfamily std\+::vector$<$ Point3 $>$ Camera\+::backproject (\begin{DoxyParamCaption}\item[{const std\+::vector$<$ Point2 $>$ \&}]{points\+\_\+2d }\end{DoxyParamCaption}) const}
+
+
+
+Backprojects 2D points to 3D rays using the camera model. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em points\+\_\+2d} & A vector of 2D points. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A vector of backprojected 3D rays. 
+\end{DoxyReturn}
+\label{classBrownConrady_a0fa46f041586bb492f0bd5e525e4a020} 
+\index{BrownConrady@{BrownConrady}!backproject@{backproject}}
+\index{backproject@{backproject}!BrownConrady@{BrownConrady}}
+\doxysubsubsection{\texorpdfstring{backproject()}{backproject()}\hspace{0.1cm}{\footnotesize\ttfamily [3/3]}}
+{\footnotesize\ttfamily std\+::vector$<$ std\+::vector$<$ std\+::array$<$ double, 3 $>$ $>$ $>$ Camera\+::backproject (\begin{DoxyParamCaption}\item[{const std\+::vector$<$ std\+::vector$<$ double $>$ $>$ \&}]{image }\end{DoxyParamCaption}) const}
+
+
+
+Backprojects a 2D vector of 2D points to 3D rays using the camera model. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em image} & A 2D vector of 2D points. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A 2D vector of backprojected 3D rays. 
+\end{DoxyReturn}
+\label{classBrownConrady_ac9aab593db57112c2be96b435a9113ac} 
+\index{BrownConrady@{BrownConrady}!getBackprojectSettings@{getBackprojectSettings}}
+\index{getBackprojectSettings@{getBackprojectSettings}!BrownConrady@{BrownConrady}}
+\doxysubsubsection{\texorpdfstring{getBackprojectSettings()}{getBackprojectSettings()}}
+{\footnotesize\ttfamily void Brown\+Conrady\+::get\+Backproject\+Settings (\begin{DoxyParamCaption}\item[{double \&}]{threshold,  }\item[{int \&}]{iterations }\end{DoxyParamCaption}) const}
+
+
+
+Gets the backprojection settings. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em threshold} & The threshold value to be set. \\
+\hline
+{\em iterations} & The number of iterations to be set. \\
+\hline
+\end{DoxyParams}
+\label{classBrownConrady_a19d36dc93640630d91fe1fb53cceccbb} 
+\index{BrownConrady@{BrownConrady}!getFocalLength@{getFocalLength}}
+\index{getFocalLength@{getFocalLength}!BrownConrady@{BrownConrady}}
+\doxysubsubsection{\texorpdfstring{getFocalLength()}{getFocalLength()}}
+{\footnotesize\ttfamily std\+::vector$<$ double $>$ Brown\+Conrady\+::get\+Focal\+Length (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Gets the focal length. 
+
+\begin{DoxyReturn}{Returns}
+The focal length. 
+\end{DoxyReturn}
+\label{classBrownConrady_a334ebefb8804f973f173f6b5d03db99e} 
+\index{BrownConrady@{BrownConrady}!getModelName@{getModelName}}
+\index{getModelName@{getModelName}!BrownConrady@{BrownConrady}}
+\doxysubsubsection{\texorpdfstring{getModelName()}{getModelName()}}
+{\footnotesize\ttfamily const std\+::string Brown\+Conrady\+::get\+Model\+Name (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Gets the model name. 
+
+\begin{DoxyReturn}{Returns}
+A string containing the model name. 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{classCamera}{Camera}}.
+
+\label{classBrownConrady_a2627a2054ffe39166c10f8e851d33041} 
+\index{BrownConrady@{BrownConrady}!getPinhole@{getPinhole}}
+\index{getPinhole@{getPinhole}!BrownConrady@{BrownConrady}}
+\doxysubsubsection{\texorpdfstring{getPinhole()}{getPinhole()}}
+{\footnotesize\ttfamily std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classPinhole}{Pinhole}} $>$ Brown\+Conrady\+::get\+Pinhole (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Gets a shared pointer to a \doxylink{classPinhole}{Pinhole} model. 
+
+\begin{DoxyReturn}{Returns}
+A shared pointer to a \doxylink{classPinhole}{Pinhole} model. 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{classCamera}{Camera}}.
+
+\label{classBrownConrady_aac93b47f7b85ab9877c523c8e4e3eefa} 
+\index{BrownConrady@{BrownConrady}!getPrincipalPoint@{getPrincipalPoint}}
+\index{getPrincipalPoint@{getPrincipalPoint}!BrownConrady@{BrownConrady}}
+\doxysubsubsection{\texorpdfstring{getPrincipalPoint()}{getPrincipalPoint()}}
+{\footnotesize\ttfamily std\+::vector$<$ double $>$ Brown\+Conrady\+::get\+Principal\+Point (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Gets the principal point. 
+
+\begin{DoxyReturn}{Returns}
+The principal point. 
+\end{DoxyReturn}
+\label{classBrownConrady_af622245827306910bef5ed6675ef5c55} 
+\index{BrownConrady@{BrownConrady}!getRadialDistCoeffs@{getRadialDistCoeffs}}
+\index{getRadialDistCoeffs@{getRadialDistCoeffs}!BrownConrady@{BrownConrady}}
+\doxysubsubsection{\texorpdfstring{getRadialDistCoeffs()}{getRadialDistCoeffs()}}
+{\footnotesize\ttfamily std\+::vector$<$ double $>$ Brown\+Conrady\+::get\+Radial\+Dist\+Coeffs (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Gets the radial distortion coefficients. The radial distortion is defined by the equation\+: 
+
+\[
+R_n = 1 + k_1 r^2 + k_2 r^4 + k_3 r^6 + \cdots
+\] \begin{DoxyReturn}{Returns}
+The radial distortion coefficients. 
+\end{DoxyReturn}
+\label{classBrownConrady_aeb6cda1cdac8183c86937050b210ef12} 
+\index{BrownConrady@{BrownConrady}!getTangentialDistCoeffs@{getTangentialDistCoeffs}}
+\index{getTangentialDistCoeffs@{getTangentialDistCoeffs}!BrownConrady@{BrownConrady}}
+\doxysubsubsection{\texorpdfstring{getTangentialDistCoeffs()}{getTangentialDistCoeffs()}}
+{\footnotesize\ttfamily std\+::vector$<$ double $>$ Brown\+Conrady\+::get\+Tangential\+Dist\+Coeffs (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Gets the tangential distortion coefficients. 
+
+\begin{DoxyReturn}{Returns}
+The tangential distortion coefficients. 
+\end{DoxyReturn}
+\label{classBrownConrady_a40d4586ef9518b595eef4e154557c300} 
+\index{BrownConrady@{BrownConrady}!getTangentialPolynominalDistCoeffs@{getTangentialPolynominalDistCoeffs}}
+\index{getTangentialPolynominalDistCoeffs@{getTangentialPolynominalDistCoeffs}!BrownConrady@{BrownConrady}}
+\doxysubsubsection{\texorpdfstring{getTangentialPolynominalDistCoeffs()}{getTangentialPolynominalDistCoeffs()}}
+{\footnotesize\ttfamily std\+::vector$<$ double $>$ Brown\+Conrady\+::get\+Tangential\+Polynominal\+Dist\+Coeffs (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Gets the tangential polynomial distortion coefficients. 
+
+\begin{DoxyReturn}{Returns}
+The tangential polynomial distortion coefficients. 
+\end{DoxyReturn}
+\label{classBrownConrady_a8e240d66be88269ea79958d0c0e73b91} 
+\index{BrownConrady@{BrownConrady}!load@{load}}
+\index{load@{load}!BrownConrady@{BrownConrady}}
+\doxysubsubsection{\texorpdfstring{load()}{load()}}
+{\footnotesize\ttfamily std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classBrownConrady}{Brown\+Conrady}} $>$ Brown\+Conrady\+::load (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{file\+Name }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Loads a \doxylink{classBrownConrady}{Brown\+Conrady} model from a file. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em file\+Name} & The path of the file to load the model from. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A shared pointer to the loaded \doxylink{classBrownConrady}{Brown\+Conrady} model. 
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em std\+::invalid\+\_\+argument} & if the model contained in the imported file is not a \doxylink{classBrownConrady}{Brown\+Conrady} model. \\
+\hline
+\end{DoxyExceptions}
+\label{classBrownConrady_a778013253f14b4927be2e08fef847c1c} 
+\index{BrownConrady@{BrownConrady}!project@{project}}
+\index{project@{project}!BrownConrady@{BrownConrady}}
+\doxysubsubsection{\texorpdfstring{project()}{project()}\hspace{0.1cm}{\footnotesize\ttfamily [1/3]}}
+{\footnotesize\ttfamily std\+::array$<$ double, 2 $>$ Brown\+Conrady\+::project (\begin{DoxyParamCaption}\item[{const Point3 \&}]{point\+\_\+3d }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Projects a 3D point to a 2D point using intrinsic and extrinsic parameters. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em point\+\_\+3d} & The 3D point to project. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The projected 2D point. 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{classCamera}{Camera}}.
+
+\label{classBrownConrady_a6ae3fa443671dd7a681711f3ff2bd46b} 
+\index{BrownConrady@{BrownConrady}!project@{project}}
+\index{project@{project}!BrownConrady@{BrownConrady}}
+\doxysubsubsection{\texorpdfstring{project()}{project()}\hspace{0.1cm}{\footnotesize\ttfamily [2/3]}}
+{\footnotesize\ttfamily std\+::vector$<$ Point2 $>$ Camera\+::project (\begin{DoxyParamCaption}\item[{const std\+::vector$<$ Point3 $>$ \&}]{points\+\_\+3d }\end{DoxyParamCaption}) const}
+
+
+
+Projects 3D points to 2D points using the camera model. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em points\+\_\+3d} & A vector of 3D points. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A vector of projected 2D points. 
+\end{DoxyReturn}
+\label{classBrownConrady_a2d4cb6f9297cffe56d4936743f0cb358} 
+\index{BrownConrady@{BrownConrady}!project@{project}}
+\index{project@{project}!BrownConrady@{BrownConrady}}
+\doxysubsubsection{\texorpdfstring{project()}{project()}\hspace{0.1cm}{\footnotesize\ttfamily [3/3]}}
+{\footnotesize\ttfamily std\+::vector$<$ std\+::vector$<$ Point2 $>$ $>$ Camera\+::project (\begin{DoxyParamCaption}\item[{const std\+::vector$<$ std\+::vector$<$ Point3 $>$ $>$ \&}]{points\+\_\+3d }\end{DoxyParamCaption}) const}
+
+
+
+Projects 2D vectors of 3D points to 2D points using the camera model. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em points\+\_\+3d} & A 2D vector of 3D points. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A 2D vector of projected 2D points. 
+\end{DoxyReturn}
+\label{classBrownConrady_afc2321733756d400be12d12c696fac14} 
+\index{BrownConrady@{BrownConrady}!setBackprojectSettings@{setBackprojectSettings}}
+\index{setBackprojectSettings@{setBackprojectSettings}!BrownConrady@{BrownConrady}}
+\doxysubsubsection{\texorpdfstring{setBackprojectSettings()}{setBackprojectSettings()}}
+{\footnotesize\ttfamily void Brown\+Conrady\+::set\+Backproject\+Settings (\begin{DoxyParamCaption}\item[{double}]{threshold,  }\item[{int}]{iterations }\end{DoxyParamCaption})}
+
+
+
+Sets the backprojection settings. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em threshold} & The new threshold value. \\
+\hline
+{\em iterations} & The new number of iterations. \\
+\hline
+\end{DoxyParams}
+\label{classBrownConrady_a634a9f0da36689f6ac5e669ae7747a77} 
+\index{BrownConrady@{BrownConrady}!setFocalLength@{setFocalLength}}
+\index{setFocalLength@{setFocalLength}!BrownConrady@{BrownConrady}}
+\doxysubsubsection{\texorpdfstring{setFocalLength()}{setFocalLength()}}
+{\footnotesize\ttfamily void Brown\+Conrady\+::set\+Focal\+Length (\begin{DoxyParamCaption}\item[{std\+::vector$<$ double $>$}]{focal\+\_\+length }\end{DoxyParamCaption})}
+
+
+
+Sets the focal length. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em focal\+\_\+length} & A vector containing the new focal length values. \\
+\hline
+\end{DoxyParams}
+\label{classBrownConrady_abb4f0adee74673a6bbe328bfd6c4b827} 
+\index{BrownConrady@{BrownConrady}!setPrincipalPoint@{setPrincipalPoint}}
+\index{setPrincipalPoint@{setPrincipalPoint}!BrownConrady@{BrownConrady}}
+\doxysubsubsection{\texorpdfstring{setPrincipalPoint()}{setPrincipalPoint()}}
+{\footnotesize\ttfamily void Brown\+Conrady\+::set\+Principal\+Point (\begin{DoxyParamCaption}\item[{std\+::vector$<$ double $>$}]{principal\+\_\+point }\end{DoxyParamCaption})}
+
+
+
+Sets the principal point. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em principal\+\_\+point} & A vector containing the new principal point values. \\
+\hline
+\end{DoxyParams}
+\label{classBrownConrady_ad95aadc2133e4879a693b79f338d9e21} 
+\index{BrownConrady@{BrownConrady}!setRadialDistCoeffs@{setRadialDistCoeffs}}
+\index{setRadialDistCoeffs@{setRadialDistCoeffs}!BrownConrady@{BrownConrady}}
+\doxysubsubsection{\texorpdfstring{setRadialDistCoeffs()}{setRadialDistCoeffs()}}
+{\footnotesize\ttfamily void Brown\+Conrady\+::set\+Radial\+Dist\+Coeffs (\begin{DoxyParamCaption}\item[{std\+::vector$<$ double $>$}]{radial\+\_\+dist\+\_\+coeffs }\end{DoxyParamCaption})}
+
+
+
+Sets the radial distortion coefficients. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em radial\+\_\+dist\+\_\+coeffs} & A vector containing the new radial distortion coefficients. \\
+\hline
+\end{DoxyParams}
+\label{classBrownConrady_a793d6a68dd1d4926ccdd1a52779d36b3} 
+\index{BrownConrady@{BrownConrady}!setTangentialDistCoeffs@{setTangentialDistCoeffs}}
+\index{setTangentialDistCoeffs@{setTangentialDistCoeffs}!BrownConrady@{BrownConrady}}
+\doxysubsubsection{\texorpdfstring{setTangentialDistCoeffs()}{setTangentialDistCoeffs()}}
+{\footnotesize\ttfamily void Brown\+Conrady\+::set\+Tangential\+Dist\+Coeffs (\begin{DoxyParamCaption}\item[{std\+::vector$<$ double $>$}]{tangential\+\_\+dist\+\_\+coeffs }\end{DoxyParamCaption})}
+
+
+
+Sets the tangential distortion coefficients. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em tangential\+\_\+dist\+\_\+coeffs} & A vector containing the new tangential distortion coefficients. \\
+\hline
+\end{DoxyParams}
+\label{classBrownConrady_a9a1204b2d868e264f5fd475efb3c02ef} 
+\index{BrownConrady@{BrownConrady}!setTangentialPolynominalDistCoeffs@{setTangentialPolynominalDistCoeffs}}
+\index{setTangentialPolynominalDistCoeffs@{setTangentialPolynominalDistCoeffs}!BrownConrady@{BrownConrady}}
+\doxysubsubsection{\texorpdfstring{setTangentialPolynominalDistCoeffs()}{setTangentialPolynominalDistCoeffs()}}
+{\footnotesize\ttfamily void Brown\+Conrady\+::set\+Tangential\+Polynominal\+Dist\+Coeffs (\begin{DoxyParamCaption}\item[{std\+::vector$<$ double $>$}]{tangential\+\_\+polynomial\+\_\+dist\+\_\+coeffs }\end{DoxyParamCaption})}
+
+
+
+Sets the tangential polynomial distortion coefficients. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em tangential\+\_\+polynomial\+\_\+dist\+\_\+coeffs} & A vector containing the new tangential polynomial distortion coefficients. \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+include/camera/brown\+\_\+conrady.\+h\item 
+src/camera/brown\+\_\+conrady.\+cpp\end{DoxyCompactItemize}

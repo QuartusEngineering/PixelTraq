@@ -1,0 +1,111 @@
+\doxysection{Utils Class Reference}
+\label{classUtils}\index{Utils@{Utils}}
+\doxysubsubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static std\+::vector$<$ std\+::vector$<$ std\+::vector$<$ double $>$ $>$ $>$ \mbox{\hyperlink{classUtils_ae1fdc77008156622252b6cb37839fd1d}{load\+Image}} (const std\+::string \&filename, int desired\+Channels=1)
+\begin{DoxyCompactList}\small\item\em Loads an image from a file and returns it as a 3D vector. \end{DoxyCompactList}\item 
+static void \mbox{\hyperlink{classUtils_a08b7dfeca250f3bb7ea335d8677f5282}{save\+Image}} (const std\+::vector$<$ std\+::vector$<$ std\+::vector$<$ double $>$ $>$ $>$ \&data, const std\+::string \&filename, const std\+::string \&format)
+\begin{DoxyCompactList}\small\item\em Saves an image to a file in a specified format. \end{DoxyCompactList}\item 
+static void \mbox{\hyperlink{classUtils_a86f14f46fa25f01c580c06d587c2867d}{save\+Image}} (const std\+::vector$<$ std\+::vector$<$ std\+::vector$<$ double $>$ $>$ $>$ \&data, const std\+::string \&filename)
+\begin{DoxyCompactList}\small\item\em Saves an image to a file in a specified format based on the extension in the filename. \end{DoxyCompactList}\item 
+static bool \mbox{\hyperlink{classUtils_ad0cc0148523b04a729f51796775c714e}{exists}} (const std\+::string \&name)
+\begin{DoxyCompactList}\small\item\em Checks if a file exists. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Member Function Documentation}
+\label{classUtils_ad0cc0148523b04a729f51796775c714e} 
+\index{Utils@{Utils}!exists@{exists}}
+\index{exists@{exists}!Utils@{Utils}}
+\doxysubsubsection{\texorpdfstring{exists()}{exists()}}
+{\footnotesize\ttfamily bool Utils\+::exists (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{name }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Checks if a file exists. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em name} & The path to the file. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true if the file exists, false otherwise. 
+\end{DoxyReturn}
+\label{classUtils_ae1fdc77008156622252b6cb37839fd1d} 
+\index{Utils@{Utils}!loadImage@{loadImage}}
+\index{loadImage@{loadImage}!Utils@{Utils}}
+\doxysubsubsection{\texorpdfstring{loadImage()}{loadImage()}}
+{\footnotesize\ttfamily std\+::vector$<$ std\+::vector$<$ std\+::vector$<$ double $>$ $>$ $>$ Utils\+::load\+Image (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{filename,  }\item[{int}]{desired\+Channels = {\ttfamily 1} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Loads an image from a file and returns it as a 3D vector. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em filename} & The path to the image file. \\
+\hline
+{\em desired\+Channels} & The number of desired channels in the output image. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A 3D vector representing the image. 
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em std\+::runtime\+\_\+error} & if the image fails to load. \\
+\hline
+\end{DoxyExceptions}
+\label{classUtils_a86f14f46fa25f01c580c06d587c2867d} 
+\index{Utils@{Utils}!saveImage@{saveImage}}
+\index{saveImage@{saveImage}!Utils@{Utils}}
+\doxysubsubsection{\texorpdfstring{saveImage()}{saveImage()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily void Utils\+::save\+Image (\begin{DoxyParamCaption}\item[{const std\+::vector$<$ std\+::vector$<$ std\+::vector$<$ double $>$ $>$ $>$ \&}]{data,  }\item[{const std\+::string \&}]{filename }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Saves an image to a file in a specified format based on the extension in the filename. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em data} & The 3D vector representing the image. \\
+\hline
+{\em filename} & The path to the output image file including the extension. \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em std\+::invalid\+\_\+argument} & if the input data has inconsistent dimensions or an unsupported format. \\
+\hline
+\end{DoxyExceptions}
+\label{classUtils_a08b7dfeca250f3bb7ea335d8677f5282} 
+\index{Utils@{Utils}!saveImage@{saveImage}}
+\index{saveImage@{saveImage}!Utils@{Utils}}
+\doxysubsubsection{\texorpdfstring{saveImage()}{saveImage()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily void Utils\+::save\+Image (\begin{DoxyParamCaption}\item[{const std\+::vector$<$ std\+::vector$<$ std\+::vector$<$ double $>$ $>$ $>$ \&}]{data,  }\item[{const std\+::string \&}]{filename,  }\item[{const std\+::string \&}]{format }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Saves an image to a file in a specified format. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em data} & The 3D vector representing the image. \\
+\hline
+{\em filename} & The path to the output image file. \\
+\hline
+{\em format} & The format to save the image in (e.\+g., "{}bmp"{}, "{}png"{}, "{}jpg"{}). \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em std\+::invalid\+\_\+argument} & if the input data has inconsistent dimensions or an unsupported format. \\
+\hline
+\end{DoxyExceptions}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+include/utilities/utils.\+h\item 
+src/utilities/utils.\+cpp\end{DoxyCompactItemize}

@@ -1,0 +1,356 @@
+\doxysection{Camera Class Reference}
+\label{classCamera}\index{Camera@{Camera}}
+Inheritance diagram for Camera\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=1.333333cm]{classCamera}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\label{classCamera_a01f94c3543f56ede7af49dc778f19331} 
+{\bfseries Camera} ()
+\begin{DoxyCompactList}\small\item\em Default constructor for the \doxylink{classCamera}{Camera} class. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classCamera_ae4dce82bbbae84426aa18223438ea3b2}{Camera}} (std\+::vector$<$ int $>$ image\+\_\+size, Point3 rotation, Point3 translation)
+\begin{DoxyCompactList}\small\item\em Parameterized constructor for the \doxylink{classCamera}{Camera} class. \end{DoxyCompactList}\item 
+std\+::string \mbox{\hyperlink{classCamera_a52aedf294fdf857f9a41e124c7927b43}{get\+Parameter\+Display\+String}} () const
+\begin{DoxyCompactList}\small\item\em Returns a string with the camera parameters for display. \end{DoxyCompactList}\item 
+\label{classCamera_a38aa74f8e73ad739fc9d980ecd5d0fa5} 
+void {\bfseries display} () const
+\begin{DoxyCompactList}\small\item\em Displays the camera parameters to the console. \end{DoxyCompactList}\item 
+std\+::vector$<$ int $>$ \mbox{\hyperlink{classCamera_ae647b7b651bdc664118d03e5f7f66616}{get\+Image\+Size}} () const
+\begin{DoxyCompactList}\small\item\em Gets the image size. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classCamera_a7131f2a763a841f7c6a93a79981ffb72}{set\+Image\+Size}} (std\+::vector$<$ int $>$ image\+\_\+size)
+\begin{DoxyCompactList}\small\item\em Sets the image size. \end{DoxyCompactList}\item 
+std\+::vector$<$ Point2 $>$ \mbox{\hyperlink{classCamera_a6ae3fa443671dd7a681711f3ff2bd46b}{project}} (const std\+::vector$<$ Point3 $>$ \&points\+\_\+3d) const
+\begin{DoxyCompactList}\small\item\em Projects 3D points to 2D points using the camera model. \end{DoxyCompactList}\item 
+std\+::vector$<$ std\+::vector$<$ Point2 $>$ $>$ \mbox{\hyperlink{classCamera_a2d4cb6f9297cffe56d4936743f0cb358}{project}} (const std\+::vector$<$ std\+::vector$<$ Point3 $>$ $>$ \&points\+\_\+3d1) const
+\begin{DoxyCompactList}\small\item\em Projects 2D vectors of 3D points to 2D points using the camera model. \end{DoxyCompactList}\item 
+std\+::vector$<$ std\+::vector$<$ std\+::array$<$ double, 3 $>$ $>$ $>$ \mbox{\hyperlink{classCamera_a0fa46f041586bb492f0bd5e525e4a020}{backproject}} (const std\+::vector$<$ std\+::vector$<$ double $>$ $>$ \&image) const
+\begin{DoxyCompactList}\small\item\em Backprojects a 2D vector of 2D points to 3D rays using the camera model. \end{DoxyCompactList}\item 
+std\+::vector$<$ Point3 $>$ \mbox{\hyperlink{classCamera_aef54da14254e193c05f01794cc1e2cc0}{backproject}} (const std\+::vector$<$ Point2 $>$ \&points\+\_\+2d) const
+\begin{DoxyCompactList}\small\item\em Backprojects 2D points to 3D rays using the camera model. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classCamera_a8f46c6f364430fa41f0b96aa62c7f158}{set\+Translation}} (Point3 translation)
+\begin{DoxyCompactList}\small\item\em Sets the translation vector. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classCamera_a53ac33421a4e50f8a94330540d6971f4}{set\+Rotation}} (Point3 rotation)
+\begin{DoxyCompactList}\small\item\em Sets the rotation vector. \end{DoxyCompactList}\item 
+const std\+::vector$<$ Point3 $>$ \mbox{\hyperlink{classCamera_a5d9ce2104ac617235356c9ef2734049a}{world\+To\+Camera\+Pnts}} (const std\+::vector$<$ Point3 $>$ \&world\+\_\+points) const
+\begin{DoxyCompactList}\small\item\em Transforms world points to camera points. \end{DoxyCompactList}\item 
+const std\+::vector$<$ Point3 $>$ \mbox{\hyperlink{classCamera_a5cb55aa775a0213abbfe85122112b16a}{camera\+To\+World\+Pnts}} (const std\+::vector$<$ Point3 $>$ \&world\+\_\+points) const
+\begin{DoxyCompactList}\small\item\em Transforms camera points to world points. \end{DoxyCompactList}\item 
+const Point3 \mbox{\hyperlink{classCamera_a7fcbbda82d69c6b3407d3397b59336fb}{world\+To\+Camera\+Pnts}} (const Point3 \&world\+\_\+point) const
+\begin{DoxyCompactList}\small\item\em Transforms a single world point to a camera point. \end{DoxyCompactList}\item 
+const Point3 \mbox{\hyperlink{classCamera_a543532ed983ca1232c3c7e0d620c1c8d}{camera\+To\+World\+Pnts}} (const Point3 \&world\+\_\+point) const
+\begin{DoxyCompactList}\small\item\em Transforms a single camera point to a world point. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classCamera_a0ad27316f530acbc22702832bbc84e11}{save}} (const std\+::string \&file\+Name) const
+\begin{DoxyCompactList}\small\item\em Saves the \doxylink{classCamera}{Camera} object to a file. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classCamera}{Camera}} $>$ \mbox{\hyperlink{classCamera_ac7fc1f6c7e0b0560097c3ab69d4fa533}{load}} (const std\+::string \&file\+Name)
+\begin{DoxyCompactList}\small\item\em Static method to load a camera based on file type. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\label{classCamera_ae4dce82bbbae84426aa18223438ea3b2} 
+\index{Camera@{Camera}!Camera@{Camera}}
+\index{Camera@{Camera}!Camera@{Camera}}
+\doxysubsubsection{\texorpdfstring{Camera()}{Camera()}}
+{\footnotesize\ttfamily Camera\+::\+Camera (\begin{DoxyParamCaption}\item[{std\+::vector$<$ int $>$}]{image\+\_\+size,  }\item[{Point3}]{rotation,  }\item[{Point3}]{translation }\end{DoxyParamCaption})}
+
+
+
+Parameterized constructor for the \doxylink{classCamera}{Camera} class. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em image\+\_\+size} & Vector containing the width and height of the image. \\
+\hline
+{\em rotation} & Rotation angles in radians. \\
+\hline
+{\em translation} & Translation vector. \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em std\+::invalid\+\_\+argument} & if image\+\_\+size does not contain exactly 2 elements. \\
+\hline
+\end{DoxyExceptions}
+
+
+\doxysubsection{Member Function Documentation}
+\label{classCamera_aef54da14254e193c05f01794cc1e2cc0} 
+\index{Camera@{Camera}!backproject@{backproject}}
+\index{backproject@{backproject}!Camera@{Camera}}
+\doxysubsubsection{\texorpdfstring{backproject()}{backproject()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily std\+::vector$<$ Point3 $>$ Camera\+::backproject (\begin{DoxyParamCaption}\item[{const std\+::vector$<$ Point2 $>$ \&}]{points\+\_\+2d }\end{DoxyParamCaption}) const}
+
+
+
+Backprojects 2D points to 3D rays using the camera model. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em points\+\_\+2d} & A vector of 2D points. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A vector of backprojected 3D rays. 
+\end{DoxyReturn}
+\label{classCamera_a0fa46f041586bb492f0bd5e525e4a020} 
+\index{Camera@{Camera}!backproject@{backproject}}
+\index{backproject@{backproject}!Camera@{Camera}}
+\doxysubsubsection{\texorpdfstring{backproject()}{backproject()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily std\+::vector$<$ std\+::vector$<$ std\+::array$<$ double, 3 $>$ $>$ $>$ Camera\+::backproject (\begin{DoxyParamCaption}\item[{const std\+::vector$<$ std\+::vector$<$ double $>$ $>$ \&}]{image }\end{DoxyParamCaption}) const}
+
+
+
+Backprojects a 2D vector of 2D points to 3D rays using the camera model. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em image} & A 2D vector of 2D points. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A 2D vector of backprojected 3D rays. 
+\end{DoxyReturn}
+\label{classCamera_a543532ed983ca1232c3c7e0d620c1c8d} 
+\index{Camera@{Camera}!cameraToWorldPnts@{cameraToWorldPnts}}
+\index{cameraToWorldPnts@{cameraToWorldPnts}!Camera@{Camera}}
+\doxysubsubsection{\texorpdfstring{cameraToWorldPnts()}{cameraToWorldPnts()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily const Point3 Camera\+::camera\+To\+World\+Pnts (\begin{DoxyParamCaption}\item[{const Point3 \&}]{world\+\_\+point }\end{DoxyParamCaption}) const}
+
+
+
+Transforms a single camera point to a world point. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em camera\+\_\+point} & A single camera point. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The transformed world point. 
+\end{DoxyReturn}
+\label{classCamera_a5cb55aa775a0213abbfe85122112b16a} 
+\index{Camera@{Camera}!cameraToWorldPnts@{cameraToWorldPnts}}
+\index{cameraToWorldPnts@{cameraToWorldPnts}!Camera@{Camera}}
+\doxysubsubsection{\texorpdfstring{cameraToWorldPnts()}{cameraToWorldPnts()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily const std\+::vector$<$ Point3 $>$ Camera\+::camera\+To\+World\+Pnts (\begin{DoxyParamCaption}\item[{const std\+::vector$<$ Point3 $>$ \&}]{world\+\_\+points }\end{DoxyParamCaption}) const}
+
+
+
+Transforms camera points to world points. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em camera\+\_\+points} & A vector of camera points. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A vector of transformed world points. 
+\end{DoxyReturn}
+\label{classCamera_ae647b7b651bdc664118d03e5f7f66616} 
+\index{Camera@{Camera}!getImageSize@{getImageSize}}
+\index{getImageSize@{getImageSize}!Camera@{Camera}}
+\doxysubsubsection{\texorpdfstring{getImageSize()}{getImageSize()}}
+{\footnotesize\ttfamily std\+::vector$<$ int $>$ Camera\+::get\+Image\+Size (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Gets the image size. 
+
+\begin{DoxyReturn}{Returns}
+A vector containing the width and height of the image. 
+\end{DoxyReturn}
+\label{classCamera_a52aedf294fdf857f9a41e124c7927b43} 
+\index{Camera@{Camera}!getParameterDisplayString@{getParameterDisplayString}}
+\index{getParameterDisplayString@{getParameterDisplayString}!Camera@{Camera}}
+\doxysubsubsection{\texorpdfstring{getParameterDisplayString()}{getParameterDisplayString()}}
+{\footnotesize\ttfamily std\+::string Camera\+::get\+Parameter\+Display\+String (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Returns a string with the camera parameters for display. 
+
+\begin{DoxyReturn}{Returns}
+A string containing the camera parameter details. 
+\end{DoxyReturn}
+\label{classCamera_ac7fc1f6c7e0b0560097c3ab69d4fa533} 
+\index{Camera@{Camera}!load@{load}}
+\index{load@{load}!Camera@{Camera}}
+\doxysubsubsection{\texorpdfstring{load()}{load()}}
+{\footnotesize\ttfamily std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classCamera}{Camera}} $>$ Camera\+::load (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{file\+Name }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Static method to load a camera based on file type. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em file\+Name} & The name of the file. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A shared pointer to the loaded \doxylink{classCamera}{Camera} object. 
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em std\+::invalid\+\_\+argument} & if the file does not exist. \\
+\hline
+\end{DoxyExceptions}
+\label{classCamera_a6ae3fa443671dd7a681711f3ff2bd46b} 
+\index{Camera@{Camera}!project@{project}}
+\index{project@{project}!Camera@{Camera}}
+\doxysubsubsection{\texorpdfstring{project()}{project()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily std\+::vector$<$ Point2 $>$ Camera\+::project (\begin{DoxyParamCaption}\item[{const std\+::vector$<$ Point3 $>$ \&}]{points\+\_\+3d }\end{DoxyParamCaption}) const}
+
+
+
+Projects 3D points to 2D points using the camera model. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em points\+\_\+3d} & A vector of 3D points. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A vector of projected 2D points. 
+\end{DoxyReturn}
+\label{classCamera_a2d4cb6f9297cffe56d4936743f0cb358} 
+\index{Camera@{Camera}!project@{project}}
+\index{project@{project}!Camera@{Camera}}
+\doxysubsubsection{\texorpdfstring{project()}{project()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily std\+::vector$<$ std\+::vector$<$ Point2 $>$ $>$ Camera\+::project (\begin{DoxyParamCaption}\item[{const std\+::vector$<$ std\+::vector$<$ Point3 $>$ $>$ \&}]{points\+\_\+3d }\end{DoxyParamCaption}) const}
+
+
+
+Projects 2D vectors of 3D points to 2D points using the camera model. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em points\+\_\+3d} & A 2D vector of 3D points. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A 2D vector of projected 2D points. 
+\end{DoxyReturn}
+\label{classCamera_a0ad27316f530acbc22702832bbc84e11} 
+\index{Camera@{Camera}!save@{save}}
+\index{save@{save}!Camera@{Camera}}
+\doxysubsubsection{\texorpdfstring{save()}{save()}}
+{\footnotesize\ttfamily void Camera\+::save (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{file\+Name }\end{DoxyParamCaption}) const}
+
+
+
+Saves the \doxylink{classCamera}{Camera} object to a file. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em file\+Name} & The name of the file. \\
+\hline
+\end{DoxyParams}
+\label{classCamera_a7131f2a763a841f7c6a93a79981ffb72} 
+\index{Camera@{Camera}!setImageSize@{setImageSize}}
+\index{setImageSize@{setImageSize}!Camera@{Camera}}
+\doxysubsubsection{\texorpdfstring{setImageSize()}{setImageSize()}}
+{\footnotesize\ttfamily void Camera\+::set\+Image\+Size (\begin{DoxyParamCaption}\item[{std\+::vector$<$ int $>$}]{image\+\_\+size }\end{DoxyParamCaption})}
+
+
+
+Sets the image size. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em image\+\_\+size} & Vector containing the width and height of the image. \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em std\+::invalid\+\_\+argument} & if image\+\_\+size does not contain exactly 2 elements. \\
+\hline
+\end{DoxyExceptions}
+\label{classCamera_a53ac33421a4e50f8a94330540d6971f4} 
+\index{Camera@{Camera}!setRotation@{setRotation}}
+\index{setRotation@{setRotation}!Camera@{Camera}}
+\doxysubsubsection{\texorpdfstring{setRotation()}{setRotation()}}
+{\footnotesize\ttfamily void Camera\+::set\+Rotation (\begin{DoxyParamCaption}\item[{Point3}]{rotation }\end{DoxyParamCaption})}
+
+
+
+Sets the rotation vector. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em rotation} & The rotation vector. \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em std\+::invalid\+\_\+argument} & if rotation does not contain exactly 3 elements. \\
+\hline
+\end{DoxyExceptions}
+\label{classCamera_a8f46c6f364430fa41f0b96aa62c7f158} 
+\index{Camera@{Camera}!setTranslation@{setTranslation}}
+\index{setTranslation@{setTranslation}!Camera@{Camera}}
+\doxysubsubsection{\texorpdfstring{setTranslation()}{setTranslation()}}
+{\footnotesize\ttfamily void Camera\+::set\+Translation (\begin{DoxyParamCaption}\item[{Point3}]{translation }\end{DoxyParamCaption})}
+
+
+
+Sets the translation vector. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em translation} & The translation vector. \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em std\+::invalid\+\_\+argument} & if translation does not contain exactly 3 elements. \\
+\hline
+\end{DoxyExceptions}
+\label{classCamera_a7fcbbda82d69c6b3407d3397b59336fb} 
+\index{Camera@{Camera}!worldToCameraPnts@{worldToCameraPnts}}
+\index{worldToCameraPnts@{worldToCameraPnts}!Camera@{Camera}}
+\doxysubsubsection{\texorpdfstring{worldToCameraPnts()}{worldToCameraPnts()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily const Point3 Camera\+::world\+To\+Camera\+Pnts (\begin{DoxyParamCaption}\item[{const Point3 \&}]{world\+\_\+point }\end{DoxyParamCaption}) const}
+
+
+
+Transforms a single world point to a camera point. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em world\+\_\+point} & A single world point. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The transformed camera point. 
+\end{DoxyReturn}
+\label{classCamera_a5d9ce2104ac617235356c9ef2734049a} 
+\index{Camera@{Camera}!worldToCameraPnts@{worldToCameraPnts}}
+\index{worldToCameraPnts@{worldToCameraPnts}!Camera@{Camera}}
+\doxysubsubsection{\texorpdfstring{worldToCameraPnts()}{worldToCameraPnts()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily const std\+::vector$<$ Point3 $>$ Camera\+::world\+To\+Camera\+Pnts (\begin{DoxyParamCaption}\item[{const std\+::vector$<$ Point3 $>$ \&}]{world\+\_\+points }\end{DoxyParamCaption}) const}
+
+
+
+Transforms world points to camera points. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em world\+\_\+points} & A vector of world points. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A vector of transformed camera points. 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+include/camera/camera.\+h\item 
+src/camera/camera.\+cpp\end{DoxyCompactItemize}
