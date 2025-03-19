@@ -6,7 +6,7 @@ The PixelTraq library is a C++ library developed to help users integrate cameras
 ## External Links
 [PixelTraq Service](https://www.quartus.com/products/pixeltraq/)\
 [PixelTraq Resources](https://www.quartus.com/products/pixeltraq/resources/)\
-[Documentation](https://github.com/pages/QuartusEngineering/PixelTraq)
+[Documentation](https://quartusengineering.github.io/PixelTraq/)
 
 ## Integration
 
