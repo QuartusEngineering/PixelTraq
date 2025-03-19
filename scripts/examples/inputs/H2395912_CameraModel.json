@@ -1,0 +1,51 @@
+{
+  "MetaData": {
+    "CameraPartNumber": "N/A",
+    "CameraSerialNumber": "H2395912",
+    "LensPartNumber": "N/A",
+    "LensSerialNumber": "N/A",
+    "QuartusPartNumber": "QXXX-XXXX",
+    "QuartusSerialNumber": "SN00X",
+    "QuartusRevision": "A",
+    "class_name": "CalibrationMetadata"
+  },
+  "Intrinsics": {
+    "mu_mv": [
+      1844.2357325163041,
+      1844.3446041039479
+    ],
+    "principal_point": [
+      1051.4409608063438,
+      788.11275611439669
+    ],
+    "radial_distortion_coeff": [
+      0.15180985495707794,
+      0.020900536701567066,
+      0.28489374886704133,
+      -0.23871750845332931
+    ],
+    "radial_asym_poly": [],
+    "radial_asym_fourier": [],
+    "tangential_asym_poly": [],
+    "tangential_asym_fourier": [],
+    "image_size": [
+      2064,
+      1544
+    ],
+    "class_name": "KannalaModel",
+    "coordinate_convention": "TL0_0"
+  },
+  "Extrinsics": {
+    "rotation": [
+      1.565092629756111,
+      -0.00044346800078586581,
+      1.564527184028218
+    ],
+    "translation": [
+      -0.11210216866211262,
+      0.033260985575117391,
+      -0.030357330244937839
+    ],
+    "class_name": "RealObject"
+  }
+}
