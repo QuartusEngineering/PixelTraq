@@ -1,0 +1,33 @@
+{
+    "Extrinsics": {
+        "class_name": "RealObject",
+        "rotation": [
+            1.574922167918299,
+            -0.00031742290161591044,
+            1.5767922159686159
+        ],
+        "translation": [
+            0.018745173150222103,
+            0.01101567955196766,
+            -0.03312517459007923
+        ]
+    },
+    "Intrinsics": {
+        "class_name": "PinholeModel",
+        "coordinate_convention": "TL0_0",
+        "focal_length": [
+            1000
+        ],
+        "image_size": [
+            1400,
+            1400
+        ],
+        "principal_point": [
+            699,
+            699
+        ],
+        "skew": [
+            0
+        ]
+    }
+}
